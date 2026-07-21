@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:412eaef296e6a68d -->
+<!-- CATALOG-HASH:5ef0e892b3563668 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,13 +35,13 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (233)
+## Tools (231)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
 | Tool | What it does | Tier |
 |---|---|---|
-| `challenge_as_customer` | Run your deliverable past the company's customer truth: REAL Customer Evidence first (when stored), then generated ICP as labeled simulation | read |
+| `challenge_as_customer` | Run your deliverable past a simulated version of the company's ideal customer | read |
 | `deliberate` | Run an adversarial deliberation on a decision | read |
 | `derive_from_website` | SPIKE tool (.agent/design-docs/2026-07-09-magical-onboarding-buildout-mode.md, "The Assignment") | sensitive · approval-carded |
 | `get_product_context` | Returns THIS company's product truth — the operator-authored offer + the SHIPPED, marketable capabilities (what the product does, and what i | read |
@@ -49,11 +49,10 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (117)
+### Business data & workspace (finance, OKRs, customers, leads, content) (115)
 
 | Tool | What it does | Tier |
 |---|---|---|
-| `add_customer_evidence` | Store one piece of REAL Customer Evidence for this company (paying-customer words/behavior, telemetry, review, operator-relayed quote, prosp | write |
 | `add_lead` | Add a new lead to the Leads CRM (crm_leads) — the table the Leads tab, triage, and outreach all use | write |
 | `analyze_team_needs` | Gather comprehensive team and company context for talent strategy analysis | read |
 | `approve_pipeline_item` | Approve a content item for publishing | sensitive · approval-carded |
@@ -113,7 +112,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `ingest_voice_corpus` | Build or refresh the company's voice profile from REAL writing | sensitive · approval-carded |
 | `interview_for_hire` | Research the company and return everything needed to propose a specialist hire in ONE shot | sensitive · approval-carded |
 | `link_agent_okrs` | Link an agent to one or more company OKRs | write |
-| `list_customer_evidence` | List ranked REAL Customer Evidence for this company (paying > telemetry > review > relayed > agent_as_user > prospect) | read |
 | `list_dashboard_widgets` | List all dashboard widgets for a specific agent | read |
 | `list_deals` | List CRM deals for the current company | read |
 | `list_features` | List all product features in the Feature Index | read |
