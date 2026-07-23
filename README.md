@@ -56,7 +56,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `add_customer_evidence` | Store one piece of REAL Customer Evidence for this company (paying-customer words/behavior, telemetry, review, operator-relayed quote, prosp | write |
 | `add_lead` | Add a new lead to the Leads CRM (crm_leads) — the table the Leads tab, triage, and outreach all use | write |
 | `analyze_team_needs` | Gather comprehensive team and company context for talent strategy analysis | read |
-| `approve_pipeline_item` | Approve a content item for publishing | sensitive · approval-carded |
+| `approve_pipeline_item` | Approve a content item for publishing — or REJECT it with approved:false | sensitive · approval-carded |
 | `archive_pipeline` | Archive (or restore) a content pipeline — flips is_active off/on, mirroring the Content Pipeline UI's soft-delete/restore | write |
 | `capture_idea` | Capture an idea into the user's Ideas | write |
 | `clear_pipeline_learnings` | Reset all learnings for a pipeline and start fresh | write |
@@ -98,7 +98,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_my_profile` | Get the current user's profile information including name, title, contact info, and personal details. | read |
 | `get_next_priority` | Answer "What should I work on?" in two beats: it leads with the single most-actionable pending Command Center card the operator's rail featu | read |
 | `get_okrs` | List objectives and key results for the company | read |
-| `get_pending_approvals` | Get content waiting for approval (changelogs, newsletters, etc) | read |
+| `get_pending_approvals` | Get CONTENT PIPELINE outputs waiting for approval/publish (changelogs, newsletters, social drafts) | read |
 | `get_projections` | Get projected future values from financial forecasts | read |
 | `get_reader_profile` | Get a team member's READER PROFILE — their per-domain expertise (novice/fluent/expert) that tells agents how to pitch internal cards, summar | read |
 | `get_routing_overview` | See how agent output is currently routed — who is responsible for which domains in the company. | read |
@@ -248,7 +248,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 
 | Tool | What it does | Tier |
 |---|---|---|
-| `attach_product_request_pr` | Attach an existing freedom-ai GitHub PR URL to a product request so the filer can see it via get_product_request_status | write |
+| `attach_product_request_pr` | Attach an existing freedom-ai GitHub PR URL to a product request and **resolve it by construction** (card → approved, product_status=fixed,  | write |
 | `claim_product_request_for_builder` | Mint a paste-ready Builder claim recipe for a FreedomOS product request so a host coding agent (Grok Build / Claude Code) with Harness + gst | write |
 | `get_product_request_status` | Check status of a product request you previously filed with submit_product_request for your operator | read |
 | `open_product_request_draft_pr` | Open a draft GitHub PR shell for an approved FreedomOS product request (work ticket branch, no auto-code) | write |
