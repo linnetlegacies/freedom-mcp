@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:badb85d61343a91e -->
+<!-- CATALOG-HASH:31c19e626e874250 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (234)
+## Tools (235)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -93,7 +93,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_monthly_trends` | Get month-over-month financial trends | read |
 | `get_my_channel_partner_link` | Get YOUR channel partner **student share link** (https://getfreedomos.com/start/{slug}) — the classroom start page (copy Claude prompt first | read |
 | `get_my_channel_partner_starter_pack` | Get YOUR classroom starter pack for students: the public share URL (https://getfreedomos.com/start/{slug}) where they copy a one-paste Claud | read |
-| `get_my_channel_partner_stats` | Get YOUR channel partner stats: student share URL (/start/slug), rev-share terms, and referral counts by status (pending/joined/activated/cr | read |
+| `get_my_channel_partner_stats` | Get YOUR channel partner stats: student share URL (/start/slug), rev-share terms, referral counts by status (pending/joined/activated/credit | read |
 | `get_my_companies` | List the companies the current operator can act in (their FreedomOS portfolio), with the operator's role in each plus an `about` line (entit | read |
 | `get_my_profile` | Get the current user's profile information including name, title, contact info, and personal details. | read |
 | `get_next_priority` | Answer "What should I work on?" in two beats: it leads with the single most-actionable pending Command Center card the operator's rail featu | read |
@@ -159,7 +159,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_feature_status` | Mark a feature as ready for marketing | write |
 | `update_finance_note` | Add or update a note on a P&L account row | write |
 | `update_icp` | Update specific fields of a saved Ideal Customer Profile (ICP) | write |
-| `update_key_result` | Update a key result | write |
+| `update_key_result` | Update a key result for the company operator and any agent owning KR progress (progress, assignment, due date, rename, measure binding) | write |
 | `update_knowledge_section` | Update a specific section of a knowledge file by its ## header | write |
 | `update_lead` | Edit an existing lead in the Leads CRM (crm_leads): name, email, phone, location, do-not-contact flag/reason, lifecycle state (new/active/fl | write |
 | `update_my_profile` | Update the current user's profile | write |
@@ -205,7 +205,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_cac_strategy` | THE tool for any question about this company's CAC strategy or LTV:CAC ratio — e.g | read |
 | `get_decision_ledger` | THE tool for what the Freedom Engine has DECIDED for this company — the audit feed of every autonomous decision: what it auto-ran, what it t | read |
 | `get_page_performance` | Get per-page search performance from Google Search Console — which pages get the most clicks, impressions, and best positions | read |
-| `get_release_ledger` | THE tool for "did this piece ship on this channel" — reads the cross-channel Release Ledger, the queryable truth for every confirmed send (X | read |
+| `get_release_ledger` | THE tool for "did this piece ship on this channel" — reads the cross-channel Release Ledger, the queryable truth for every confirmed send (x | read |
 | `get_search_performance` | Get search performance data from Google Search Console — queries, clicks, impressions, CTR, and average position | read |
 | `get_site_list` | List all verified sites/properties in Google Search Console | read |
 | `get_sitemaps` | List all sitemaps submitted to Google Search Console for a property — shows submission status, indexing coverage, errors, and warnings | read |
@@ -255,7 +255,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `open_product_request_draft_pr` | Open a draft GitHub PR shell for an approved FreedomOS product request (work ticket branch, no auto-code) | write |
 | `report_feedback` | Report an error, issue, observation, or suggestion you encountered during your work | write |
 | `scan_product_signals` | Scan a company for product-system bugs and unlocks (failed/timed-out activity runs, blocked_on_you cards, open error agent_feedback) and ret | write |
-| `submit_product_request` | File a bug report or feature request with the FreedomOS product team | write |
+| `submit_product_request` | File a bug report or feature request about FreedomOS the platform (FO UI, MCP tools, Command Center, auth, connectors, FO agents runtime) wi | write |
 
 ### Navigation (1)
 
@@ -263,7 +263,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (38)
+### Workflows & agents (hire, run, schedule, approve) (39)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -299,6 +299,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_attention_budget` | Set the founder's attention budget — the maximum pending review cards before they are 'overloaded' (a whole number 1–100; default 7) — for a | sensitive · approval-carded |
 | `set_cos_preferences` | Replace THIS operator's full CoS preference block (or clear with empty) | write |
 | `share_commitment` | Share a commitment with your spouse or partner so they can see it too | write |
+| `split_agent_activity` | Split ONE oversized activity into smaller activities (intake + finish) without regenerating the rest of the plan | sensitive · approval-carded |
 | `toggle_agent_schedule` | Pause or resume an agent's scheduled activities — the whole activity plan, or a single activity via activity_name | sensitive · approval-carded |
 | `trigger_agent_activity` | Trigger a specific agent to run a specific activity immediately | sensitive · approval-carded |
 | `unshare_commitment` | Stop sharing a commitment with someone | write |
