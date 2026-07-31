@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:31c19e626e874250 -->
+<!-- CATALOG-HASH:f49d31e411dd91f5 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (235)
+## Tools (237)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -49,7 +49,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (118)
+### Business data & workspace (finance, OKRs, customers, leads, content) (120)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -98,8 +98,10 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_my_profile` | Get the current user's profile information including name, title, contact info, and personal details. | read |
 | `get_next_priority` | Answer "What should I work on?" in two beats: it leads with the single most-actionable pending Command Center card the operator's rail featu | read |
 | `get_okrs` | List objectives and key results for the company | read |
+| `get_partner_cos_onboard` | Onboard YOUR host coding CoS (Claude Code, Cursor, etc.) to FreedomOS: returns a LIVE MCP tool catalog + a deep-research prompt so the host  | read |
 | `get_pending_approvals` | Get CONTENT PIPELINE outputs waiting for approval/publish (changelogs, newsletters, social drafts) | read |
 | `get_projections` | Get projected future values from financial forecasts | read |
+| `get_reader_expertise_interview` | Get a READER EXPERTISE INTERVIEW kit for this operator (or any company member): domain candidate buckets + a host-CoS protocol that offers 3 | read |
 | `get_reader_profile` | Get a team member's READER PROFILE — their per-domain expertise (novice/fluent/expert) that tells agents how to pitch internal cards, summar | read |
 | `get_routing_overview` | See how agent output is currently routed — who is responsible for which domains in the company. | read |
 | `get_setup_state` | Get the company's core-tenet setup completeness — mission, vision, OKRs, finances, ICP, branding, team, integrations, product, revenue chann | read |
