@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:f49d31e411dd91f5 -->
+<!-- CATALOG-HASH:171df88f8fa14644 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (237)
+## Tools (238)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -101,8 +101,8 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_partner_cos_onboard` | Onboard YOUR host coding CoS (Claude Code, Cursor, etc.) to FreedomOS: returns a LIVE MCP tool catalog + a deep-research prompt so the host  | read |
 | `get_pending_approvals` | Get CONTENT PIPELINE outputs waiting for approval/publish (changelogs, newsletters, social drafts) | read |
 | `get_projections` | Get projected future values from financial forecasts | read |
-| `get_reader_expertise_interview` | Get a READER EXPERTISE INTERVIEW kit for this operator (or any company member): domain candidate buckets + a host-CoS protocol that offers 3 | read |
-| `get_reader_profile` | Get a team member's READER PROFILE — their per-domain expertise (novice/fluent/expert) that tells agents how to pitch internal cards, summar | read |
+| `get_reader_expertise_interview` | Get a fluency INTERVIEW kit (domain candidates + "which is clearest?" protocol) so a host CoS can gauge how FO should talk to this operator | read |
+| `get_reader_profile` | Get a person's OPERATOR FLUENCY (reader profile) — overall character level + per-topic strengths (novice/fluent/expert) | read |
 | `get_routing_overview` | See how agent output is currently routed — who is responsible for which domains in the company. | read |
 | `get_setup_state` | Get the company's core-tenet setup completeness — mission, vision, OKRs, finances, ICP, branding, team, integrations, product, revenue chann | read |
 | `get_tactics` | List tactics for the company | read |
@@ -169,7 +169,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_pipeline` | Update an existing content pipeline | write |
 | `update_pipeline_style_guide` | Manually add a style rule to a pipeline | write |
 | `update_projection` | Update projected values for specific accounts and months in the financial plan | write |
-| `update_reader_profile` | Update a team member's reader profile — set their baseline level or per-domain expertise (novice/fluent/expert) so future internal cards and | write |
+| `update_reader_profile` | Update a person's OPERATOR FLUENCY (baseline + per-topic strengths that follow them across companies) | write |
 | `update_tactic` | Update an existing tactic | write |
 | `update_transaction_note` | Add or update a note on a specific transaction | write |
 | `update_voice_profile` | Update the company's voice profile | write |
@@ -265,7 +265,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (39)
+### Workflows & agents (hire, run, schedule, approve) (40)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -278,6 +278,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `complete_commitment` | Mark a commitment as completed | write |
 | `confirm_mcp_approval` | Confirm a pending MCP capability approval by spoken (or chat) yes/no | write |
 | `create_attention_directive` | Queue a short instruction for an external coding/builder session (Grok terminal, Claude Code, or future FreedomOS runtime) | write |
+| `create_play_from_activity` | Draft a Play (growth_tactics with steps + human review) from an oversized agent activity | sensitive · approval-carded |
 | `decide_command_center_item` | Approve or deny a Command Center card | sensitive · approval-carded |
 | `derive_capability` | Scan the company's connected source code (its GitHub repo, via the Pulse connection in Smart Tools) and DRAFT a capability list — shipped FE | sensitive · approval-carded |
 | `draft_outreach` | Produce two outreach draft variants (A/B) for a lead given an angle | write |
