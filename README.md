@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:ceb75f19be3c45dd -->
+<!-- CATALOG-HASH:b5e0d5c47149ebe7 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (240)
+## Tools (242)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -265,13 +265,14 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (42)
+### Workflows & agents (hire, run, schedule, approve) (44)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `ack_attention_directive` | Mark a pending attention directive as acked after the host session has taken the instruction | write |
 | `add_agent_activity` | Add ONE activity to an agent's activity plan without regenerating the whole plan | sensitive · approval-carded |
 | `add_commitment` | Track a personal commitment, deadline, birthday, appointment, or obligation | write |
+| `append_cos_lesson` | Append one settleable CoS lesson for THIS operator only (self-improve construction) | write |
 | `append_cos_preference` | Append one durable speech/taste preference for THIS operator only (re-injected on their next voice session mint) | write |
 | `cancel_attention_directive` | Cancel a pending attention directive (operator changed mind / wrong target) | write |
 | `cancel_commitment` | Cancel a commitment without completing it — marks it cancelled | write |
@@ -294,6 +295,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_attention_directives` | List pending attention directives for THIS operator (optionally filtered by target_session_id) | read |
 | `list_attention_sessions` | List THIS operator's coding/builder sessions (status, goal, ask) | read |
 | `list_commitments` | List the user's active commitments | read |
+| `list_cos_lessons` | List THIS operator's CoS lessons (open + settled_keep by default) | read |
 | `park_attention_sessions` | Park THIS operator's coding host sessions (N6 hygiene) | write |
 | `ratify_capability` | Persist the operator-CONFIRMED derived features (from derive_capability) into the product capability index as source='derived' | sensitive · approval-carded |
 | `remove_agent_activity` | Retire ONE activity from an agent's plan | sensitive · approval-carded |
