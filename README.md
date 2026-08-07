@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:171df88f8fa14644 -->
+<!-- CATALOG-HASH:7a8977468b2e384e -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (238)
+## Tools (239)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -201,7 +201,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `generate_carousel` | Render a multi-slide image carousel + a LinkedIn-PDF from structured slide copy | write |
 | `generate_image_xai` | Generate or EDIT an image using xAI Imagine | sensitive · approval-carded |
 | `generate_vector_image` | Generate a native SVG vector image using Recraft V4 Pro Vector | sensitive · approval-carded |
-| `generate_video` | Generate a video clip using AI (xAI Imagine, 3 credits) | sensitive · approval-carded |
+| `generate_video` | Generate a video clip for the company (xAI Imagine Video 1.5, 3 credits): text-to-video, image-to-video, multi-image reference (up to 7), or | sensitive · approval-carded |
 | `generate_video_veo` | Generate a high-fidelity cinematic video using Google Veo 3.1 (5 credits) | sensitive · approval-carded |
 | `get_ads_performance` | Get Meta ads results: spend, impressions, clicks, CTR, CPC, CPM, reach, conversions (actions), cost per action, and purchase ROAS — at accou | read |
 | `get_cac_strategy` | THE tool for any question about this company's CAC strategy or LTV:CAC ratio — e.g | read |
@@ -265,7 +265,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (40)
+### Workflows & agents (hire, run, schedule, approve) (41)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -285,6 +285,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_activity_health` | Audit all agent activities for staleness, business outcome alignment, and cross-agent overlap | read |
 | `get_agent_performance` | Get detailed performance stats for a specific agent: run count, quality scores, approval/denial rates, error count, recent errors with conte | read |
 | `get_attention_budget` | THE tool for the founder's attention budget — the operator-set ceiling on pending review cards before they are 'overloaded' (e.g | read |
+| `get_attention_quest` | Speech-safe Quest Log strip for voice CoS (N5) | read |
 | `get_command_center_item` | Read ONE Command Center card by id — full description, full deliverable content, and full context payload, in ANY status (pending, approved, | read |
 | `get_command_center_items` | List Command Center cards for the company (pending by default; pass status_filter for approved/denied/snoozed/all) | read |
 | `get_cos_preferences` | Read THIS operator's saved CoS speech/taste preferences (user-scoped) | read |
@@ -297,7 +298,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `remove_agent_activity` | Retire ONE activity from an agent's plan | sensitive · approval-carded |
 | `request_attention_spawn` | Request a NEW local coding session from voice/chat (tab spawn) | write |
 | `run_quality_check` | Evaluate content or media against your ICP persona using Gemini 3.1 Pro vision | sensitive · approval-carded |
-| `run_tactic` | Run a saved growth tactic NOW by dispatching it to its agent as a one-off background activity, then return immediately (the work lands as a  | sensitive · approval-carded |
+| `run_tactic` | Run a saved Play (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry-run a Play  | sensitive · approval-carded |
 | `send_lead_draft` | Send an approved outreach draft to its lead via the company's Resend connection, then mark the draft 'sent' | outbound · human-approved per send |
 | `set_attention_budget` | Set the founder's attention budget — the maximum pending review cards before they are 'overloaded' (a whole number 1–100; default 7) — for a | sensitive · approval-carded |
 | `set_cos_preferences` | Replace THIS operator's full CoS preference block (or clear with empty) | write |
