@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:7a8977468b2e384e -->
+<!-- CATALOG-HASH:ceb75f19be3c45dd -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (239)
+## Tools (240)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -265,7 +265,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (41)
+### Workflows & agents (hire, run, schedule, approve) (42)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -294,6 +294,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_attention_directives` | List pending attention directives for THIS operator (optionally filtered by target_session_id) | read |
 | `list_attention_sessions` | List THIS operator's coding/builder sessions (status, goal, ask) | read |
 | `list_commitments` | List the user's active commitments | read |
+| `park_attention_sessions` | Park THIS operator's coding host sessions (N6 hygiene) | write |
 | `ratify_capability` | Persist the operator-CONFIRMED derived features (from derive_capability) into the product capability index as source='derived' | sensitive · approval-carded |
 | `remove_agent_activity` | Retire ONE activity from an agent's plan | sensitive · approval-carded |
 | `request_attention_spawn` | Request a NEW local coding session from voice/chat (tab spawn) | write |
