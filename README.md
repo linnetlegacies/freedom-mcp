@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:b5e0d5c47149ebe7 -->
+<!-- CATALOG-HASH:77359adfe531b9a9 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (242)
+## Tools (245)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -265,7 +265,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (44)
+### Workflows & agents (hire, run, schedule, approve) (47)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -295,11 +295,14 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_attention_directives` | List pending attention directives for THIS operator (optionally filtered by target_session_id) | read |
 | `list_attention_sessions` | List THIS operator's coding/builder sessions (status, goal, ask) | read |
 | `list_commitments` | List the user's active commitments | read |
-| `list_cos_lessons` | List THIS operator's CoS lessons (open + settled_keep by default) | read |
+| `list_cos_lessons` | List THIS operator's CoS lessons (open + settled_keep by default) for self-improve memory | read |
 | `park_attention_sessions` | Park THIS operator's coding host sessions (N6 hygiene) | write |
 | `ratify_capability` | Persist the operator-CONFIRMED derived features (from derive_capability) into the product capability index as source='derived' | sensitive · approval-carded |
 | `remove_agent_activity` | Retire ONE activity from an agent's plan | sensitive · approval-carded |
+| `request_attention_close` | Close an EXISTING coding tab on the operator machine for THIS operator | write |
+| `request_attention_focus` | Raise an EXISTING coding tab on the operator machine (OS focus) for THIS operator's desk | write |
 | `request_attention_spawn` | Request a NEW local coding session from voice/chat (tab spawn) | write |
+| `request_attention_transfer` | Transfer work for THIS operator: push an instruction to a target coding session (or spawn one), optionally close/park the source | write |
 | `run_quality_check` | Evaluate content or media against your ICP persona using Gemini 3.1 Pro vision | sensitive · approval-carded |
 | `run_tactic` | Run a saved Play (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry-run a Play  | sensitive · approval-carded |
 | `send_lead_draft` | Send an approved outreach draft to its lead via the company's Resend connection, then mark the draft 'sent' | outbound · human-approved per send |
