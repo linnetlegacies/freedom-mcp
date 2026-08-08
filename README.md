@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:77359adfe531b9a9 -->
+<!-- CATALOG-HASH:9080fba12559abf8 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (245)
+## Tools (247)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -199,7 +199,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `create_meta_ad_draft` | Create a complete Meta (Facebook/Instagram) ad draft — campaign + ad set + creative + ad — ALL in PAUSED state, spending nothing | sensitive · approval-carded |
 | `draft_tenet_from_signal` | Draft a company tenet (mission or vision) FROM the company's existing website, for the operator to ratify or edit — instead of asking them t | sensitive · approval-carded |
 | `generate_carousel` | Render a multi-slide image carousel + a LinkedIn-PDF from structured slide copy | write |
-| `generate_image_xai` | Generate or EDIT an image using xAI Imagine | sensitive · approval-carded |
+| `generate_image_xai` | Generate or EDIT an image using xAI Imagine (Quality Mode default — highest live API fidelity; closest to consumer Image 2.0 until API ships | sensitive · approval-carded |
 | `generate_vector_image` | Generate a native SVG vector image using Recraft V4 Pro Vector | sensitive · approval-carded |
 | `generate_video` | Generate a video clip for the company (xAI Imagine Video 1.5, 3 credits): text-to-video, image-to-video, multi-image reference (up to 7), or | sensitive · approval-carded |
 | `generate_video_veo` | Generate a high-fidelity cinematic video using Google Veo 3.1 (5 credits) | sensitive · approval-carded |
@@ -263,9 +263,9 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 
 | Tool | What it does | Tier |
 |---|---|---|
-| `list_my_work` | List shared work-graph items (lab_work_items) in the current company — the cross-session shared plan | read |
+| `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (47)
+### Workflows & agents (hire, run, schedule, approve) (49)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -296,7 +296,9 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_attention_sessions` | List THIS operator's coding/builder sessions (status, goal, ask) | read |
 | `list_commitments` | List the user's active commitments | read |
 | `list_cos_lessons` | List THIS operator's CoS lessons (open + settled_keep by default) for self-improve memory | read |
+| `list_operator_cos_events` | List THIS operator's recent CoS telemetry (operator_cos_events: open/speech/close, host_push actions, card_decide/confused/buggy) | read |
 | `park_attention_sessions` | Park THIS operator's coding host sessions (N6 hygiene) | write |
+| `propose_cos_content_atoms` | Marketing-by-construction: pack THIS operator's recent CoS telemetry into one-job content atoms (Proof/Story/Take · Wisdom/Proof factories) | read |
 | `ratify_capability` | Persist the operator-CONFIRMED derived features (from derive_capability) into the product capability index as source='derived' | sensitive · approval-carded |
 | `remove_agent_activity` | Retire ONE activity from an agent's plan | sensitive · approval-carded |
 | `request_attention_close` | Close an EXISTING coding tab on the operator machine for THIS operator | write |
