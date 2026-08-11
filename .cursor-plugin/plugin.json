@@ -1,0 +1,23 @@
+{
+  "name": "freedom-os",
+  "version": "1.0.0",
+  "description": "Connect to FreedomOS — finance, OKRs, customers, content, and AI agent teams. Sensitive and outbound actions ask you first.",
+  "author": {
+    "name": "Linnet Legacies",
+    "email": "tim@linnetlegacies.com"
+  },
+  "homepage": "https://getfreedomos.com",
+  "repository": "https://github.com/linnetlegacies/freedom-mcp",
+  "keywords": ["freedomos", "mcp", "business", "agents", "okr", "finance"],
+  "variables": {
+    "type": "object",
+    "properties": {
+      "FREEDOMOS_API_KEY": {
+        "type": "string",
+        "title": "Freedom OS personal key",
+        "description": "Create yours at https://getfreedomos.com/mcp (shown once; revocable anytime)."
+      }
+    },
+    "required": ["FREEDOMOS_API_KEY"]
+  }
+}

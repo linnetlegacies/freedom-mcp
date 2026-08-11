@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "freedom-os": {
+      "url": "https://twuluxmoognlwtmaoqgo.supabase.co/functions/v1/freedom-mcp",
+      "headers": {
+        "Authorization": "Bearer ${FREEDOMOS_API_KEY}"
+      }
+    }
+  }
+}
