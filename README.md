@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:9080fba12559abf8 -->
+<!-- CATALOG-HASH:3a65207e4d9051f8 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (247)
+## Tools (248)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -265,7 +265,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (49)
+### Workflows & agents (hire, run, schedule, approve) (50)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -278,7 +278,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `cancel_commitment` | Cancel a commitment without completing it — marks it cancelled | write |
 | `complete_commitment` | Mark a commitment as completed | write |
 | `confirm_mcp_approval` | Confirm a pending MCP capability approval by spoken (or chat) yes/no | write |
-| `create_attention_directive` | Queue a short instruction for an external coding/builder session (Grok terminal, Claude Code, or future FreedomOS runtime) | write |
+| `create_attention_directive` | Queue a short instruction for an external agent session — a coding/builder host (Grok terminal, Claude Code) or a Grok Bot desktop chat agen | write |
 | `create_play_from_activity` | Draft a Play (growth_tactics with steps + human review) from an oversized agent activity | sensitive · approval-carded |
 | `decide_command_center_item` | Approve or deny a Command Center card | sensitive · approval-carded |
 | `derive_capability` | Scan the company's connected source code (its GitHub repo, via the Pulse connection in Smart Tools) and DRAFT a capability list — shipped FE | sensitive · approval-carded |
@@ -305,6 +305,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `request_attention_focus` | Raise an EXISTING coding tab on the operator machine (OS focus) for THIS operator's desk | write |
 | `request_attention_spawn` | Request a NEW local coding session from voice/chat (tab spawn) | write |
 | `request_attention_transfer` | Transfer work for THIS operator: push an instruction to a target coding session (or spawn one), optionally close/park the source | write |
+| `route_operator_hud` | Route the operator's desk HUD to a view they asked to see — open a door (money, sessions, home, roster, loadout, upgrades), lock a company z | write |
 | `run_quality_check` | Evaluate content or media against your ICP persona using Gemini 3.1 Pro vision | sensitive · approval-carded |
 | `run_tactic` | Run a saved Play (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry-run a Play  | sensitive · approval-carded |
 | `send_lead_draft` | Send an approved outreach draft to its lead via the company's Resend connection, then mark the draft 'sent' | outbound · human-approved per send |
