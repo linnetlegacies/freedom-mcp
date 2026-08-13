@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:5e2742b018c2c369 -->
+<!-- CATALOG-HASH:3a65207e4d9051f8 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (249)
+## Tools (248)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -49,7 +49,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (121)
+### Business data & workspace (finance, OKRs, customers, leads, content) (120)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -122,7 +122,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_features` | List all product features in the Feature Index | read |
 | `list_inbox` | List pending ideas in the user's Ideas | read |
 | `list_knowledge` | List all knowledge files and folders saved for this company | read |
-| `list_leads` | List the actual leads (id, name, email) in the current company, optionally filtered to one exact segment tag | read |
 | `list_pipeline_learnings` | Show the style guide and recent revision history for a content pipeline | read |
 | `list_pipelines` | List all content pipelines (changelogs, team updates, reports, customer newsletters, social posts) | read |
 | `list_scheduled_reports` | List all scheduled reports for this company, optionally filtered by agent | read |
