@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:ffa43f4100f94eb0 -->
+<!-- CATALOG-HASH:a752e67b05d701fc -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,15 +35,14 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (250)
+## Tools (249)
 
-### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
+### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `challenge_as_customer` | Run your deliverable past the company's customer truth: REAL Customer Evidence first (when stored), then generated ICP as labeled simulation | read |
 | `deliberate` | Run an adversarial deliberation on a decision | read |
-| `derive_from_website` | SPIKE tool (.agent/design-docs/2026-07-09-magical-onboarding-buildout-mode.md, "The Assignment") | sensitive · approval-carded |
 | `get_product_context` | Returns THIS company's product truth — the operator-authored offer + the SHIPPED, marketable capabilities (what the product does, and what i | read |
 | `recalibrate_agent_jd` | Regenerate an agent's JD using fresh company context | sensitive · approval-carded |
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
