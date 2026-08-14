@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:ffa43f4100f94eb0 -->
+<!-- CATALOG-HASH:e7f71b8dd0717291 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (250)
+## Tools (249)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -49,7 +49,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (121)
+### Business data & workspace (finance, OKRs, customers, leads, content) (120)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -111,7 +111,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_transactions` | List company transactions with optional filters | read |
 | `get_voice_profile` | Get the company's VOICE PROFILE — the operator's real writing voice the drafting agents ground on (style descriptor, in-voice DOs, out-of-vo | read |
 | `grant_agent_tool` | Grant ONE specific tool to an agent's loadout (tool_access) | sensitive · approval-carded |
-| `hire_agent` | DEPRECATED: Redirects to interview_for_hire | sensitive · approval-carded |
 | `hire_agent_with_context` | Hire a new specialist with full hiring context gathered from the interview | sensitive · approval-carded |
 | `ingest_voice_corpus` | Build or refresh the company's voice profile from REAL writing | sensitive · approval-carded |
 | `interview_for_hire` | Research the company and return everything needed to propose a specialist hire in ONE shot | sensitive · approval-carded |
@@ -256,7 +255,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `attach_product_request_pr` | Attach an existing freedom-ai GitHub PR URL to a product request and **resolve it by construction** (card → approved, product_status=fixed,  | write |
 | `claim_product_request_for_builder` | Mint a paste-ready Builder claim recipe for a FreedomOS product request so a host coding agent (Grok Build / Claude Code) with Harness + gst | write |
 | `get_product_request_status` | Check status of a product request you previously filed with submit_product_request for your operator | read |
-| `open_product_request_draft_pr` | Open a draft GitHub PR shell for an approved FreedomOS product request (work ticket branch, no auto-code) | write |
+| `open_product_request_draft_pr` | MANUAL ONLY — open a draft GitHub PR shell for an approved FreedomOS product request | write |
 | `report_feedback` | Report an error, issue, observation, or suggestion you encountered during your work | write |
 | `scan_product_signals` | Scan a company for product-system bugs and unlocks (failed/timed-out activity runs, blocked_on_you cards, open error agent_feedback) and ret | write |
 | `submit_product_request` | File a bug report or feature request about FreedomOS the platform (FO UI, MCP tools, Command Center, auth, connectors, FO agents runtime) wi | write |
