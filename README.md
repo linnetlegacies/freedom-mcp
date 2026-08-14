@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:e7f71b8dd0717291 -->
+<!-- CATALOG-HASH:a752e67b05d701fc -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -37,19 +37,18 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 
 ## Tools (249)
 
-### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
+### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `challenge_as_customer` | Run your deliverable past the company's customer truth: REAL Customer Evidence first (when stored), then generated ICP as labeled simulation | read |
 | `deliberate` | Run an adversarial deliberation on a decision | read |
-| `derive_from_website` | SPIKE tool (.agent/design-docs/2026-07-09-magical-onboarding-buildout-mode.md, "The Assignment") | sensitive · approval-carded |
 | `get_product_context` | Returns THIS company's product truth — the operator-authored offer + the SHIPPED, marketable capabilities (what the product does, and what i | read |
 | `recalibrate_agent_jd` | Regenerate an agent's JD using fresh company context | sensitive · approval-carded |
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (120)
+### Business data & workspace (finance, OKRs, customers, leads, content) (121)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -111,6 +110,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_transactions` | List company transactions with optional filters | read |
 | `get_voice_profile` | Get the company's VOICE PROFILE — the operator's real writing voice the drafting agents ground on (style descriptor, in-voice DOs, out-of-vo | read |
 | `grant_agent_tool` | Grant ONE specific tool to an agent's loadout (tool_access) | sensitive · approval-carded |
+| `hire_agent` | DEPRECATED: Redirects to interview_for_hire | sensitive · approval-carded |
 | `hire_agent_with_context` | Hire a new specialist with full hiring context gathered from the interview | sensitive · approval-carded |
 | `ingest_voice_corpus` | Build or refresh the company's voice profile from REAL writing | sensitive · approval-carded |
 | `interview_for_hire` | Research the company and return everything needed to propose a specialist hire in ONE shot | sensitive · approval-carded |
