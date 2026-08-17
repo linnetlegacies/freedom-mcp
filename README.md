@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:a955684c7350fbb3 -->
+<!-- CATALOG-HASH:0e47ee431ebfcba5 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (251)
+## Tools (250)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -48,7 +48,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (123)
+### Business data & workspace (finance, OKRs, customers, leads, content) (121)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -74,8 +74,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `delete_knowledge` | Archive a knowledge file by slug (soft delete) | write |
 | `delete_objective` | Archive an objective and its key results (safe delete — recoverable, never hard-deleted) | write |
 | `delete_tactic` | Archive a tactic (safe delete - recoverable) | write |
-| `enroll_by_segment` | Enroll every contactable lead carrying one exact segment tag into an outreach sequence — one call, no pasted address list | write |
-| `enroll_leads_in_sequence` | Enroll specific leads (by email or name) into an outreach sequence — the same enrollment the Leads tab Enroll button performs, with the same | write |
 | `generate_key_results` | Generate intelligent, context-aware key result suggestions for an objective | write |
 | `generate_tactics` | Generate AND save 5 grounded growth tactics for a 4-F category, composed from the company mission/vision, OKRs, and ICP customer profile | write |
 | `get_actuals_vs_budget` | Compare actual financial results to budget/projections | read |
@@ -268,7 +266,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (50)
+### Workflows & agents (hire, run, schedule, approve) (51)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -299,6 +297,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_attention_sessions` | List THIS operator's coding/builder sessions (status, goal, ask) | read |
 | `list_commitments` | List the user's active commitments | read |
 | `list_cos_lessons` | List THIS operator's CoS lessons (open + settled_keep by default) for self-improve memory | read |
+| `list_grok_bot_conversations` | List THIS operator's Grok Bot desktop chat seats (not Terminal/ACP coding Groks) with live/quiet/gone labels and last turns | read |
 | `list_operator_cos_events` | List THIS operator's recent CoS telemetry (operator_cos_events: open/speech/close, host_push actions, card_decide/confused/buggy) | read |
 | `park_attention_sessions` | Park THIS operator's coding host sessions (N6 hygiene) | write |
 | `propose_cos_content_atoms` | Marketing-by-construction: pack THIS operator's recent CoS telemetry into one-job content atoms (Proof/Story/Take · Wisdom/Proof factories) | read |
