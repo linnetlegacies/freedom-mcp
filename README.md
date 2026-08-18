@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:918b99c7badb8b28 -->
+<!-- CATALOG-HASH:61f88b8e26e20392 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (252)
+## Tools (253)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -205,7 +205,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `generate_image_xai` | Generate or EDIT an image using xAI Imagine (Quality Mode default — highest live API fidelity; closest to consumer Image 2.0 until API ships | sensitive · approval-carded |
 | `generate_vector_image` | Generate a native SVG vector image using Recraft V4 Pro Vector | sensitive · approval-carded |
 | `generate_video` | Generate a video clip for the company (xAI Imagine Video 1.5, 3 credits): text-to-video, image-to-video, multi-image reference (up to 7), or | sensitive · approval-carded |
-| `generate_video_veo` | Generate a high-fidelity cinematic video using Google Veo 3.1 (5 credits) | sensitive · approval-carded |
+| `generate_video_veo` | DEPRECATED: Archived video door for operators and agents | sensitive · approval-carded |
 | `get_ads_performance` | Get Meta ads results: spend, impressions, clicks, CTR, CPC, CPM, reach, conversions (actions), cost per action, and purchase ROAS — at accou | read |
 | `get_cac_strategy` | THE tool for any question about this company's CAC strategy or LTV:CAC ratio — e.g | read |
 | `get_decision_ledger` | THE tool for what the Freedom Engine has DECIDED for this company — the audit feed of every autonomous decision: what it auto-ran, what it t | read |
@@ -268,7 +268,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (51)
+### Workflows & agents (hire, run, schedule, approve) (52)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -294,6 +294,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_command_center_items` | List Command Center cards for the company (pending by default; pass status_filter for approved/denied/snoozed/all) | read |
 | `get_cos_preferences` | Read THIS operator's saved CoS speech/taste preferences (user-scoped) | read |
 | `get_executive_landscape` | Get a cross-domain view of everything on the user's plate | read |
+| `get_factory_floor` | Read the Mac desk factory snapshot for THIS operator (ACP up/down, last launcher event, official workers vs leftover UUID/TUI tabs, Terminal | read |
 | `get_team_pulse` | Get a real-time snapshot of team output volume, pending approvals, and founder load | read |
 | `list_attention_directives` | List pending attention directives for THIS operator (optionally filtered by target_session_id) | read |
 | `list_attention_sessions` | List THIS operator's coding/builder sessions (status, goal, ask) | read |
