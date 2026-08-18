@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:6c945e547c1db8c0 -->
+<!-- CATALOG-HASH:918b99c7badb8b28 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (250)
+## Tools (252)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -48,12 +48,13 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (122)
+### Business data & workspace (finance, OKRs, customers, leads, content) (123)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `add_customer_evidence` | Store one piece of REAL Customer Evidence for this company (paying-customer words/behavior, telemetry, review, operator-relayed quote, prosp | write |
 | `add_lead` | Add a new lead to the Leads CRM (crm_leads) — the table the Leads tab, triage, and outreach all use | write |
+| `add_team_member` | Add one human teammate to the current company by email | sensitive · approval-carded |
 | `analyze_team_needs` | Gather comprehensive team and company context for talent strategy analysis | read |
 | `approve_pipeline_item` | Approve a content item for publishing — or REJECT it with approved:false | sensitive · approval-carded |
 | `archive_pipeline` | Archive (or restore) a content pipeline — flips is_active off/on, mirroring the Content Pipeline UI's soft-delete/restore | write |
@@ -190,7 +191,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (53)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (54)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -204,6 +205,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `generate_image_xai` | Generate or EDIT an image using xAI Imagine (Quality Mode default — highest live API fidelity; closest to consumer Image 2.0 until API ships | sensitive · approval-carded |
 | `generate_vector_image` | Generate a native SVG vector image using Recraft V4 Pro Vector | sensitive · approval-carded |
 | `generate_video` | Generate a video clip for the company (xAI Imagine Video 1.5, 3 credits): text-to-video, image-to-video, multi-image reference (up to 7), or | sensitive · approval-carded |
+| `generate_video_veo` | Generate a high-fidelity cinematic video using Google Veo 3.1 (5 credits) | sensitive · approval-carded |
 | `get_ads_performance` | Get Meta ads results: spend, impressions, clicks, CTR, CPC, CPM, reach, conversions (actions), cost per action, and purchase ROAS — at accou | read |
 | `get_cac_strategy` | THE tool for any question about this company's CAC strategy or LTV:CAC ratio — e.g | read |
 | `get_decision_ledger` | THE tool for what the Freedom Engine has DECIDED for this company — the audit feed of every autonomous decision: what it auto-ran, what it t | read |
