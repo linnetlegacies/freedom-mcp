@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:813f25cf750550f7 -->
+<!-- CATALOG-HASH:fc51f82c629441c3 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (275)
+## Tools (280)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -191,7 +191,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (75)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (80)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -218,7 +218,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_search_performance` | Get search performance data from Google Search Console — queries, clicks, impressions, CTR, and average position | read |
 | `get_shopify_customer_stats` | Get an AGGREGATE Shopify customer count only — a single number, optionally filtered by `query` (Shopify customer search syntax, e.g | read |
 | `get_shopify_order` | Get one Shopify order's detail by id (gid://shopify/Order/...): line items (title, quantity, price), totals, and financial/fulfillment statu | read |
-| `get_shopify_product` | Get one Shopify product's full detail by id (gid://shopify/Product/...): description, status, tags, and its variants with price and inventor | read |
+| `get_shopify_product` | Get one Shopify product's full detail by id (gid://shopify/Product/...): description, status, tags, updatedAt (pass it as expected_updated_a | read |
 | `get_shopify_shop` | Get the connected Shopify store's profile: name, primary domain, currency, plan, and contact email | read |
 | `get_shopify_theme_asset` | Get one Shopify theme file's raw source code (Liquid/CSS/JS/JSON, e.g | read |
 | `get_site_list` | List all verified sites/properties in Google Search Console | read |
@@ -252,6 +252,9 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `posthog_query_trends` | Query event trends from PostHog (pageviews, signups, DAU, etc | read |
 | `preview_meta_ad` | Get a facebook.com preview link for a drafted Meta ad, so the user can see exactly what it will look like before deciding to activate | read |
 | `promote_corpus_to_content` | Mint the NEXT content angle(s) from the company's corpus into content_ideas + Command Center cards | write |
+| `publish_shopify_page` | Publish an UNPUBLISHED Shopify page live to buyers | outbound · human-approved per send |
+| `publish_shopify_product` | Publish a DRAFT Shopify product LIVE to buyers (status → ACTIVE) | outbound · human-approved per send |
+| `publish_shopify_theme` | Publish an unpublished Shopify theme as the LIVE storefront — this swaps the ENTIRE website buyers see in one step | outbound · human-approved per send |
 | `query_sme` | Query an external Subject Matter Expert (SME) AI for verified domain knowledge | read |
 | `read_web_page` | Read a web page and return its content as clean markdown | sensitive · approval-carded |
 | `remove_background` | Remove the background from an existing image, leaving the main subject isolated on a transparent background (PNG). | sensitive · approval-carded |
@@ -265,6 +268,8 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_revenue_channels` | Declare where this business makes money — stripe, xero, shopify, amazon, ebay, manual invoicing, "none_yet" (pre-revenue), or other (name it | sensitive · approval-carded |
 | `set_shopify_variant_price_draft` | Set a variant's price (and optionally compare-at price) on a DRAFT Shopify product | sensitive · approval-carded |
 | `sync_stripe_conversions` | Record won deals from the company's connected Stripe so lead→paid conversion becomes measurable | write |
+| `unpublish_shopify_product` | Take a LIVE Shopify product off the storefront (status ACTIVE → DRAFT) | outbound · human-approved per send |
+| `update_live_shopify_product` | Edit a LIVE Shopify product's title, description, or tags — changes buyers see immediately | outbound · human-approved per send |
 | `update_meta_ad_budget` | Change the daily budget of a Meta ad set (account currency, major units; structural cap applies) | outbound · human-approved per send |
 | `update_shopify_page_draft` | Update an UNPUBLISHED Shopify page's title or body | sensitive · approval-carded |
 | `update_shopify_product_draft` | Update a DRAFT (or archived) Shopify product's title, description, or tags | sensitive · approval-carded |
