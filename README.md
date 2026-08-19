@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:1e0dd88de7a1968a -->
+<!-- CATALOG-HASH:112b7ec219c61be6 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (254)
+## Tools (259)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -191,7 +191,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (54)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (59)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -212,6 +212,9 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_page_performance` | Get per-page search performance from Google Search Console — which pages get the most clicks, impressions, and best positions | read |
 | `get_release_ledger` | THE tool for "did this piece ship on this channel" — reads the cross-channel Release Ledger, the queryable truth for every confirmed send (x | read |
 | `get_search_performance` | Get search performance data from Google Search Console — queries, clicks, impressions, CTR, and average position | read |
+| `get_shopify_order` | Get one Shopify order's detail by id (gid://shopify/Order/...): line items (title, quantity, price), totals, and financial/fulfillment statu | read |
+| `get_shopify_product` | Get one Shopify product's full detail by id (gid://shopify/Product/...): description, status, tags, and its variants with price and inventor | read |
+| `get_shopify_shop` | Get the connected Shopify store's profile: name, primary domain, currency, plan, and contact email | read |
 | `get_site_list` | List all verified sites/properties in Google Search Console | read |
 | `get_sitemaps` | List all sitemaps submitted to Google Search Console for a property — shows submission status, indexing coverage, errors, and warnings | read |
 | `get_stripe_metrics` | Get Stripe metrics including average/median LTV, MRR, churn rate, active subscriptions, and an AI-recommended CAC target derived from the co | read |
@@ -225,6 +228,8 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_ad_campaigns` | List campaigns in a Meta ad account: status, objective, budgets (major currency units), and schedule | read |
 | `list_corpus_inventory` | List what content material this company already has (knowledge folders like book-1/canon, SME Expert rules, idea_inbox assigned to the works | read |
 | `list_integrations` | List ALL connected external integrations — MCP servers, OAuth accounts (Google, X, ...), and direct integrations (Xero accounting, Stripe) — | read |
+| `list_shopify_orders` | List recent orders from the connected Shopify store — order name/number, total, financial + fulfillment status, and created date | read |
+| `list_shopify_products` | List products from the connected Shopify store — title, status (ACTIVE/DRAFT/ARCHIVED), total inventory, and price range | read |
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
 | `originate_content_ideas` | Surface CONTENT IDEAS from the company's own corpus and land them in the content pool + cards (same owner as promote_corpus_to_content) | write |
