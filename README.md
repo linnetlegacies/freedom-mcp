@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:61f88b8e26e20392 -->
+<!-- CATALOG-HASH:1e0dd88de7a1968a -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (253)
+## Tools (254)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -268,7 +268,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (52)
+### Workflows & agents (hire, run, schedule, approve) (53)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -304,6 +304,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_operator_cos_events` | List THIS operator's recent CoS telemetry (operator_cos_events: open/speech/close, host_push actions, card_decide/confused/buggy) | read |
 | `park_attention_sessions` | Park THIS operator's coding host sessions (N6 hygiene) | write |
 | `propose_cos_content_atoms` | Marketing-by-construction: pack THIS operator's recent CoS telemetry into one-job content atoms (Proof/Story/Take · Wisdom/Proof factories) | read |
+| `propose_talk_seeds` | Watch this company's recent activity and pin "Talk about this?" seeds on the Board | write |
 | `ratify_capability` | Persist the operator-CONFIRMED derived features (from derive_capability) into the product capability index as source='derived' | sensitive · approval-carded |
 | `remove_agent_activity` | Retire ONE activity from an agent's plan | sensitive · approval-carded |
 | `request_attention_close` | Close an EXISTING coding tab on the operator machine for THIS operator | write |
