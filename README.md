@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:3efbeb7cb0ae24a8 -->
+<!-- CATALOG-HASH:813f25cf750550f7 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (272)
+## Tools (275)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -191,7 +191,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (72)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (75)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -201,6 +201,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `check_my_inbox` | Check your own agent email inbox (receive-only) for messages sent to your @agents.getfreedomos.com address, and read them | sensitive · approval-carded |
 | `create_meta_ad_draft` | Create a complete Meta (Facebook/Instagram) ad draft — campaign + ad set + creative + ad — ALL in PAUSED state, spending nothing | sensitive · approval-carded |
 | `create_shopify_discount_code` | Create a CODE discount in the connected Shopify store (percentage off, applies when a buyer enters the code — inert until the code is shared | sensitive · approval-carded |
+| `create_shopify_page` | Create a new page in the connected Shopify store as an UNPUBLISHED draft (never live — publishing to buyers is a separate approval-gated ste | sensitive · approval-carded |
 | `create_shopify_product` | Create a new product in the connected Shopify store as a DRAFT (never live — publishing to buyers is a separate approval-gated step) | sensitive · approval-carded |
 | `draft_tenet_from_signal` | Draft a company tenet (mission or vision) FROM the company's existing website, for the operator to ratify or edit — instead of asking them t | sensitive · approval-carded |
 | `generate_carousel` | Render a multi-slide image carousel + a LinkedIn-PDF from structured slide copy | write |
@@ -265,7 +266,9 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_shopify_variant_price_draft` | Set a variant's price (and optionally compare-at price) on a DRAFT Shopify product | sensitive · approval-carded |
 | `sync_stripe_conversions` | Record won deals from the company's connected Stripe so lead→paid conversion becomes measurable | write |
 | `update_meta_ad_budget` | Change the daily budget of a Meta ad set (account currency, major units; structural cap applies) | outbound · human-approved per send |
+| `update_shopify_page_draft` | Update an UNPUBLISHED Shopify page's title or body | sensitive · approval-carded |
 | `update_shopify_product_draft` | Update a DRAFT (or archived) Shopify product's title, description, or tags | sensitive · approval-carded |
+| `upsert_shopify_theme_file` | Create or overwrite one file (Liquid/CSS/JS/JSON source code) in an UNPUBLISHED Shopify theme — this is how agents build the storefront webs | sensitive · approval-carded |
 | `vectorize_image` | Convert an existing raster image (PNG, JPG, WebP) to SVG vector format using Recraft | sensitive · approval-carded |
 
 ### Meta & discovery (7)
