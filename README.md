@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:fc51f82c629441c3 -->
+<!-- CATALOG-HASH:6c4e0cf62a254e0d -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (280)
+## Tools (282)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -191,7 +191,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (80)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (82)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -228,12 +228,14 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_top_customers` | Get top customers ranked by lifetime value (LTV) or revenue from Stripe | read |
 | `get_x_post_metrics` | Get engagement metrics for a tweet on X (Twitter) | read |
 | `get_xero_report` | Get a LIVE financial report straight from the company's connected Xero ledger: ProfitAndLoss, BalanceSheet, BankSummary, TrialBalance, or Ex | read |
+| `ingest_x_post_to_pipeline` | Put one of the operator's already-posted X items into the Media pipeline as the human | write |
 | `inspect_url` | Inspect a URL in Google Search Console — check indexing status, crawl errors, mobile usability, and rich results | read |
 | `invoke_integration` | Execute a tool on a connected MCP integration | outbound · human-approved per send |
 | `list_ad_accounts` | List the Meta (Facebook/Instagram) ad accounts on this company's connection, with status, currency, lifetime spend, and spend cap | read |
 | `list_ad_campaigns` | List campaigns in a Meta ad account: status, objective, budgets (major currency units), and schedule | read |
 | `list_corpus_inventory` | List what content material this company already has (knowledge folders like book-1/canon, SME Expert rules, idea_inbox assigned to the works | read |
 | `list_integrations` | List ALL connected external integrations — MCP servers, OAuth accounts (Google, X, ...), and direct integrations (Xero accounting, Stripe) — | read |
+| `list_operator_x_posts` | List this company's recent original X posts from the connected account — no URL paste | read |
 | `list_shopify_content` | List the connected Shopify store's online-store pages (title, handle, published status) and blogs (title, handle) | read |
 | `list_shopify_discounts` | List discount codes and automatic discounts configured on the connected Shopify store — id, discount type, title, and status (ACTIVE/EXPIRED | read |
 | `list_shopify_files` | List media files (images and generic files) uploaded to the connected Shopify store's file library — alt text and URL | read |
