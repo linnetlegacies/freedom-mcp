@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:6c4e0cf62a254e0d -->
+<!-- CATALOG-HASH:fae1a96e2eea9f10 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (282)
+## Tools (283)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -67,17 +67,17 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `create_key_result` | Add a key result to an objective (the KR in OKR) | write |
 | `create_objective` | Create a new objective (the O in OKR) | write |
 | `create_pipeline` | Create a new content pipeline to automate content creation | write |
-| `create_tactic` | Create a new growth tactic for the company | write |
+| `create_tactic` | Create a Play or Playbook for the company (growth_tactics — the Plays rail) | write |
 | `deactivate_agent` | Deactivate (archive) an AI agent/specialist from the team | sensitive · approval-carded |
 | `delete_icp` | Delete a saved Ideal Customer Profile (ICP) | sensitive · approval-carded |
 | `delete_idea` | Delete an idea from Ideas | write |
 | `delete_key_result` | Archive a key result (safe delete — recoverable, never hard-deleted) | write |
 | `delete_knowledge` | Archive a knowledge file by slug (soft delete) | write |
 | `delete_objective` | Archive an objective and its key results (safe delete — recoverable, never hard-deleted) | write |
-| `delete_tactic` | Archive a tactic (safe delete - recoverable) | write |
+| `delete_tactic` | Archive a Play or Playbook (safe delete — recoverable) | write |
 | `enroll_by_segment` | Enroll every contactable lead carrying one exact segment tag into an outreach sequence — one call, no pasted address list | write |
 | `generate_key_results` | Generate intelligent, context-aware key result suggestions for an objective | write |
-| `generate_tactics` | Generate AND save 5 grounded growth tactics for a 4-F category, composed from the company mission/vision, OKRs, and ICP customer profile | write |
+| `generate_tactics` | Generate AND save 5 grounded Plays for a 4-F category, composed from the company mission/vision, OKRs, and ICP | write |
 | `get_actuals_vs_budget` | Compare actual financial results to budget/projections | read |
 | `get_agent_outcome_panel` | Per-agent "what did the compute buy" facts for the operator: trailing-14-day credits, runs (with self-maintenance share), human-accepted vs  | read |
 | `get_artifacts` | Get saved artifacts for the company | read |
@@ -106,7 +106,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_reader_profile` | Get a person's OPERATOR FLUENCY (reader profile) — overall character level + per-topic strengths (novice/fluent/expert) | read |
 | `get_routing_overview` | See how agent output is currently routed — who is responsible for which domains in the company. | read |
 | `get_setup_state` | Get the company's core-tenet setup completeness — mission, vision, OKRs, finances, ICP, branding, team, integrations, product, revenue chann | read |
-| `get_tactics` | List tactics for the company | read |
+| `get_tactics` | List Plays and Playbooks for the company (growth_tactics — the Plays rail) | read |
 | `get_team_members` | Get all team members for the current company | read |
 | `get_team_roster` | Get complete AI team roster with roles, specialties, and capacity info | read |
 | `get_transactions` | List company transactions with optional filters | read |
@@ -172,7 +172,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_pipeline_style_guide` | Manually add a style rule to a pipeline | write |
 | `update_projection` | Update projected values for specific accounts and months in the financial plan | write |
 | `update_reader_profile` | Update a person's OPERATOR FLUENCY (baseline + per-topic strengths that follow them across companies) | write |
-| `update_tactic` | Update an existing tactic | write |
+| `update_tactic` | Update an existing Play or Playbook (growth_tactics) | write |
 | `update_transaction_note` | Add or update a note on a specific transaction | write |
 | `update_voice_profile` | Update the company's voice profile | write |
 
@@ -191,7 +191,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (82)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (83)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -272,6 +272,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `sync_stripe_conversions` | Record won deals from the company's connected Stripe so lead→paid conversion becomes measurable | write |
 | `unpublish_shopify_product` | Take a LIVE Shopify product off the storefront (status ACTIVE → DRAFT) | outbound · human-approved per send |
 | `update_live_shopify_product` | Edit a LIVE Shopify product's title, description, or tags — changes buyers see immediately | outbound · human-approved per send |
+| `update_live_shopify_theme_file` | Overwrite one existing file (Liquid/CSS/JS/JSON) on the LIVE (MAIN) Shopify theme — buyers render the change immediately | outbound · human-approved per send |
 | `update_meta_ad_budget` | Change the daily budget of a Meta ad set (account currency, major units; structural cap applies) | outbound · human-approved per send |
 | `update_shopify_page_draft` | Update an UNPUBLISHED Shopify page's title or body | sensitive · approval-carded |
 | `update_shopify_product_draft` | Update a DRAFT (or archived) Shopify product's title, description, or tags | sensitive · approval-carded |
@@ -341,7 +342,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `request_attention_transfer` | Transfer work for THIS operator: push an instruction to a target coding session (or spawn one), optionally close/park the source | write |
 | `route_operator_hud` | Route the operator's desk HUD to a view they asked to see — open a door (money, sessions, home, roster, loadout, upgrades), lock a company z | write |
 | `run_quality_check` | Evaluate content or media against your ICP persona using Gemini 3.1 Pro vision | sensitive · approval-carded |
-| `run_tactic` | Run a saved Play (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry-run a Play  | sensitive · approval-carded |
+| `run_tactic` | Run a saved Play or Playbook (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry | sensitive · approval-carded |
 | `send_lead_draft` | Send an approved outreach draft to its lead via the company's Resend connection, then mark the draft 'sent' | outbound · human-approved per send |
 | `set_attention_budget` | Set the founder's attention budget — the maximum pending review cards before they are 'overloaded' (a whole number 1–100; default 7) — for a | sensitive · approval-carded |
 | `set_cos_preferences` | Replace THIS operator's full CoS preference block (or clear with empty) | write |
