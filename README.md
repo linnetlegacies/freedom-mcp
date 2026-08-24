@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:6d5757d0ad7f4a73 -->
+<!-- CATALOG-HASH:3e9fdf1f13113e2f -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (296)
+## Tools (298)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -48,7 +48,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (128)
+### Business data & workspace (finance, OKRs, customers, leads, content) (123)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -58,7 +58,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `analyze_team_needs` | Gather comprehensive team and company context for talent strategy analysis | read |
 | `approve_pipeline_item` | Approve a content item for publishing — or REJECT it with approved:false | sensitive · approval-carded |
 | `archive_pipeline` | Archive (or restore) a content pipeline — flips is_active off/on, mirroring the Content Pipeline UI's soft-delete/restore | write |
-| `archive_playbook` | Archive a Playbook (safe delete — recoverable) | write |
 | `capture_idea` | Capture an idea into the user's Ideas | write |
 | `clear_pipeline_learnings` | Reset all learnings for a pipeline and start fresh | write |
 | `configure_dashboard` | Create or update a widget on your agent dashboard | write |
@@ -68,19 +67,17 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `create_key_result` | Add a key result to an objective (the KR in OKR) | write |
 | `create_objective` | Create a new objective (the O in OKR) | write |
 | `create_pipeline` | Create a new content pipeline to automate content creation | write |
-| `create_playbook` | Create a Playbook for the company (growth_tactics — the Plays rail) | write |
-| `create_tactic` | DEPRECATED: Use create_playbook | write |
+| `create_tactic` | Create a Play or Playbook for the company (growth_tactics — the Plays rail) | write |
 | `deactivate_agent` | Deactivate (archive) an AI agent/specialist from the team | sensitive · approval-carded |
 | `delete_icp` | Delete a saved Ideal Customer Profile (ICP) | sensitive · approval-carded |
 | `delete_idea` | Delete an idea from Ideas | write |
 | `delete_key_result` | Archive a key result (safe delete — recoverable, never hard-deleted) | write |
 | `delete_knowledge` | Archive a knowledge file by slug (soft delete) | write |
 | `delete_objective` | Archive an objective and its key results (safe delete — recoverable, never hard-deleted) | write |
-| `delete_tactic` | DEPRECATED: Use archive_playbook | write |
+| `delete_tactic` | Archive a Play or Playbook (safe delete — recoverable) | write |
 | `enroll_by_segment` | Enroll every contactable lead carrying one exact segment tag into an outreach sequence — one call, no pasted address list | write |
 | `generate_key_results` | Generate intelligent, context-aware key result suggestions for an objective | write |
-| `generate_playbooks` | Generate AND save 5 grounded Playbooks for a 4-F category, composed from the company mission/vision, OKRs, and ICP | write |
-| `generate_tactics` | DEPRECATED: Use generate_playbooks | write |
+| `generate_tactics` | Generate AND save 5 grounded Plays for a 4-F category, composed from the company mission/vision, OKRs, and ICP | write |
 | `get_actuals_vs_budget` | Compare actual financial results to budget/projections | read |
 | `get_agent_outcome_panel` | Per-agent "what did the compute buy" facts for the operator: trailing-14-day credits, runs (with self-maintenance share), human-accepted vs  | read |
 | `get_artifacts` | Get saved artifacts for the company | read |
@@ -109,7 +106,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_reader_profile` | Get a person's OPERATOR FLUENCY (reader profile) — overall character level + per-topic strengths (novice/fluent/expert) | read |
 | `get_routing_overview` | See how agent output is currently routed — who is responsible for which domains in the company. | read |
 | `get_setup_state` | Get the company's core-tenet setup completeness — mission, vision, OKRs, finances, ICP, branding, team, integrations, product, revenue chann | read |
-| `get_tactics` | DEPRECATED: Use list_playbooks | read |
+| `get_tactics` | List Plays and Playbooks for the company (growth_tactics — the Plays rail) | read |
 | `get_team_members` | Get all team members for the current company | read |
 | `get_team_roster` | Get complete AI team roster with roles, specialties, and capacity info | read |
 | `get_transactions` | List company transactions with optional filters | read |
@@ -129,7 +126,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_leads` | List the actual leads (id, name, email) in the current company, optionally filtered to one exact segment tag | read |
 | `list_pipeline_learnings` | Show the style guide and recent revision history for a content pipeline | read |
 | `list_pipelines` | List all content pipelines (changelogs, team updates, reports, customer newsletters, social posts) | read |
-| `list_playbooks` | List Playbooks for the company (growth_tactics — the Plays rail) | read |
 | `list_scheduled_reports` | List all scheduled reports for this company, optionally filtered by agent | read |
 | `list_segments` | List the live lead segment tags for the current company with server-computed lead counts (excluding do-not-contact, archived, and test leads | read |
 | `list_shared_with_me` | List all knowledge files and folders that have been shared with the current user | read |
@@ -174,10 +170,9 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_objective` | Update an existing objective's title, description, or year | write |
 | `update_pipeline` | Update an existing content pipeline | write |
 | `update_pipeline_style_guide` | Manually add a style rule to a pipeline | write |
-| `update_playbook` | Update an existing Playbook (growth_tactics) | write |
 | `update_projection` | Update projected values for specific accounts and months in the financial plan | write |
 | `update_reader_profile` | Update a person's OPERATOR FLUENCY (baseline + per-topic strengths that follow them across companies) | write |
-| `update_tactic` | DEPRECATED: Use update_playbook | write |
+| `update_tactic` | Update an existing Play or Playbook (growth_tactics) | write |
 | `update_transaction_note` | Add or update a note on a specific transaction | write |
 | `update_voice_profile` | Update the company's voice profile | write |
 
@@ -196,7 +191,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (90)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (98)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -256,11 +251,19 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
 | `originate_content_ideas` | Surface CONTENT IDEAS from the company's own corpus and land them in the content pool + cards (same owner as promote_corpus_to_content) | write |
+| `posthog_create_vision_scanner` | Create a Replay Vision scanner on the connected PostHog project | write |
+| `posthog_delete_vision_scanner` | Delete a Replay Vision scanner and its observations tab (PostHog $recording_observed events stay in the event stream) | write |
+| `posthog_get_vision_observation` | Get one Replay Vision observation (structured result + model reasoning) | read |
+| `posthog_get_vision_scanner` | Get one Replay Vision scanner by id, including its prompt/config and credit usage this month | read |
 | `posthog_hogql` | Run an arbitrary HogQL (SQL) query against PostHog data | read |
 | `posthog_list_events` | List all event types tracked in PostHog, ordered by usage | read |
 | `posthog_list_insights` | List existing saved insights in PostHog | read |
+| `posthog_list_vision_observations` | List Replay Vision observations (what scanners saw on recordings) | read |
+| `posthog_list_vision_scanners` | List Replay Vision scanners in the connected PostHog project (AI probes that watch session recordings) | read |
 | `posthog_query_funnel` | Build and run a funnel analysis in PostHog | read |
 | `posthog_query_trends` | Query event trends from PostHog (pageviews, signups, DAU, etc | read |
+| `posthog_scan_session` | Run a Replay Vision scanner against one session recording now (spends PostHog Vision credits for that observation) | write |
+| `posthog_update_vision_scanner` | Update a Replay Vision scanner (prompt, enabled, sampling, credit limit) | write |
 | `preview_meta_ad` | Get a facebook.com preview link for a drafted Meta ad, so the user can see exactly what it will look like before deciding to activate | read |
 | `promote_corpus_to_content` | Mint the NEXT content angle(s) from the company's corpus into content_ideas + Command Center cards | write |
 | `publish_shopify_page` | Publish an UNPUBLISHED Shopify page live to buyers | outbound · human-approved per send |
@@ -309,7 +312,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (54)
+### Workflows & agents (hire, run, schedule, approve) (53)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -353,9 +356,8 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `request_attention_spawn` | Request a NEW local coding session from voice/chat (tab spawn) | write |
 | `request_attention_transfer` | Transfer work for THIS operator: push an instruction to a target coding session (or spawn one), optionally close/park the source | write |
 | `route_operator_hud` | Route the operator's desk HUD to a view they asked to see — open a door (money, sessions, home, roster, loadout, upgrades), lock a company z | write |
-| `run_playbook` | Run a saved Playbook (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry-run a P | sensitive · approval-carded |
 | `run_quality_check` | Evaluate content or media against your ICP persona using Gemini 3.1 Pro vision | sensitive · approval-carded |
-| `run_tactic` | DEPRECATED: Use run_playbook | sensitive · approval-carded |
+| `run_tactic` | Run a saved Play or Playbook (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry | sensitive · approval-carded |
 | `send_lead_draft` | Send an approved outreach draft to its lead via the company's Resend connection, then mark the draft 'sent' | outbound · human-approved per send |
 | `set_attention_budget` | Set the founder's attention budget — the maximum pending review cards before they are 'overloaded' (a whole number 1–100; default 7) — for a | sensitive · approval-carded |
 | `set_cos_preferences` | Replace THIS operator's full CoS preference block (or clear with empty) | write |
