@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:6d5757d0ad7f4a73 -->
+<!-- CATALOG-HASH:952d58f0db16a34e -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (296)
+## Tools (304)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -196,7 +196,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (90)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (98)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -256,11 +256,19 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
 | `originate_content_ideas` | Surface CONTENT IDEAS from the company's own corpus and land them in the content pool + cards (same owner as promote_corpus_to_content) | write |
+| `posthog_create_vision_scanner` | Create a Replay Vision scanner on the connected PostHog project for the operator or analytics agent | write |
+| `posthog_delete_vision_scanner` | Delete a Replay Vision scanner and its observations tab (PostHog $recording_observed events stay in the event stream) for the operator or an | write |
+| `posthog_get_vision_observation` | Get one Replay Vision observation (structured result + model reasoning) for the operator or analytics agent | read |
+| `posthog_get_vision_scanner` | Get one Replay Vision scanner by id, including its prompt/config and credit usage this month, for the operator or analytics agent | read |
 | `posthog_hogql` | Run an arbitrary HogQL (SQL) query against PostHog data | read |
 | `posthog_list_events` | List all event types tracked in PostHog, ordered by usage | read |
 | `posthog_list_insights` | List existing saved insights in PostHog | read |
+| `posthog_list_vision_observations` | List Replay Vision observations (what scanners saw on recordings) for the operator or analytics agent | read |
+| `posthog_list_vision_scanners` | List Replay Vision scanners in the connected PostHog project (AI probes that watch session recordings) for the operator or analytics agent | read |
 | `posthog_query_funnel` | Build and run a funnel analysis in PostHog | read |
 | `posthog_query_trends` | Query event trends from PostHog (pageviews, signups, DAU, etc | read |
+| `posthog_scan_session` | Run a Replay Vision scanner against one session recording now (spends PostHog Vision credits for that observation) for the operator or analy | write |
+| `posthog_update_vision_scanner` | Update a Replay Vision scanner (prompt, enabled, sampling, credit limit) for the operator or analytics agent | write |
 | `preview_meta_ad` | Get a facebook.com preview link for a drafted Meta ad, so the user can see exactly what it will look like before deciding to activate | read |
 | `promote_corpus_to_content` | Mint the NEXT content angle(s) from the company's corpus into content_ideas + Command Center cards | write |
 | `publish_shopify_page` | Publish an UNPUBLISHED Shopify page live to buyers | outbound · human-approved per send |
