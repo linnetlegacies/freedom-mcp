@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:952d58f0db16a34e -->
+<!-- CATALOG-HASH:bc93de423610b25e -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (304)
+## Tools (306)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -98,7 +98,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_my_channel_partner_link` | Get YOUR channel partner **student share link** (https://getfreedomos.com/start/{slug}) — the classroom start page (copy Claude prompt first | read |
 | `get_my_channel_partner_starter_pack` | Get YOUR classroom starter pack for students: the public share URL (https://getfreedomos.com/start/{slug}) where they copy a one-paste Claud | read |
 | `get_my_channel_partner_stats` | Get YOUR channel partner stats: student share URL (/start/slug), rev-share terms, referral counts by status (pending/joined/activated/credit | read |
-| `get_my_companies` | List the companies the current operator can act in (their FreedomOS portfolio), with the operator's role in each plus an `about` line (entit | read |
+| `get_my_companies` | List the companies the current operator can act in (their FreedomOS portfolio) | read |
 | `get_my_profile` | Get the current user's profile information including name, title, contact info, and personal details. | read |
 | `get_next_priority` | Answer "What should I work on?" in two beats: it leads with the single most-actionable pending Command Center card the operator's rail featu | read |
 | `get_okrs` | List objectives and key results for the company | read |
@@ -196,7 +196,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (98)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (100)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -219,6 +219,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_ads_performance` | Get Meta ads results: spend, impressions, clicks, CTR, CPC, CPM, reach, conversions (actions), cost per action, and purchase ROAS — at accou | read |
 | `get_cac_strategy` | THE tool for any question about this company's CAC strategy or LTV:CAC ratio — e.g | read |
 | `get_decision_ledger` | THE tool for what the Freedom Engine has DECIDED for this company — the audit feed of every autonomous decision: what it auto-ran, what it t | read |
+| `get_github_app_status` | See whether GetFreedomOS (the FreedomOS GitHub App) is connected for this company | read |
 | `get_page_performance` | Get per-page search performance from Google Search Console — which pages get the most clicks, impressions, and best positions | read |
 | `get_release_ledger` | THE tool for "did this piece ship on this channel" — reads the cross-channel Release Ledger, the queryable truth for every confirmed send (x | read |
 | `get_search_performance` | Get search performance data from Google Search Console — queries, clicks, impressions, CTR, and average position | read |
@@ -288,6 +289,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_revenue_channels` | Declare where this business makes money — stripe, xero, shopify, amazon, ebay, manual invoicing, "none_yet" (pre-revenue), or other (name it | sensitive · approval-carded |
 | `set_shopify_variant_price_draft` | Set a variant's price (and optionally compare-at price) on a DRAFT Shopify product | sensitive · approval-carded |
 | `set_x_ad_status` | Activate or pause an X campaign or line item | outbound · human-approved per send |
+| `start_github_app_claim` | Start connecting GetFreedomOS (the FreedomOS GitHub App) for this company | write |
 | `sync_stripe_conversions` | Record won deals from the company's connected Stripe so lead→paid conversion becomes measurable | write |
 | `unpublish_shopify_product` | Take a LIVE Shopify product off the storefront (status ACTIVE → DRAFT) | outbound · human-approved per send |
 | `update_live_shopify_product` | Edit a LIVE Shopify product's title, description, or tags — changes buyers see immediately | outbound · human-approved per send |
