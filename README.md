@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:bc93de423610b25e -->
+<!-- CATALOG-HASH:411654b3e4f0694a -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (306)
+## Tools (307)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -48,7 +48,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (128)
+### Business data & workspace (finance, OKRs, customers, leads, content) (129)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -124,7 +124,8 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_dashboard_widgets` | List all dashboard widgets for a specific agent | read |
 | `list_deals` | List CRM deals for the current company | read |
 | `list_features` | List all product features in the Feature Index | read |
-| `list_inbox` | List pending ideas in the user's Ideas | read |
+| `list_ideas` | List Ideas: untriaged (new/parked) for the operator, and/or triaged into the current company | read |
+| `list_inbox` | DEPRECATED: Use list_ideas | read |
 | `list_knowledge` | List all knowledge files and folders saved for this company | read |
 | `list_leads` | List the actual leads (id, name, email) in the current company, optionally filtered to one exact segment tag | read |
 | `list_pipeline_learnings` | Show the style guide and recent revision history for a content pipeline | read |
@@ -133,7 +134,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_scheduled_reports` | List all scheduled reports for this company, optionally filtered by agent | read |
 | `list_segments` | List the live lead segment tags for the current company with server-computed lead counts (excluding do-not-contact, archived, and test leads | read |
 | `list_shared_with_me` | List all knowledge files and folders that have been shared with the current user | read |
-| `list_workspace_ideas` | List ideas that have been assigned to this workspace | read |
+| `list_workspace_ideas` | DEPRECATED: Use list_ideas | read |
 | `manage_responsibilities` | Assign, delegate, or revoke responsibility domains for team members | write |
 | `propose_work` | Create a new shared work-graph item (lab_work_items) so it is visible and coordinated across sessions and agents | write |
 | `publish_pipeline_item` | Publish approved INTERNAL content to configured output | outbound · human-approved per send |
