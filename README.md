@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:411654b3e4f0694a -->
+<!-- CATALOG-HASH:b92ccc1f5178aa40 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (307)
+## Tools (309)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -48,13 +48,14 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (129)
+### Business data & workspace (finance, OKRs, customers, leads, content) (131)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `add_customer_evidence` | Store one piece of REAL Customer Evidence for this company (paying-customer words/behavior, telemetry, review, operator-relayed quote, prosp | write |
 | `add_lead` | Add a new lead to the Leads CRM (crm_leads) — the table the Leads tab, triage, and outreach all use | write |
 | `add_team_member` | Add one human teammate to the current company by email | sensitive · approval-carded |
+| `agree_playbook` | Seal a Playbook plan (source_details.plan_agreed_at) so run_playbook can dispatch | write |
 | `analyze_team_needs` | Gather comprehensive team and company context for talent strategy analysis | read |
 | `approve_pipeline_item` | Approve a content item for publishing — or REJECT it with approved:false | sensitive · approval-carded |
 | `archive_pipeline` | Archive (or restore) a content pipeline — flips is_active off/on, mirroring the Content Pipeline UI's soft-delete/restore | write |
@@ -79,8 +80,8 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `delete_tactic` | DEPRECATED: Use archive_playbook | write |
 | `enroll_by_segment` | Enroll every contactable lead carrying one exact segment tag into an outreach sequence — one call, no pasted address list | write |
 | `generate_key_results` | Generate intelligent, context-aware key result suggestions for an objective | write |
-| `generate_playbooks` | Generate AND save 5 grounded Playbooks for a 4-F category, composed from the company mission/vision, OKRs, and ICP | write |
-| `generate_tactics` | DEPRECATED: Use generate_playbooks | write |
+| `generate_playbooks` | DEPRECATED: Use create_playbook | write |
+| `generate_tactics` | DEPRECATED: Use create_playbook | write |
 | `get_actuals_vs_budget` | Compare actual financial results to budget/projections | read |
 | `get_agent_outcome_panel` | Per-agent "what did the compute buy" facts for the operator: trailing-14-day credits, runs (with self-maintenance share), human-accepted vs  | read |
 | `get_artifacts` | Get saved artifacts for the company | read |
@@ -104,6 +105,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_okrs` | List objectives and key results for the company | read |
 | `get_partner_cos_onboard` | Onboard YOUR host coding CoS (Claude Code, Cursor, etc.) to FreedomOS: returns a LIVE MCP tool catalog + a deep-research prompt so the host  | read |
 | `get_pending_approvals` | Get CONTENT PIPELINE outputs waiting for approval/publish (changelogs, newsletters, social drafts) | read |
+| `get_playbook` | Read ONE Playbook by id or title — full steps, plan Agree seal, instructions, assignee | read |
 | `get_projections` | Get projected future values from financial forecasts | read |
 | `get_reader_expertise_interview` | Get a fluency INTERVIEW kit (domain candidates + "which is clearest?" protocol) so a host CoS can gauge how FO should talk to this operator | read |
 | `get_reader_profile` | Get a person's OPERATOR FLUENCY (reader profile) — overall character level + per-topic strengths (novice/fluent/expert) | read |
@@ -257,7 +259,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_x_ad_campaigns` | List campaigns in an X ads account | read |
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
-| `originate_content_ideas` | Surface CONTENT IDEAS from the company's own corpus and land them in the content pool + cards (same owner as promote_corpus_to_content) | write |
+| `originate_content_ideas` | DEPRECATED: Use promote_corpus_to_content | write |
 | `posthog_create_vision_scanner` | Create a Replay Vision scanner on the connected PostHog project for the operator or analytics agent | write |
 | `posthog_delete_vision_scanner` | Delete a Replay Vision scanner and its observations tab (PostHog $recording_observed events stay in the event stream) for the operator or an | write |
 | `posthog_get_vision_observation` | Get one Replay Vision observation (structured result + model reasoning) for the operator or analytics agent | read |
