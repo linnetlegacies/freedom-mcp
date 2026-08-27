@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:b92ccc1f5178aa40 -->
+<!-- CATALOG-HASH:74945f02c6912a90 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (309)
+## Tools (311)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -48,7 +48,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (131)
+### Business data & workspace (finance, OKRs, customers, leads, content) (133)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -85,7 +85,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_actuals_vs_budget` | Compare actual financial results to budget/projections | read |
 | `get_agent_outcome_panel` | Per-agent "what did the compute buy" facts for the operator: trailing-14-day credits, runs (with self-maintenance share), human-accepted vs  | read |
 | `get_artifacts` | Get saved artifacts for the company | read |
-| `get_brand_guidelines` | Get the company's brand guidelines — name, tagline, colors (hex codes), typography, personality/tone, naming rules, and VISUAL + POSITIONING | read |
+| `get_brand_guidelines` | Get the company's brand guidelines — name, tagline, colors, typography, personality/tone, naming rules, visual + positioning dos/donts | read |
 | `get_cash_position` | Get current cash and bank account balances | read |
 | `get_check_telemetry` | Read recent quality-check telemetry for the current company | read |
 | `get_company` | Get detailed company profile including mission, vision, and settings. | read |
@@ -105,7 +105,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_okrs` | List objectives and key results for the company | read |
 | `get_partner_cos_onboard` | Onboard YOUR host coding CoS (Claude Code, Cursor, etc.) to FreedomOS: returns a LIVE MCP tool catalog + a deep-research prompt so the host  | read |
 | `get_pending_approvals` | Get CONTENT PIPELINE outputs waiting for approval/publish (changelogs, newsletters, social drafts) | read |
-| `get_playbook` | Read ONE Playbook by id or title — full steps, plan Agree seal, instructions, assignee | read |
+| `get_playbook` | Read ONE Playbook by id or title — operator contract (outcome, who, what Yes authorizes), steps, plan Agree seal, assignee | read |
 | `get_projections` | Get projected future values from financial forecasts | read |
 | `get_reader_expertise_interview` | Get a fluency INTERVIEW kit (domain candidates + "which is clearest?" protocol) so a host CoS can gauge how FO should talk to this operator | read |
 | `get_reader_profile` | Get a person's OPERATOR FLUENCY (reader profile) — overall character level + per-topic strengths (novice/fluent/expert) | read |
@@ -115,7 +115,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_team_members` | Get all team members for the current company | read |
 | `get_team_roster` | Get complete AI team roster with roles, specialties, and capacity info | read |
 | `get_transactions` | List company transactions with optional filters | read |
-| `get_voice_profile` | Get the company's VOICE PROFILE — the operator's real writing voice the drafting agents ground on (style descriptor, in-voice DOs, out-of-vo | read |
+| `get_voice_profile` | Get the company's VOICE PROFILE — the operator's real writing voice (style, DOs, AVOIDs, exemplars, target reading level) | read |
 | `grant_agent_tool` | Grant ONE specific tool to an agent's loadout (tool_access) | sensitive · approval-carded |
 | `hire_agent` | DEPRECATED: Redirects to interview_for_hire | sensitive · approval-carded |
 | `hire_agent_with_context` | Hire a new specialist with full hiring context gathered from the interview | sensitive · approval-carded |
@@ -143,6 +143,8 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `query_lead_journey` | Reconstruct the full journey of a lead — what they did on the site, what they signaled, what we have already sent them | read |
 | `read_knowledge` | Read a Markdown knowledge file by slug | read |
 | `reassign_reports` | Reassign all scheduled reports from one agent to another | write |
+| `redraft_engine_playbooks` | Portfolio sweep: re-draft every assigned engine-photocopy Play in this company into an English operator contract | write |
+| `redraft_playbook_contract` | Rewrite one engine-drafted Play into an English operator contract (outcome, who, what Yes authorizes) | write |
 | `remove_dashboard_widget` | Remove a widget from an agent dashboard. | write |
 | `request_content_revision` | Request changes to a content item | write |
 | `resolve_work` | Mark a shared work-graph item resolved — verified (default), published, or cancelled | sensitive · approval-carded |
