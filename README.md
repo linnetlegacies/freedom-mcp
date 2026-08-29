@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:74945f02c6912a90 -->
+<!-- CATALOG-HASH:b6c2f5d4c53287f9 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (311)
+## Tools (312)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -48,7 +48,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (133)
+### Business data & workspace (finance, OKRs, customers, leads, content) (134)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -105,7 +105,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_okrs` | List objectives and key results for the company | read |
 | `get_partner_cos_onboard` | Onboard YOUR host coding CoS (Claude Code, Cursor, etc.) to FreedomOS: returns a LIVE MCP tool catalog + a deep-research prompt so the host  | read |
 | `get_pending_approvals` | Get CONTENT PIPELINE outputs waiting for approval/publish (changelogs, newsletters, social drafts) | read |
-| `get_playbook` | Read ONE Playbook by id or title — operator contract (outcome, who, what Yes authorizes), steps, plan Agree seal, assignee | read |
+| `get_playbook` | Read ONE Playbook by id or title — operator contract (outcome, who, what Yes authorizes), steps, plan Agree seal, assignee, how-to (descript | read |
 | `get_projections` | Get projected future values from financial forecasts | read |
 | `get_reader_expertise_interview` | Get a fluency INTERVIEW kit (domain candidates + "which is clearest?" protocol) so a host CoS can gauge how FO should talk to this operator | read |
 | `get_reader_profile` | Get a person's OPERATOR FLUENCY (reader profile) — overall character level + per-topic strengths (novice/fluent/expert) | read |
@@ -158,6 +158,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_grain_policy` | Create or update the wisdom-layer publish policy for ONE content grain in the current company | sensitive · approval-carded |
 | `set_offer` | Author or update the company's grand slam OFFER — the operator-authored positioning agents ground all outbound in (the offer half of the pro | sensitive · approval-carded |
 | `share_knowledge` | Share a knowledge file or folder with a specific user | write |
+| `share_playbook` | Send this Playbook | write |
 | `submit_content_to_pipeline` | Submit manual content to a pipeline for transformation | write |
 | `suggest_collaboration` | Create a cross-agent collaboration request | read |
 | `suggest_next_hire` | Analyze team gaps and recommend hires or routing to existing agents | read |
@@ -249,14 +250,14 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_corpus_inventory` | List what content material this company already has (knowledge folders like book-1/canon, SME Expert rules, idea_inbox assigned to the works | read |
 | `list_integrations` | List ALL connected external integrations — MCP servers, OAuth accounts (Google, X, ...), and direct integrations (Xero accounting, Stripe) — | read |
 | `list_operator_x_posts` | List this company's recent original X posts from the connected account — no URL paste | read |
-| `list_shopify_content` | List the connected Shopify store's online-store pages (title, handle, published status) and blogs (title, handle) | read |
+| `list_shopify_content` | List the connected Shopify store's online-store pages (title, handle, published status, updatedAt — pass a page's updatedAt as expected_upda | read |
 | `list_shopify_discounts` | List discount codes and automatic discounts configured on the connected Shopify store — id, discount type, title, and status (ACTIVE/EXPIRED | read |
 | `list_shopify_files` | List media files (images and generic files) uploaded to the connected Shopify store's file library — alt text and URL | read |
 | `list_shopify_inventory` | List product variant inventory levels from the connected Shopify store — SKU, quantity, and which product each variant belongs to | read |
 | `list_shopify_navigation` | List the connected Shopify store's navigation menus — handle, title, and each item's label/URL, including one level of nested (children) ite | read |
 | `list_shopify_orders` | List recent orders from the connected Shopify store — order name/number, total, financial + fulfillment status, and created date | read |
 | `list_shopify_products` | List products from the connected Shopify store — title, status (ACTIVE/DRAFT/ARCHIVED), total inventory, and price range | read |
-| `list_shopify_themes` | List themes installed on the connected Shopify store — name and role (MAIN/UNPUBLISHED/DEVELOPMENT) | read |
+| `list_shopify_themes` | List themes installed on the connected Shopify store — name, role (MAIN/UNPUBLISHED/DEVELOPMENT), and updatedAt (pass it as expected_updated | read |
 | `list_x_ad_accounts` | List the X (Twitter) ads accounts on this company's X connection | read |
 | `list_x_ad_campaigns` | List campaigns in an X ads account | read |
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
