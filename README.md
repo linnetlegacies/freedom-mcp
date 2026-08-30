@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:b6c2f5d4c53287f9 -->
+<!-- CATALOG-HASH:14733f1b73c6a982 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (312)
+## Tools (314)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -89,7 +89,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_cash_position` | Get current cash and bank account balances | read |
 | `get_check_telemetry` | Read recent quality-check telemetry for the current company | read |
 | `get_company` | Get detailed company profile including mission, vision, and settings. | read |
-| `get_credit_usage` | Check credit balance, usage history, and cost breakdown | read |
+| `get_credit_usage` | Company spend snapshot in one read: remaining FOS credits vs plan limit, reset date, named $ cap when set, Grok mix on the FOS ledger (optio | read |
 | `get_financial_summary` | Get P&L summary with revenue, expenses, and net income for the company | read |
 | `get_freedom_target` | Get the user's freedom target (monthly income goal to quit day job), current FCF progress, estimated freedom date, and assumptions | read |
 | `get_grain_policy` | Read the content-grain (wisdom-layer) publish policy for the current company | read |
@@ -128,7 +128,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_features` | List all product features in the Feature Index | read |
 | `list_ideas` | List Ideas: untriaged (new/parked) for the operator, and/or triaged into the current company | read |
 | `list_inbox` | DEPRECATED: Use list_ideas | read |
-| `list_knowledge` | List all knowledge files and folders saved for this company | read |
+| `list_knowledge` | List knowledge files and folders for this company (names, slugs, sizes, folders) | read |
 | `list_leads` | List the actual leads (id, name, email) in the current company, optionally filtered to one exact segment tag | read |
 | `list_pipeline_learnings` | Show the style guide and recent revision history for a content pipeline | read |
 | `list_pipelines` | List all content pipelines (changelogs, team updates, reports, customer newsletters, social posts) | read |
@@ -202,7 +202,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (100)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (102)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -210,6 +210,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `audit_brand_visibility` | Audit whether Freedom OS appears in AI-generated search results | read |
 | `browse_url` | Browse a web page in a real browser and take a screenshot | sensitive · approval-carded |
 | `check_my_inbox` | Check your own agent email inbox (receive-only) for messages sent to your @agents.getfreedomos.com address, and read them | sensitive · approval-carded |
+| `claim_cloudflare_preview` | Claim or create a Cloudflare Pages or Workers project on this company's standing deploy token so the operator-agent does not need a founder  | write |
 | `create_meta_ad_draft` | Create a complete Meta (Facebook/Instagram) ad draft — campaign + ad set + creative + ad — ALL in PAUSED state, spending nothing | sensitive · approval-carded |
 | `create_shopify_discount_code` | Create a CODE discount in the connected Shopify store (percentage off, applies when a buyer enters the code — inert until the code is shared | sensitive · approval-carded |
 | `create_shopify_page` | Create a new page in the connected Shopify store as an UNPUBLISHED draft (never live — publishing to buyers is a separate approval-gated ste | sensitive · approval-carded |
@@ -224,6 +225,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `generate_video_veo` | DEPRECATED: Archived video door for operators and agents | sensitive · approval-carded |
 | `get_ads_performance` | Get Meta ads results: spend, impressions, clicks, CTR, CPC, CPM, reach, conversions (actions), cost per action, and purchase ROAS — at accou | read |
 | `get_cac_strategy` | THE tool for any question about this company's CAC strategy or LTV:CAC ratio — e.g | read |
+| `get_cloudflare_hosting_status` | See whether this company has a standing Cloudflare deploy token in FreedomOS Vault (Pages, Workers, DNS) — not a founder dashboard session | read |
 | `get_decision_ledger` | THE tool for what the Freedom Engine has DECIDED for this company — the audit feed of every autonomous decision: what it auto-ran, what it t | read |
 | `get_github_app_status` | See whether GetFreedomOS (the FreedomOS GitHub App) is connected for this company | read |
 | `get_page_performance` | Get per-page search performance from Google Search Console — which pages get the most clicks, impressions, and best positions | read |
