@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:5073290079c47464 -->
+<!-- CATALOG-HASH:c7e6ed81569ec48f -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (319)
+## Tools (320)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -203,7 +203,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (105)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (107)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -241,12 +241,14 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_shopify_theme_asset` | Get one Shopify theme file's raw source code (Liquid/CSS/JS/JSON, e.g | read |
 | `get_site_list` | List all verified sites/properties in Google Search Console | read |
 | `get_sitemaps` | List all sitemaps submitted to Google Search Console for a property — shows submission status, indexing coverage, errors, and warnings | read |
+| `get_spend_envelope` | See this company's founder-granted spend envelope (Stripe Issuing card on the Treasury account) | read |
 | `get_stripe_metrics` | Get Stripe metrics including average/median LTV, MRR, churn rate, active subscriptions, and an AI-recommended CAC target derived from the co | read |
 | `get_subscription_stats` | Get subscription statistics from Stripe — active, trialing, past-due, and canceled counts plus MRR and ARR | read |
 | `get_top_customers` | Get top customers ranked by lifetime value (LTV) or revenue from Stripe | read |
 | `get_x_ads_performance` | Get X (Twitter) ads results for an account (and optional campaign) | read |
 | `get_x_post_metrics` | Get engagement metrics for a tweet on X (Twitter) | read |
 | `get_xero_report` | Get a LIVE financial report straight from the company's connected Xero ledger: ProfitAndLoss, BalanceSheet, BankSummary, TrialBalance, or Ex | read |
+| `grant_spend_envelope` | Grant or raise this company's spend envelope: issue a Stripe Issuing card on the company's Treasury FinancialAccount with a monthly spending | sensitive · approval-carded |
 | `ingest_x_post_to_pipeline` | Put one of the operator's already-posted X items into the Media pipeline as the human | write |
 | `inspect_url` | Inspect a URL in Google Search Console — check indexing status, crawl errors, mobile usability, and rich results | read |
 | `invoke_integration` | Execute a tool on a connected MCP integration | outbound · human-approved per send |
@@ -313,12 +315,11 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `upsert_shopify_theme_file` | Create or overwrite one file (Liquid/CSS/JS/JSON source code) in an UNPUBLISHED Shopify theme — this is how agents build the storefront webs | sensitive · approval-carded |
 | `vectorize_image` | Convert an existing raster image (PNG, JPG, WebP) to SVG vector format using Recraft | sensitive · approval-carded |
 
-### Meta & discovery (8)
+### Meta & discovery (7)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `attach_product_request_pr` | Attach an existing freedom-ai GitHub PR URL to a product request and **resolve it by construction** (card → approved, product_status=fixed,  | write |
-| `before_inventing_check_fo` | Before inventing a parallel glossary, wiki, memory store, voice pack, task list, or similar in the host repo, call this | read |
 | `claim_product_request_for_builder` | Mint a paste-ready Builder claim recipe for a FreedomOS product request so a host coding agent (Grok Build / Claude Code) with Harness + gst | write |
 | `get_product_request_status` | Check status of a product request you previously filed with submit_product_request for your operator | read |
 | `open_product_request_draft_pr` | MANUAL ONLY — open a draft GitHub PR shell for an approved FreedomOS product request | write |
