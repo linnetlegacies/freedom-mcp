@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:079b1d2a18926398 -->
+<!-- CATALOG-HASH:b1e03cc61e8da0db -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (313)
+## Tools (315)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -48,7 +48,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (135)
+### Business data & workspace (finance, OKRs, customers, leads, content) (134)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -88,7 +88,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_brand_guidelines` | Get the company's brand guidelines — name, tagline, colors, typography, personality/tone, naming rules, visual + positioning dos/donts | read |
 | `get_cash_position` | Get current cash and bank account balances | read |
 | `get_check_telemetry` | Read recent quality-check telemetry for the current company | read |
-| `get_company` | Get detailed company profile including mission, vision, settings, and lifecycle (active \| archived, from companies.archived_at) | read |
+| `get_company` | Get detailed company profile including mission, vision, and settings. | read |
 | `get_credit_usage` | Company spend snapshot in one read: remaining FOS credits vs plan limit, reset date, named $ cap when set, Grok mix on the FOS ledger (optio | read |
 | `get_financial_summary` | Get P&L summary with revenue, expenses, and net income for the company | read |
 | `get_freedom_target` | Get the user's freedom target (monthly income goal to quit day job), current FCF progress, estimated freedom date, and assumptions | read |
@@ -155,7 +155,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `search_conversations` | Search past conversations with the user | read |
 | `search_transactions` | Search transactions by description | read |
 | `segment_leads` | Organize, select, or clear a lead segment on the Leads tab by its exact source tag (e.g | read |
-| `set_company_lifecycle` | Archive or unarchive (restore) a company the operator can manage | sensitive · approval-carded |
 | `set_grain_policy` | Create or update the wisdom-layer publish policy for ONE content grain in the current company | sensitive · approval-carded |
 | `set_offer` | Author or update the company's grand slam OFFER — the operator-authored positioning agents ground all outbound in (the offer half of the pro | sensitive · approval-carded |
 | `share_knowledge` | Share a knowledge file or folder with a specific user | write |
@@ -203,7 +202,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (100)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (103)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -212,6 +211,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `browse_url` | Browse a web page in a real browser and take a screenshot | sensitive · approval-carded |
 | `check_my_inbox` | Check your own agent email inbox (receive-only) for messages sent to your @agents.getfreedomos.com address, and read them | sensitive · approval-carded |
 | `create_meta_ad_draft` | Create a complete Meta (Facebook/Instagram) ad draft — campaign + ad set + creative + ad — ALL in PAUSED state, spending nothing | sensitive · approval-carded |
+| `create_payment_link` | Create a Stripe Payment Link so this company can collect a real payment (sponsor, invoice, one-off) | write |
 | `create_shopify_discount_code` | Create a CODE discount in the connected Shopify store (percentage off, applies when a buyer enters the code — inert until the code is shared | sensitive · approval-carded |
 | `create_shopify_page` | Create a new page in the connected Shopify store as an UNPUBLISHED draft (never live — publishing to buyers is a separate approval-gated ste | sensitive · approval-carded |
 | `create_shopify_product` | Create a new product in the connected Shopify store as a DRAFT (never live — publishing to buyers is a separate approval-gated step) | sensitive · approval-carded |
@@ -228,6 +228,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_decision_ledger` | THE tool for what the Freedom Engine has DECIDED for this company — the audit feed of every autonomous decision: what it auto-ran, what it t | read |
 | `get_github_app_status` | See whether GetFreedomOS (the FreedomOS GitHub App) is connected for this company | read |
 | `get_page_performance` | Get per-page search performance from Google Search Console — which pages get the most clicks, impressions, and best positions | read |
+| `get_receive_status` | See whether this company can receive money (Stripe charges_enabled) | read |
 | `get_release_ledger` | THE tool for "did this piece ship on this channel" — reads the cross-channel Release Ledger, the queryable truth for every confirmed send (x | read |
 | `get_search_performance` | Get search performance data from Google Search Console — queries, clicks, impressions, CTR, and average position | read |
 | `get_shopify_customer_stats` | Get an AGGREGATE Shopify customer count only — a single number, optionally filtered by `query` (Shopify customer search syntax, e.g | read |
@@ -296,6 +297,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_revenue_channels` | Declare where this business makes money — stripe, xero, shopify, amazon, ebay, manual invoicing, "none_yet" (pre-revenue), or other (name it | sensitive · approval-carded |
 | `set_shopify_variant_price_draft` | Set a variant's price (and optionally compare-at price) on a DRAFT Shopify product | sensitive · approval-carded |
 | `set_x_ad_status` | Activate or pause an X campaign or line item | outbound · human-approved per send |
+| `start_company_receive` | Start the path for this company to receive money | write |
 | `start_github_app_claim` | Start connecting GetFreedomOS (the FreedomOS GitHub App) for this company | write |
 | `sync_stripe_conversions` | Record won deals from the company's connected Stripe so lead→paid conversion becomes measurable | write |
 | `unpublish_shopify_product` | Take a LIVE Shopify product off the storefront (status ACTIVE → DRAFT) | outbound · human-approved per send |
