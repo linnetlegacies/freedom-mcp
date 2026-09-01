@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:d2890538e8c6839b -->
+<!-- CATALOG-HASH:10a625f0e03c47af -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (321)
+## Tools (322)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -203,7 +203,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (107)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (108)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -217,8 +217,9 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `create_shopify_discount_code` | Create a CODE discount in the connected Shopify store (percentage off, applies when a buyer enters the code — inert until the code is shared | sensitive · approval-carded |
 | `create_shopify_page` | Create a new page in the connected Shopify store as an UNPUBLISHED draft (never live — publishing to buyers is a separate approval-gated ste | sensitive · approval-carded |
 | `create_shopify_product` | Create a new product in the connected Shopify store as a DRAFT (never live — publishing to buyers is a separate approval-gated step) | sensitive · approval-carded |
-| `create_x_ad_draft` | Create an X (Twitter) ads draft — campaign + line item — ALL in PAUSED state, spending nothing | sensitive · approval-carded |
+| `create_x_ad_draft` | Create an X (Twitter) ads draft — campaign + line item + optional ad creative — ALL in PAUSED state, spending nothing | sensitive · approval-carded |
 | `draft_tenet_from_signal` | Draft a company tenet (mission or vision) FROM the company's existing website, for the operator to ratify or edit — instead of asking them t | sensitive · approval-carded |
+| `ensure_meta_pixel` | Get-or-create the Meta ad account's pixel and report whether its site tag is installed and firing — returns the pixel id and (until it fires | sensitive · approval-carded |
 | `generate_carousel` | Render a multi-slide image carousel + a LinkedIn-PDF from structured slide copy | write |
 | `generate_html_visual` | Generate a small, self-contained HTML visual (comparison table, simple diagram, annotated list, mini-dashboard) as a throwaway artifact for  | sensitive · approval-carded |
 | `generate_image_xai` | Generate or EDIT an image using xAI Imagine (Quality Mode default — highest live API fidelity; closest to consumer Image 2.0 until API ships | sensitive · approval-carded |
@@ -227,7 +228,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `generate_video_veo` | DEPRECATED: Archived video door for operators and agents | sensitive · approval-carded |
 | `get_ads_performance` | Get Meta ads results: spend, impressions, clicks, CTR, CPC, CPM, reach, conversions (actions), cost per action, and purchase ROAS — at accou | read |
 | `get_cac_strategy` | THE tool for any question about this company's CAC strategy or LTV:CAC ratio — e.g | read |
-| `get_cloudflare_hosting_status` | See whether this company has a standing Cloudflare deploy token in FreedomOS Vault (Pages, Workers, DNS) — not a founder dashboard session | read |
+| `get_cloudflare_hosting_status` | See whether this company has a standing Cloudflare deploy grant in FreedomOS Vault (OAuth MCP or API token) for Pages, Workers, DNS — not a  | read |
 | `get_decision_ledger` | THE tool for what the Freedom Engine has DECIDED for this company — the audit feed of every autonomous decision: what it auto-ran, what it t | read |
 | `get_github_app_status` | See whether GetFreedomOS (the FreedomOS GitHub App) is connected for this company | read |
 | `get_page_performance` | Get per-page search performance from Google Search Console — which pages get the most clicks, impressions, and best positions | read |
@@ -265,7 +266,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_shopify_orders` | List recent orders from the connected Shopify store — order name/number, total, financial + fulfillment status, and created date | read |
 | `list_shopify_products` | List products from the connected Shopify store — title, status (ACTIVE/DRAFT/ARCHIVED), total inventory, and price range | read |
 | `list_shopify_themes` | List themes installed on the connected Shopify store — name, role (MAIN/UNPUBLISHED/DEVELOPMENT), and updatedAt (pass it as expected_updated | read |
-| `list_x_ad_accounts` | List the X (Twitter) ads accounts on this company's X connection | read |
+| `list_x_ad_accounts` | List the X (Twitter) ads accounts on this company's X Ads connection (its own grant, separate from organic X posting) | read |
 | `list_x_ad_campaigns` | List campaigns in an X ads account | read |
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
