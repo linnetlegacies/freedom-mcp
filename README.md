@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:6b0c095d13b9dccd -->
+<!-- CATALOG-HASH:1f09a1bfb70826c8 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (323)
+## Tools (322)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -48,7 +48,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (135)
+### Business data & workspace (finance, OKRs, customers, leads, content) (134)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -162,7 +162,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `share_playbook` | Send this Playbook | write |
 | `submit_content_to_pipeline` | Submit manual content to a pipeline for transformation | write |
 | `suggest_collaboration` | Create a cross-agent collaboration request | read |
-| `suggest_next_hire` | Analyze team gaps and recommend hires or routing to existing agents | read |
 | `triage_idea` | Assign an idea to one or more workspaces | write |
 | `unshare_knowledge` | Revoke a user's access to a shared knowledge file or folder. | write |
 | `update_agent` | Rename a team member or fix its role/title | write |
