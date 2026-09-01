@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:10a625f0e03c47af -->
+<!-- CATALOG-HASH:6b0c095d13b9dccd -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (322)
+## Tools (323)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -203,7 +203,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (108)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (109)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -218,6 +218,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `create_shopify_page` | Create a new page in the connected Shopify store as an UNPUBLISHED draft (never live — publishing to buyers is a separate approval-gated ste | sensitive · approval-carded |
 | `create_shopify_product` | Create a new product in the connected Shopify store as a DRAFT (never live — publishing to buyers is a separate approval-gated step) | sensitive · approval-carded |
 | `create_x_ad_draft` | Create an X (Twitter) ads draft — campaign + line item + optional ad creative — ALL in PAUSED state, spending nothing | sensitive · approval-carded |
+| `draft_ad_variants` | Draft 2-3 DISTINCT-HOOK paid ad copy variants (X/Twitter or Meta) for the operator to pick from — grounded in the company voice profile and  | write |
 | `draft_tenet_from_signal` | Draft a company tenet (mission or vision) FROM the company's existing website, for the operator to ratify or edit — instead of asking them t | sensitive · approval-carded |
 | `ensure_meta_pixel` | Get-or-create the Meta ad account's pixel and report whether its site tag is installed and firing — returns the pixel id and (until it fires | sensitive · approval-carded |
 | `generate_carousel` | Render a multi-slide image carousel + a LinkedIn-PDF from structured slide copy | write |
@@ -292,9 +293,9 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `query_sme` | Query an external Subject Matter Expert (SME) AI for verified domain knowledge | read |
 | `read_web_page` | Read a web page and return its content as clean markdown | sensitive · approval-carded |
 | `remove_background` | Remove the background from an existing image, leaving the main subject isolated on a transparent background (PNG). | sensitive · approval-carded |
-| `request_connector` | Request that the operator connect an external integration (MCP connector) so you can use its tools | sensitive · approval-carded |
+| `request_connector` | Climb the door ladder for a needed service: bind this company's connector, offer reuse of an account the operator already admins on another  | sensitive · approval-carded |
 | `search_ad_targeting` | Search Meta's ad-interest targeting catalog (returns interest ids + audience sizes) | read |
-| `search_connector_registry` | Search the vetted connector registry for an external integration (MCP connector) you need but that is not yet connected | read |
+| `search_connector_registry` | When a goal needs a service, search here — do not stop at not-connected | read |
 | `search_x_ad_targeting` | Search X Ads targeting (interests or locations) | read |
 | `send_email` | Send an outbound email via the company's Resend connection | outbound · human-approved per send |
 | `send_slack_message` | Send a message to a Slack channel or direct message to a team member | outbound · human-approved per send |
@@ -380,7 +381,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `request_attention_transfer` | Transfer work for THIS operator: push an instruction to a target coding session (or spawn one), optionally close/park the source | write |
 | `route_operator_hud` | Route the operator's desk HUD to a view they asked to see — open a door (money, sessions, home, roster, loadout, upgrades), lock a company z | write |
 | `run_playbook` | Run a saved Playbook (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry-run a P | sensitive · approval-carded |
-| `run_quality_check` | Evaluate content or media against your ICP persona using Gemini 3.1 Pro vision | sensitive · approval-carded |
+| `run_quality_check` | Evaluate content or media against your ICP persona using xAI grok-4.6 vision | sensitive · approval-carded |
 | `run_tactic` | DEPRECATED: Use run_playbook | sensitive · approval-carded |
 | `send_lead_draft` | Send an approved outreach draft to its lead via the company's Resend connection, then mark the draft 'sent' | outbound · human-approved per send |
 | `set_attention_budget` | Set the founder's attention budget — the maximum pending review cards before they are 'overloaded' (a whole number 1–100; default 7) — for a | sensitive · approval-carded |
