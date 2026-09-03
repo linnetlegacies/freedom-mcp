@@ -96,7 +96,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_icps` | Get saved Ideal Customer Profiles (ICPs) from Customer Hunter | read |
 | `get_lead_pipeline_snapshot` | Aggregate counts of the Leads CRM (crm_leads) for the current company: active leads by temperature (warm/cold/…/unset) and lifecycle stage,  | read |
 | `get_monthly_trends` | Get month-over-month financial trends | read |
-| `get_my_channel_partner_link` | Get YOUR channel partner **student share link** (https://getfreedomos.com/start/{slug}) — the classroom start page (copy Claude prompt first | read |
+| `get_my_channel_partner_link` | DEPRECATED: Use get_my_channel_partner_starter_pack | read |
 | `get_my_channel_partner_starter_pack` | Get YOUR classroom starter pack for students: the public share URL (https://getfreedomos.com/start/{slug}) where they copy a one-paste Claud | read |
 | `get_my_channel_partner_stats` | Get YOUR channel partner stats: student share URL (/start/slug), rev-share terms, referral counts by status (pending/joined/activated/credit | read |
 | `get_my_companies` | List the companies the current operator can act in (their FreedomOS portfolio) | read |
