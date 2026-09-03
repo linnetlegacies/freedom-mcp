@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:1be184846627cc99 -->
+<!-- CATALOG-HASH:1e50d2a37efbdf99 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (323)
+## Tools (324)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -329,10 +329,11 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `scan_product_signals` | Scan a company for product-system bugs and unlocks (failed/timed-out activity runs, blocked_on_you cards, open error agent_feedback) and ret | write |
 | `submit_product_request` | File a bug report or feature request about FreedomOS the platform (FO UI, MCP tools, Command Center, auth, connectors, FO agents runtime) wi | write |
 
-### Navigation (1)
+### Navigation (2)
 
 | Tool | What it does | Tier |
 |---|---|---|
+| `get_factory_census` | KR2 census for the current company: over the STAMPED builder landings of the trailing 28 days, the share that named a Key Result at birth or | read |
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
 ### Workflows & agents (hire, run, schedule, approve) (55)
