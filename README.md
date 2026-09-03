@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:1e50d2a37efbdf99 -->
+<!-- CATALOG-HASH:e439838472093119 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (324)
+## Tools (325)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -48,7 +48,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (134)
+### Business data & workspace (finance, OKRs, customers, leads, content) (135)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -141,6 +141,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `propose_work` | Create a new shared work-graph item (lab_work_items) so it is visible and coordinated across sessions and agents | write |
 | `publish_pipeline_item` | Publish approved INTERNAL content to configured output | outbound · human-approved per send |
 | `query_lead_journey` | Reconstruct the full journey of a lead — what they did on the site, what they signaled, what we have already sent them | read |
+| `reactivate_agent` | Restore an archived specialist in place (is_active=true on the existing row) | sensitive · approval-carded |
 | `read_knowledge` | Read a Markdown knowledge file by slug | read |
 | `reassign_reports` | Reassign all scheduled reports from one agent to another | write |
 | `redraft_engine_playbooks` | Portfolio sweep: re-draft every assigned engine-photocopy Play in this company into an English operator contract | write |
