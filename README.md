@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:e439838472093119 -->
+<!-- CATALOG-HASH:7122b7218dbc7e1d -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (325)
+## Tools (326)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -101,7 +101,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_my_channel_partner_stats` | Get YOUR channel partner stats: student share URL (/start/slug), rev-share terms, referral counts by status (pending/joined/activated/credit | read |
 | `get_my_companies` | List the companies the current operator can act in (their FreedomOS portfolio) | read |
 | `get_my_profile` | Get the current user's profile information including name, title, contact info, and personal details. | read |
-| `get_next_priority` | Answer "What should I work on?" in two beats: it leads with the single most-actionable pending Command Center card the operator's rail featu | read |
+| `get_next_priority` | DEPRECATED: Use get_attention_quest | read |
 | `get_okrs` | List objectives and key results for the company | read |
 | `get_partner_cos_onboard` | Onboard YOUR host coding CoS (Claude Code, Cursor, etc.) to FreedomOS: returns a LIVE MCP tool catalog + a deep-research prompt so the host  | read |
 | `get_pending_approvals` | Get CONTENT PIPELINE outputs waiting for approval/publish (changelogs, newsletters, social drafts) | read |
@@ -203,7 +203,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (109)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (110)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -223,7 +223,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `ensure_meta_pixel` | Get-or-create the Meta ad account's pixel and report whether its site tag is installed and firing — returns the pixel id and (until it fires | sensitive · approval-carded |
 | `generate_carousel` | Render a multi-slide image carousel + a LinkedIn-PDF from structured slide copy | write |
 | `generate_html_visual` | Generate a small, self-contained HTML visual (comparison table, simple diagram, annotated list, mini-dashboard) as a throwaway artifact for  | sensitive · approval-carded |
-| `generate_image_xai` | Generate or EDIT an image using xAI Imagine (Quality Mode default — highest live API fidelity; closest to consumer Image 2.0 until API ships | sensitive · approval-carded |
+| `generate_image_xai` | Generate or EDIT an image using xAI Imagine (Quality Mode default = grok-imagine-image-2.0) | sensitive · approval-carded |
 | `generate_vector_image` | Generate a native SVG vector image using Recraft V4 Pro Vector | sensitive · approval-carded |
 | `generate_video` | Generate a video clip for the company (xAI Imagine Video 1.5, 3 credits): text-to-video, image-to-video, multi-image reference (up to 7), or | sensitive · approval-carded |
 | `generate_video_veo` | DEPRECATED: Archived video door for operators and agents | sensitive · approval-carded |
@@ -232,10 +232,10 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_cloudflare_hosting_status` | See whether this company has a standing Cloudflare deploy grant in FreedomOS Vault (OAuth MCP or API token) for Pages, Workers, DNS — not a  | read |
 | `get_decision_ledger` | THE tool for what the Freedom Engine has DECIDED for this company — the audit feed of every autonomous decision: what it auto-ran, what it t | read |
 | `get_github_app_status` | See whether GetFreedomOS (the FreedomOS GitHub App) is connected for this company | read |
-| `get_page_performance` | Get per-page search performance from Google Search Console — which pages get the most clicks, impressions, and best positions | read |
+| `get_page_performance` | DEPRECATED: Use get_search_performance with dimensions=["page"] | read |
 | `get_receive_status` | See whether this company can receive money (Stripe charges_enabled) | read |
 | `get_release_ledger` | THE tool for "did this piece ship on this channel" — reads the cross-channel Release Ledger, the queryable truth for every confirmed send (x | read |
-| `get_search_performance` | Get search performance data from Google Search Console — queries, clicks, impressions, CTR, and average position | read |
+| `get_search_performance` | Get search performance data from Google Search Console — keywords or pages, with clicks, impressions, CTR, and average position | read |
 | `get_shopify_customer_stats` | Get an AGGREGATE Shopify customer count only — a single number, optionally filtered by `query` (Shopify customer search syntax, e.g | read |
 | `get_shopify_order` | Get one Shopify order's detail by id (gid://shopify/Order/...): line items (title, quantity, price), totals, and financial/fulfillment statu | read |
 | `get_shopify_product` | Get one Shopify product's full detail by id (gid://shopify/Product/...): description, status, tags, updatedAt (pass it as expected_updated_a | read |
@@ -272,6 +272,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
 | `originate_content_ideas` | DEPRECATED: Use promote_corpus_to_content | write |
+| `post_to_x` | Publish a short text post (optionally with a URL) to this company's connected X account under the Freedom Pledge | outbound · human-approved per send |
 | `posthog_create_vision_scanner` | Create a Replay Vision scanner on the connected PostHog project for the operator or analytics agent | write |
 | `posthog_delete_vision_scanner` | Delete a Replay Vision scanner and its observations tab (PostHog $recording_observed events stay in the event stream) for the operator or an | write |
 | `posthog_get_vision_observation` | Get one Replay Vision observation (structured result + model reasoning) for the operator or analytics agent | read |
