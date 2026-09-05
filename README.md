@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:7122b7218dbc7e1d -->
+<!-- CATALOG-HASH:4e9bed9adb8103f0 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (326)
+## Tools (327)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
 
@@ -56,7 +56,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `add_lead` | Add a new lead to the Leads CRM (crm_leads) — the table the Leads tab, triage, and outreach all use | write |
 | `add_team_member` | Add one human teammate to the current company by email | sensitive · approval-carded |
 | `agree_playbook` | Seal a Playbook plan (source_details.plan_agreed_at) so run_playbook can dispatch | write |
-| `analyze_team_needs` | Gather comprehensive team and company context for talent strategy analysis | read |
+| `analyze_team_needs` | DEPRECATED: Use get_team_roster then interview_for_hire | read |
 | `approve_pipeline_item` | Approve a content item for publishing — or REJECT it with approved:false | sensitive · approval-carded |
 | `archive_pipeline` | Archive (or restore) a content pipeline — flips is_active off/on, mirroring the Content Pipeline UI's soft-delete/restore | write |
 | `archive_playbook` | Archive a Playbook (safe delete — recoverable) | write |
@@ -133,7 +133,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_pipeline_learnings` | Show the style guide and recent revision history for a content pipeline | read |
 | `list_pipelines` | List all content pipelines (changelogs, team updates, reports, customer newsletters, social posts) | read |
 | `list_playbooks` | List Playbooks for the company (growth_tactics — the Plays rail) | read |
-| `list_scheduled_reports` | List all scheduled reports for this company, optionally filtered by agent | read |
+| `list_scheduled_reports` | DEPRECATED: Use add_agent_activity / trigger_agent_activity / send_to_user | read |
 | `list_segments` | List the live lead segment tags for the current company with server-computed lead counts (excluding do-not-contact, archived, and test leads | read |
 | `list_shared_with_me` | List all knowledge files and folders that have been shared with the current user | read |
 | `list_workspace_ideas` | DEPRECATED: Use list_ideas | read |
@@ -143,7 +143,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `query_lead_journey` | Reconstruct the full journey of a lead — what they did on the site, what they signaled, what we have already sent them | read |
 | `reactivate_agent` | Restore an archived specialist in place (is_active=true on the existing row) | sensitive · approval-carded |
 | `read_knowledge` | Read a Markdown knowledge file by slug | read |
-| `reassign_reports` | Reassign all scheduled reports from one agent to another | write |
+| `reassign_reports` | DEPRECATED: Use get_team_roster then add_agent_activity | write |
 | `redraft_engine_playbooks` | Portfolio sweep: re-draft every assigned engine-photocopy Play in this company into an English operator contract | write |
 | `redraft_playbook_contract` | Rewrite one engine-drafted Play into an English operator contract (outcome, who, what Yes authorizes) | write |
 | `remove_dashboard_widget` | Remove a widget from an agent dashboard. | write |
@@ -195,7 +195,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `append_to_sheet` | Append rows to a Google Spreadsheet. | write |
 | `batch_update_spreadsheet` | Perform batch operations on a Google Spreadsheet (formatting, merging, etc.). | write |
 | `create_google_doc` | Create a new Google Doc in the user's Freedom OS folder | write |
-| `create_master_plan` | Initialize a new multi-step project with a persistent Master Plan artifact | write |
+| `create_master_plan` | DEPRECATED: Use propose_work to mint a shared plan row and list_my_work to read it | write |
 | `create_spreadsheet` | Create a new Google Spreadsheet with optional headers. | write |
 | `list_google_drive_files` | List files in the user's Google Drive | read |
 | `read_google_doc` | Read content from an existing Google Doc by its ID. | read |
@@ -203,7 +203,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (110)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (111)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -307,6 +307,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_x_ad_status` | Activate or pause an X campaign or line item | outbound · human-approved per send |
 | `start_company_receive` | Start the path for this company to receive money | write |
 | `start_github_app_claim` | Start connecting GetFreedomOS (the FreedomOS GitHub App) for this company | write |
+| `start_oauth` | Start or finish FreedomOS-native vendor sign-in (X, Slack, Meta, Xero) after the operator approved the Connect card | sensitive · approval-carded |
 | `sync_stripe_conversions` | Record won deals from the company's connected Stripe so lead→paid conversion becomes measurable | write |
 | `unpublish_shopify_product` | Take a LIVE Shopify product off the storefront (status ACTIVE → DRAFT) | outbound · human-approved per send |
 | `update_live_shopify_product` | Edit a LIVE Shopify product's title, description, or tags — changes buyers see immediately | outbound · human-approved per send |
