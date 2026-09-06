@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:442297dec0b941aa -->
+<!-- CATALOG-HASH:11c3d98a33308f84 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,20 +35,21 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (329)
+## Tools (332)
 
-### Advisors & scoring (ICP consult, deliberation, quality checks) (6)
+### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `challenge_as_customer` | Run your deliverable past the company's customer truth: REAL Customer Evidence first (when stored), then generated ICP as labeled simulation | read |
 | `deliberate` | Run an adversarial deliberation on a decision | read |
+| `get_my_role` | Read your role brief | read |
 | `get_product_context` | Returns THIS company's product truth — the operator-authored offer + the SHIPPED, marketable capabilities (what the product does, and what i | read |
 | `recalibrate_agent_jd` | Regenerate an agent's JD using fresh company context | sensitive · approval-carded |
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (136)
+### Business data & workspace (finance, OKRs, customers, leads, content) (138)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -60,6 +61,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `approve_pipeline_item` | Approve a content item for publishing — or REJECT it with approved:false | sensitive · approval-carded |
 | `archive_pipeline` | Archive (or restore) a content pipeline — flips is_active off/on, mirroring the Content Pipeline UI's soft-delete/restore | write |
 | `archive_playbook` | Archive a Playbook (safe delete — recoverable) | write |
+| `attach_agent_key` | Attach your own bot (Grok Bot, a Claude routine, ChatGPT) to one role in this company, and get the key to paste into it | sensitive · approval-carded |
 | `capture_idea` | Capture an idea into the user's Ideas | write |
 | `clear_pipeline_learnings` | Reset all learnings for a pipeline and start fresh | write |
 | `configure_dashboard` | Create or update a widget on your agent dashboard | write |
@@ -78,6 +80,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `delete_knowledge` | Archive a knowledge file by slug (soft delete) | write |
 | `delete_objective` | Archive an objective and its key results (safe delete — recoverable, never hard-deleted) | write |
 | `delete_tactic` | DEPRECATED: Use archive_playbook | write |
+| `detach_agent_key` | Take back the key a bot was using to wear a role in this company | sensitive · approval-carded |
 | `enroll_by_segment` | Enroll every contactable lead carrying one exact segment tag into an outreach sequence — one call, no pasted address list | write |
 | `generate_key_results` | Generate intelligent, context-aware key result suggestions for an objective | write |
 | `generate_playbooks` | DEPRECATED: Use create_playbook | write |
