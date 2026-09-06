@@ -121,9 +121,9 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_voice_profile` | Get the company's VOICE PROFILE — the operator's real writing voice (style, DOs, AVOIDs, exemplars, target reading level) | read |
 | `grant_agent_tool` | Grant ONE specific tool to an agent's loadout (tool_access) | sensitive · approval-carded |
 | `hire_agent` | DEPRECATED: Redirects to interview_for_hire | sensitive · approval-carded |
-| `hire_agent_with_context` | Hire a new specialist with full hiring context gathered from the interview | sensitive · approval-carded |
+| `hire_agent_with_context` | Open a role with the brief from the interview | sensitive · approval-carded |
 | `ingest_voice_corpus` | Build or refresh the company's voice profile from REAL writing | sensitive · approval-carded |
-| `interview_for_hire` | Research the company and return everything needed to propose a specialist hire in ONE shot | sensitive · approval-carded |
+| `interview_for_hire` | Research the company and return everything needed to propose a new role in ONE shot | sensitive · approval-carded |
 | `link_agent_okrs` | Link an agent to one or more company OKRs | write |
 | `list_customer_evidence` | List ranked REAL Customer Evidence for this company (paying > telemetry > review > relayed > agent_as_user > prospect) | read |
 | `list_dashboard_widgets` | List all dashboard widgets for a specific agent | read |
