@@ -112,7 +112,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_projections` | Get projected future values from financial forecasts | read |
 | `get_reader_expertise_interview` | Get a fluency INTERVIEW kit (domain candidates + "which is clearest?" protocol) so a host CoS can gauge how FO should talk to this operator | read |
 | `get_reader_profile` | Get a person's OPERATOR FLUENCY (reader profile) — overall character level + per-topic strengths (novice/fluent/expert) | read |
-| `get_routing_overview` | See how agent output is currently routed — who is responsible for which domains in the company. | read |
+| `get_routing_overview` | See how agent output is currently routed — who is responsible for which domains in the company | read |
 | `get_setup_state` | Get the company's core-tenet setup completeness — mission, vision, OKRs, finances, ICP, branding, team, integrations, product, revenue chann | read |
 | `get_tactics` | DEPRECATED: Use list_playbooks | read |
 | `get_team_members` | Get all team members for the current company | read |
