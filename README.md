@@ -330,7 +330,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `attach_product_request_pr` | Attach an existing freedom-ai GitHub PR URL to a product request and **resolve it by construction** (card → approved, product_status=fixed,  | write |
 | `before_inventing_check_fo` | Before inventing a parallel glossary, wiki, memory store, voice pack, task list, or similar in the host repo, call this | read |
 | `claim_product_request_for_builder` | Mint a paste-ready Builder claim recipe for a FreedomOS product request so a host coding agent (Grok Build / Claude Code) with Harness + gst | write |
-| `find_tool` | Search the FreedomOS tool catalog by name or job | read |
+| `find_tool` | Search tools this seat can call, by name or job | read |
 | `get_product_request_status` | Check status of a product request you previously filed with submit_product_request for your operator | read |
 | `open_product_request_draft_pr` | MANUAL ONLY — open a draft GitHub PR shell for an approved FreedomOS product request | write |
 | `report_feedback` | Report an error, issue, observation, or suggestion you encountered during your work | write |
