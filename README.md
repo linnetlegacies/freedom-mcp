@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:11c3d98a33308f84 -->
+<!-- CATALOG-HASH:945b7943cad95767 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (332)
+## Tools (333)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -344,7 +344,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_factory_census` | KR2 census for the current company: over the STAMPED builder landings of the trailing 28 days, the share that named a Key Result at birth or | read |
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (55)
+### Workflows & agents (hire, run, schedule, approve) (56)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -356,6 +356,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `cancel_attention_directive` | Cancel a pending attention directive (operator changed mind / wrong target) | write |
 | `cancel_commitment` | Cancel a commitment without completing it — marks it cancelled | write |
 | `complete_commitment` | Mark a commitment as completed | write |
+| `complete_my_activity` | Stamp one due job as done after you deposit the work | write |
 | `confirm_mcp_approval` | Confirm a pending MCP capability approval by spoken (or chat) yes/no | write |
 | `create_attention_directive` | Queue a short instruction for an external agent session — a coding/builder host (Grok terminal, Claude Code) or a Grok Bot desktop chat agen | write |
 | `create_play_from_activity` | Draft a Play (growth_tactics with steps + human review) from an oversized agent activity | sensitive · approval-carded |
