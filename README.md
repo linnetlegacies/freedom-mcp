@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:945b7943cad95767 -->
+<!-- CATALOG-HASH:2b0bc152575a0b43 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (333)
+## Tools (334)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -344,7 +344,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_factory_census` | KR2 census for the current company: over the STAMPED builder landings of the trailing 28 days, the share that named a Key Result at birth or | read |
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (56)
+### Workflows & agents (hire, run, schedule, approve) (57)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -394,6 +394,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `run_quality_check` | Evaluate content or media against your ICP persona using xAI grok-4.6 vision | sensitive · approval-carded |
 | `run_tactic` | DEPRECATED: Use run_playbook | sensitive · approval-carded |
 | `send_lead_draft` | Send an approved outreach draft to its lead via the company's Resend connection, then mark the draft 'sent' | outbound · human-approved per send |
+| `send_to_user` | Communicate asynchronously with the user | write |
 | `set_attention_budget` | Set the founder's attention budget — the maximum pending review cards before they are 'overloaded' (a whole number 1–100; default 7) — for a | sensitive · approval-carded |
 | `set_cos_preferences` | Replace THIS operator's full CoS preference block (or clear with empty) | write |
 | `share_commitment` | Share a commitment with your spouse or partner so they can see it too | write |
