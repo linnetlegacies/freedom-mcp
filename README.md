@@ -167,7 +167,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `share_playbook` | Send this Playbook | write |
 | `submit_content_to_pipeline` | Submit manual content to a pipeline for transformation | write |
 | `suggest_collaboration` | Create a cross-agent collaboration request | read |
-| `triage_idea` | Assign an idea to one or more workspaces | write |
+| `triage_idea` | Assign an idea to one or more companies | write |
 | `unshare_knowledge` | Revoke a user's access to a shared knowledge file or folder. | write |
 | `update_agent` | Rename a team member or fix its role/title | write |
 | `update_agent_avatar` | Generate or regenerate AI agent profile avatar(s) for a company's AI team | sensitive · approval-carded |
@@ -262,7 +262,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `invoke_integration` | Execute a tool on a connected MCP integration | outbound · human-approved per send |
 | `list_ad_accounts` | List the Meta (Facebook/Instagram) ad accounts on this company's connection, with status, currency, lifetime spend, and spend cap | read |
 | `list_ad_campaigns` | List campaigns in a Meta ad account: status, objective, budgets (major currency units), and schedule | read |
-| `list_corpus_inventory` | List what content material this company already has (knowledge folders like book-1/canon, SME Expert rules, idea_inbox assigned to the works | read |
+| `list_corpus_inventory` | List what content material this company already has (knowledge folders like book-1/canon, SME Expert rules, idea_inbox assigned to this comp | read |
 | `list_integrations` | List ALL connected external integrations — MCP servers, OAuth accounts (Google, X, ...), and direct integrations (Xero accounting, Stripe) — | read |
 | `list_operator_x_posts` | List this company's recent original X posts from the connected account — no URL paste | read |
 | `list_shopify_content` | List the connected Shopify store's online-store pages (title, handle, published status, updatedAt — pass a page's updatedAt as expected_upda | read |
