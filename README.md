@@ -253,7 +253,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_top_customers` | Get top customers ranked by lifetime value (LTV) or revenue from Stripe | read |
 | `get_x_ads_performance` | Get X (Twitter) ads results for an account (and optional campaign) | read |
 | `get_x_post_metrics` | Get engagement metrics for a tweet on X (Twitter) | read |
-| `get_xero_books_health` | See whether the company's Xero books are moving: last bank-transaction date, days since, and a Bank Summary | read |
+| `get_xero_books_health` | See whether the company's Xero books are posting: last spend/receive money-document date, unreconciled document count, and a Bank Summary | read |
 | `get_xero_report` | Get a LIVE financial report straight from the company's connected Xero ledger: ProfitAndLoss, BalanceSheet, BankSummary, TrialBalance, or Ex | read |
 | `grant_spend_envelope` | Grant or raise this company's spend envelope: issue a Stripe Issuing card on the company's Treasury FinancialAccount with a monthly spending | sensitive · approval-carded |
 | `ingest_x_post_to_pipeline` | Put one of the operator's already-posted X items into the Media pipeline as the human | write |
