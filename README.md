@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:5ab194d3c81b332b -->
+<!-- CATALOG-HASH:6b80cb3a030121e1 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (342)
+## Tools (343)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -209,7 +209,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (117)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (118)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -218,6 +218,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `browse_url` | Browse a web page in a real browser and take a screenshot | sensitive · approval-carded |
 | `check_my_inbox` | Check your own agent email inbox (receive-only) for messages sent to your @agents.getfreedomos.com address, and read them | sensitive · approval-carded |
 | `claim_cloudflare_preview` | Claim or create a Cloudflare Pages or Workers project on this company's standing deploy token so the operator-agent does not need a founder  | write |
+| `connect_remote_mcp` | Bind a remote Streamable HTTP MCP onto this company from an https URL | sensitive · approval-carded |
 | `create_meta_ad_draft` | Create a complete Meta (Facebook/Instagram) ad draft — campaign + ad set + creative + ad — ALL in PAUSED state, spending nothing | sensitive · approval-carded |
 | `create_payment_link` | Create a Stripe Payment Link so this company can collect a real payment (sponsor, invoice, one-off) | write |
 | `create_shopify_discount_code` | Create a CODE discount in the connected Shopify store (percentage off, applies when a buyer enters the code — inert until the code is shared | sensitive · approval-carded |
