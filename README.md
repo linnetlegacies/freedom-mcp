@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:3e2da10030df25b4 -->
+<!-- CATALOG-HASH:5ab194d3c81b332b -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (341)
+## Tools (342)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -49,7 +49,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (139)
+### Business data & workspace (finance, OKRs, customers, leads, content) (140)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -65,6 +65,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `capture_idea` | Capture an idea into the user's Ideas | write |
 | `clear_pipeline_learnings` | Reset all learnings for a pipeline and start fresh | write |
 | `configure_dashboard` | Create or update a widget on your agent dashboard | write |
+| `create_company` | Create a new company in this operator's portfolio | sensitive · approval-carded |
 | `create_feature` | Add a new feature to the Feature Index | write |
 | `create_folder` | Create a folder in the knowledge base for organizing files | write |
 | `create_icp` | Create a NEW Ideal Customer Profile (ICP) from scratch and save it — no Customer Hunter UI needed | write |
