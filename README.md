@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:2b0bc152575a0b43 -->
+<!-- CATALOG-HASH:0fabd1e56cefe014 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (334)
+## Tools (340)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -207,7 +207,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (111)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (117)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -253,6 +253,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_top_customers` | Get top customers ranked by lifetime value (LTV) or revenue from Stripe | read |
 | `get_x_ads_performance` | Get X (Twitter) ads results for an account (and optional campaign) | read |
 | `get_x_post_metrics` | Get engagement metrics for a tweet on X (Twitter) | read |
+| `get_xero_books_health` | See whether the company's Xero books are moving: last bank-transaction date, days since, and a Bank Summary | read |
 | `get_xero_report` | Get a LIVE financial report straight from the company's connected Xero ledger: ProfitAndLoss, BalanceSheet, BankSummary, TrialBalance, or Ex | read |
 | `grant_spend_envelope` | Grant or raise this company's spend envelope: issue a Stripe Issuing card on the company's Treasury FinancialAccount with a monthly spending | sensitive · approval-carded |
 | `ingest_x_post_to_pipeline` | Put one of the operator's already-posted X items into the Media pipeline as the human | write |
@@ -273,10 +274,13 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_shopify_themes` | List themes installed on the connected Shopify store — name, role (MAIN/UNPUBLISHED/DEVELOPMENT), and updatedAt (pass it as expected_updated | read |
 | `list_x_ad_accounts` | List the X (Twitter) ads accounts on this company's X Ads connection (its own grant, separate from organic X posting) | read |
 | `list_x_ad_campaigns` | List campaigns in an X ads account | read |
+| `list_xero_accounts` | List the company's Xero chart of accounts (code, type, name, status) | read |
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
+| `list_xero_unreconciled` | List unreconciled Xero spend/receive MONEY DOCUMENTS (IsReconciled=false), newest first | read |
 | `originate_content_ideas` | DEPRECATED: Use promote_corpus_to_content | write |
 | `post_to_x` | Publish a short text post (optionally with a URL) to this company's connected X account under the Freedom Pledge | outbound · human-approved per send |
+| `post_xero_transaction` | Post ONE FreedomOS transaction into Xero as Spend Money or Receive Money | outbound · human-approved per send |
 | `posthog_create_vision_scanner` | Create a Replay Vision scanner on the connected PostHog project for the operator or analytics agent | write |
 | `posthog_delete_vision_scanner` | Delete a Replay Vision scanner and its observations tab (PostHog $recording_observed events stay in the event stream) for the operator or an | write |
 | `posthog_get_vision_observation` | Get one Replay Vision observation (structured result + model reasoning) for the operator or analytics agent | read |
@@ -309,9 +313,11 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_revenue_channels` | Declare where this business makes money — stripe, xero, shopify, amazon, ebay, manual invoicing, "none_yet" (pre-revenue), or other (name it | sensitive · approval-carded |
 | `set_shopify_variant_price_draft` | Set a variant's price (and optionally compare-at price) on a DRAFT Shopify product | sensitive · approval-carded |
 | `set_x_ad_status` | Activate or pause an X campaign or line item | outbound · human-approved per send |
+| `set_xero_account_map` | Map a FreedomOS cash-flow category (the account name on a transaction) to a Xero account code so suggest_xero_post / post_xero_transaction c | write |
 | `start_company_receive` | Start the path for this company to receive money | write |
 | `start_github_app_claim` | Start connecting GetFreedomOS (the FreedomOS GitHub App) for this company | write |
 | `start_oauth` | Start or finish FreedomOS-native vendor sign-in (X, Slack, Meta, Xero) after the operator approved the Connect card | sensitive · approval-carded |
+| `suggest_xero_post` | Suggest FreedomOS bank transactions that are coded and ready to post into Xero as spend/receive money | read |
 | `sync_stripe_conversions` | Record won deals from the company's connected Stripe so lead→paid conversion becomes measurable | write |
 | `unpublish_shopify_product` | Take a LIVE Shopify product off the storefront (status ACTIVE → DRAFT) | outbound · human-approved per send |
 | `update_live_shopify_product` | Edit a LIVE Shopify product's title, description, or tags — changes buyers see immediately | outbound · human-approved per send |
