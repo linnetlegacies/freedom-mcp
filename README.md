@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:6b80cb3a030121e1 -->
+<!-- CATALOG-HASH:ed12db9a3f86ac40 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (343)
+## Tools (344)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -49,7 +49,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (140)
+### Business data & workspace (finance, OKRs, customers, leads, content) (141)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -93,6 +93,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_cash_position` | Get current cash and bank account balances | read |
 | `get_check_telemetry` | Read recent quality-check telemetry for the current company | read |
 | `get_company` | Get detailed company profile including mission, vision, settings, and lifecycle (active \| archived, from companies.archived_at) | read |
+| `get_company_birth_play` | Start a new company in conversation — one next step at a time | read |
 | `get_credit_usage` | Company spend snapshot in one read: remaining FOS credits vs plan limit, reset date, named $ cap when set, Grok mix on the FOS ledger (optio | read |
 | `get_financial_summary` | Get P&L summary with revenue, expenses, and net income for the company | read |
 | `get_freedom_target` | Get the user's freedom target (monthly income goal to quit day job), current FCF progress, estimated freedom date, and assumptions | read |
