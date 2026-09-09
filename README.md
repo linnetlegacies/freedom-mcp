@@ -316,7 +316,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_xero_account_map` | Map a FreedomOS cash-flow category (the account name on a transaction) to a Xero account code so suggest_xero_post / post_xero_transaction c | write |
 | `start_company_receive` | Start the path for this company to receive money | write |
 | `start_github_app_claim` | Start connecting GetFreedomOS (the FreedomOS GitHub App) for this company | write |
-| `start_oauth` | Start or finish FreedomOS-native vendor sign-in (X, Slack, Meta, Xero) after the operator approved the Connect card | sensitive · approval-carded |
+| `start_oauth` | Start, poll, or finish FreedomOS-native vendor sign-in (X, Slack, Meta, Xero) after the operator approved the Connect card | sensitive · approval-carded |
 | `suggest_xero_post` | Suggest FreedomOS bank transactions that are coded and ready to post into Xero as spend/receive money | read |
 | `sync_stripe_conversions` | Record won deals from the company's connected Stripe so lead→paid conversion becomes measurable | write |
 | `unpublish_shopify_product` | Take a LIVE Shopify product off the storefront (status ACTIVE → DRAFT) | outbound · human-approved per send |
