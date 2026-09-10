@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:1f168706abd01596 -->
+<!-- CATALOG-HASH:0b3e29e06e98fba2 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (346)
+## Tools (347)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -49,7 +49,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (141)
+### Business data & workspace (finance, OKRs, customers, leads, content) (142)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -194,6 +194,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_transaction_account` | Change the cash category on one company transaction | write |
 | `update_transaction_note` | Add or update a note on a specific transaction | write |
 | `update_voice_profile` | Update the company's voice profile | write |
+| `upload_company_logo` | Upload this company's HUD logo from a file and set a durable public logo_url | write |
 
 ### Files & documents (10)
 
