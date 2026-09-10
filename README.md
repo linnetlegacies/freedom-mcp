@@ -120,7 +120,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_team_members` | Get all team members for the current company | read |
 | `get_team_roster` | Get complete AI team roster with roles, specialties, and capacity info | read |
 | `get_transactions` | List company transactions with optional filters | read |
-| `get_voice_profile` | Get the company's VOICE PROFILE — the operator's real writing voice (style, DOs, AVOIDs, exemplars, target reading level) | read |
+| `get_voice_profile` | Get the company's VOICE PROFILE plus reader-first rules and public audience labels for anyone writing operator-facing copy | read |
 | `grant_agent_tool` | Grant ONE specific tool to an agent's loadout (tool_access) | sensitive · approval-carded |
 | `hire_agent` | DEPRECATED: Redirects to interview_for_hire | sensitive · approval-carded |
 | `hire_agent_with_context` | Open a role with the brief from the interview | sensitive · approval-carded |
