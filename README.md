@@ -6,32 +6,43 @@ Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to
 
 ## Connect (about 2 minutes)
 
-1. Sign up at [getfreedomos.com](https://getfreedomos.com), then create a personal key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) (shown once; revocable anytime).
-2. Add the server:
+**OAuth Connect (primary — Claude, ChatGPT, Claude Code, and any host that runs MCP OAuth discovery):**
+
+1. Sign up at [getfreedomos.com](https://getfreedomos.com) if you do not already have an account.
+2. Add the server at [https://getfreedomos.com/api/mcp](https://getfreedomos.com/api/mcp). The server advertises RFC 9728 OAuth discovery; the host sends you to sign in. No personal key.
 
 ```
-Endpoint:  https://twuluxmoognlwtmaoqgo.supabase.co/functions/v1/freedom-mcp
+Endpoint:  https://getfreedomos.com/api/mcp
 Transport: streamable-http
-Header:    Authorization: Bearer <your key>
+Auth:      OAuth (RFC 9728 discovery — no static header)
 ```
 
-**Claude Code (CLI):**
+**Claude Code (CLI, OAuth):**
 ```bash
-claude mcp add --transport http freedomos-eval https://twuluxmoognlwtmaoqgo.supabase.co/functions/v1/freedom-mcp --header "Authorization: Bearer <your key>"
+claude mcp add --transport http freedomos https://getfreedomos.com/api/mcp
 ```
 
 **Claude Code (config file `~/.claude.json`, inside `mcpServers`):**
 ```json
-"freedomos-eval": { "type": "http", "url": "https://twuluxmoognlwtmaoqgo.supabase.co/functions/v1/freedom-mcp", "headers": { "Authorization": "Bearer <your key>" } }
+"freedomos": { "type": "http", "url": "https://getfreedomos.com/api/mcp" }
 ```
 
-**Any other MCP client / `mcp-remote`:** point an HTTP MCP server at the endpoint with the same Authorization header.
+**Personal key (fallback for static-header hosts — Cursor, Windsurf, Grok Build, `mcp-remote`):**
 
-Also listed on the [official MCP Registry](https://registry.modelcontextprotocol.io) as `com.getfreedomos/freedom-mcp`.
+1. Create a personal key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) (shown once; revocable anytime).
+2. Add the same address with `Authorization: Bearer <your key>`.
+
+```
+Endpoint:  https://getfreedomos.com/api/mcp
+Transport: streamable-http
+Header:    Authorization: Bearer <your key>
+```
+
+Also listed on the [official MCP Registry](https://registry.modelcontextprotocol.io) as `com.getfreedomos/freedom-mcp`. Docs: [getfreedomos.com/mcp](https://getfreedomos.com/mcp).
 
 ## Safety model
 
-- Keys are per-user and tenant-scoped — a key only ever sees that user's own companies.
+- OAuth Connect binds to the signed-in FreedomOS person. Personal keys are per-user and tenant-scoped — a key only ever sees that user's own companies.
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
