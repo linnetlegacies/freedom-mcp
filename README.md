@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:0b3e29e06e98fba2 -->
+<!-- CATALOG-HASH:bcef8f3d1cf8e17b -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (347)
+## Tools (348)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -60,7 +60,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (142)
+### Business data & workspace (finance, OKRs, customers, leads, content) (143)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -103,6 +103,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_brand_guidelines` | Get the company's brand guidelines — name, tagline, colors, typography, personality/tone, naming rules, visual + positioning dos/donts | read |
 | `get_cash_position` | Get current cash and bank account balances | read |
 | `get_check_telemetry` | Read recent quality-check telemetry for the current company | read |
+| `get_checkout_link` | Return a Stripe checkout link so this signed-in person can pay for FreedomOS Solo ($47/mo) from chat | write |
 | `get_company` | Get detailed company profile including mission, vision, settings, and lifecycle (active \| archived, from companies.archived_at) | read |
 | `get_company_birth_play` | Start a new company in conversation — one next step at a time | read |
 | `get_credit_usage` | Company spend snapshot in one read: remaining FOS credits vs plan limit, reset date, named $ cap when set, Grok mix on the FOS ledger (optio | read |
