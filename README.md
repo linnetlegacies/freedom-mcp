@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:ed12db9a3f86ac40 -->
+<!-- CATALOG-HASH:1f168706abd01596 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -35,7 +35,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (344)
+## Tools (346)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -210,7 +210,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (118)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (120)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -300,9 +300,11 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `posthog_update_vision_scanner` | Update a Replay Vision scanner (prompt, enabled, sampling, credit limit) for the operator or analytics agent | write |
 | `preview_meta_ad` | Get a facebook.com preview link for a drafted Meta ad, so the user can see exactly what it will look like before deciding to activate | read |
 | `promote_corpus_to_content` | Mint the NEXT content angle(s) from the company's corpus into content_ideas + Command Center cards | write |
+| `publish_hub` | Tee up THIS COMPANY'S hub site for release (only works for a company that has its own hub configured; for any other company the call is refu | write |
 | `publish_shopify_page` | Publish an UNPUBLISHED Shopify page live to buyers | outbound · human-approved per send |
 | `publish_shopify_product` | Publish a DRAFT Shopify product LIVE to buyers (status → ACTIVE) | outbound · human-approved per send |
 | `publish_shopify_theme` | Publish an unpublished Shopify theme as the LIVE storefront — this swaps the ENTIRE website buyers see in one step | outbound · human-approved per send |
+| `publish_site` | Tee up a ONE-CLICK publish card for THIS company's marketing site (Learn / SEO pages) | write |
 | `query_sme` | Query an external Subject Matter Expert (SME) AI for verified domain knowledge | read |
 | `read_web_page` | Read a web page and return its content as clean markdown | sensitive · approval-carded |
 | `remove_background` | Remove the background from an existing image, leaving the main subject isolated on a transparent background (PNG). | sensitive · approval-carded |
