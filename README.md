@@ -215,7 +215,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `append_to_sheet` | Append rows to a Google Spreadsheet. | write |
 | `batch_update_spreadsheet` | Perform batch operations on a Google Spreadsheet (formatting, merging, etc.). | write |
-| `create_google_doc` | Create a new Google Doc in the user's Freedom OS folder | write |
+| `create_google_doc` | Create a new Google Doc in the user's FreedomOS Drive folder | write |
 | `create_master_plan` | DEPRECATED: Use propose_work to mint a shared plan row and list_my_work to read it | write |
 | `create_spreadsheet` | Create a new Google Spreadsheet with optional headers. | write |
 | `list_google_drive_files` | List files in the user's Google Drive | read |
@@ -229,7 +229,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | Tool | What it does | Tier |
 |---|---|---|
 | `adjust_shopify_inventory` | Adjust a variant's available inventory by a delta (+/-) at its stocked location in the connected Shopify store | sensitive · approval-carded |
-| `audit_brand_visibility` | Audit whether Freedom OS appears in AI-generated search results | read |
+| `audit_brand_visibility` | Audit whether FreedomOS appears in AI-generated search results | read |
 | `browse_url` | Browse a web page in a real browser and take a screenshot | sensitive · approval-carded |
 | `check_my_inbox` | Check your own agent email inbox (receive-only) for messages sent to your @agents.getfreedomos.com address, and read them | sensitive · approval-carded |
 | `claim_cloudflare_preview` | Claim or create a Cloudflare Pages or Workers project on this company's standing deploy token so the operator-agent does not need a founder  | write |
