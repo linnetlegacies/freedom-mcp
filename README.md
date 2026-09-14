@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:82d0cce0d95215e1 -->
+<!-- CATALOG-HASH:785d4172bd944361 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (351)
+## Tools (352)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -224,7 +224,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (122)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (123)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -243,6 +243,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `create_x_ad_draft` | Create an X (Twitter) ads draft — campaign + line item + optional ad creative — ALL in PAUSED state, spending nothing | sensitive · approval-carded |
 | `draft_ad_variants` | Draft 2-3 DISTINCT-HOOK paid ad copy variants (X/Twitter or Meta) for the operator to pick from — grounded in the company voice profile and  | write |
 | `draft_tenet_from_signal` | Draft a company tenet (mission or vision) FROM the company's existing website, for the operator to ratify or edit — instead of asking them t | sensitive · approval-carded |
+| `edit_faith_content` | Save edited words onto a waiting words-ready card | write |
 | `ensure_meta_pixel` | Get-or-create the Meta ad account's pixel and report whether its site tag is installed and firing — returns the pixel id and (until it fires | sensitive · approval-carded |
 | `generate_carousel` | Render a multi-slide image carousel + a LinkedIn-PDF from structured slide copy | write |
 | `generate_html_visual` | Generate a small, self-contained HTML visual (comparison table, simple diagram, annotated list, mini-dashboard) as a throwaway artifact for  | sensitive · approval-carded |
