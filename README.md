@@ -273,7 +273,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_top_customers` | Get top customers ranked by lifetime value (LTV) or revenue from Stripe | read |
 | `get_x_ads_performance` | Get X (Twitter) ads results for an account (and optional campaign) | read |
 | `get_x_post_metrics` | Get engagement metrics for a tweet on X (Twitter) | read |
-| `get_xero_books_health` | See whether the company's Xero books are posting: last spend/receive money-document date, unreconciled document count, and a Bank Summary | read |
+| `get_xero_books_health` | See whether the company's Xero books are posting: last spend/receive money-document date, authorized unmatched document count (deleted histo | read |
 | `get_xero_report` | Get a LIVE financial report straight from the company's connected Xero ledger: ProfitAndLoss, BalanceSheet, BankSummary, TrialBalance, or Ex | read |
 | `grant_spend_envelope` | Grant or raise this company's spend envelope: issue a Stripe Issuing card on the company's Treasury FinancialAccount with a monthly spending | sensitive · approval-carded |
 | `ingest_x_post_to_pipeline` | Put one of the operator's already-posted X items into the Media pipeline as the human | write |
@@ -297,7 +297,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_xero_accounts` | List the company's Xero chart of accounts (code, type, name, status) | read |
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
-| `list_xero_unreconciled` | List unreconciled Xero spend/receive MONEY DOCUMENTS (IsReconciled=false), newest first | read |
+| `list_xero_unreconciled` | List authorized, unreconciled Xero spend/receive MONEY DOCUMENTS (deleted documents excluded), newest first, 100 per page | read |
 | `originate_content_ideas` | DEPRECATED: Use promote_corpus_to_content | write |
 | `post_to_x` | Publish a short text post (optionally with a URL) to this company's connected X account under the Freedom Pledge | outbound · human-approved per send |
 | `post_xero_transaction` | Post ONE FreedomOS transaction into Xero as Spend Money or Receive Money | outbound · human-approved per send |
