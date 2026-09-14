@@ -244,7 +244,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `draft_ad_variants` | Draft 2-3 DISTINCT-HOOK paid ad copy variants (X/Twitter or Meta) for the operator to pick from — grounded in the company voice profile and  | write |
 | `draft_tenet_from_signal` | Draft a company tenet (mission or vision) FROM the company's existing website, for the operator to ratify or edit — instead of asking them t | sensitive · approval-carded |
 | `edit_faith_content` | Save edited words onto a waiting words-ready card | write |
-| `ensure_meta_pixel` | Get-or-create the Meta ad account's pixel and report whether its site tag is installed and firing — returns the pixel id and (until it fires | sensitive · approval-carded |
+| `ensure_meta_pixel` | Get-or-create the Meta ad account's pixel and report its last activity — this does not verify a specific conversion event | sensitive · approval-carded |
 | `generate_carousel` | Render a multi-slide image carousel + a LinkedIn-PDF from structured slide copy | write |
 | `generate_html_visual` | Generate a small, self-contained HTML visual (comparison table, simple diagram, annotated list, mini-dashboard) as a throwaway artifact for  | sensitive · approval-carded |
 | `generate_image_xai` | Generate or EDIT an image using xAI Imagine (Quality Mode default = grok-imagine-image-2.0) | sensitive · approval-carded |
