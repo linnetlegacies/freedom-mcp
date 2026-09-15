@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:785d4172bd944361 -->
+<!-- CATALOG-HASH:33b506230d80ad2a -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (352)
+## Tools (353)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -224,12 +224,13 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (123)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (124)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `adjust_shopify_inventory` | Adjust a variant's available inventory by a delta (+/-) at its stocked location in the connected Shopify store | sensitive · approval-carded |
 | `audit_brand_visibility` | Audit whether FreedomOS appears in AI-generated search results | read |
+| `bind_hub_newsletter` | Bind this company's already-connected Beehiiv newsletter as the destination for its website articles, so a published letter can reach that l | write |
 | `bless_faith_content` | Record that a person in this chat just said yes to the exact final words of a faith or teaching piece (a letter or page) | write |
 | `browse_url` | Browse a web page in a real browser and take a screenshot | sensitive · approval-carded |
 | `check_my_inbox` | Check your own agent email inbox (receive-only) for messages sent to your @agents.getfreedomos.com address, and read them | sensitive · approval-carded |
