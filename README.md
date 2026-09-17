@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:b883c269e317d509 -->
+<!-- CATALOG-HASH:b8d4cf4a3aca7630 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (354)
+## Tools (355)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -354,16 +354,17 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `upsert_shopify_theme_file` | Create or overwrite one file (Liquid/CSS/JS/JSON source code) in an UNPUBLISHED Shopify theme — this is how agents build the storefront webs | sensitive · approval-carded |
 | `vectorize_image` | Convert an existing raster image (PNG, JPG, WebP) to SVG vector format using Recraft | sensitive · approval-carded |
 
-### Meta & discovery (9)
+### Meta & discovery (10)
 
 | Tool | What it does | Tier |
 |---|---|---|
-| `attach_product_request_pr` | Attach an existing freedom-ai GitHub PR URL to a product request and **resolve it by construction** (card → approved, product_status=fixed,  | write |
+| `attach_product_request_pr` | Attach an existing freedom-ai GitHub PR URL to a product request | write |
 | `before_inventing_check_fo` | Before inventing a parallel glossary, wiki, memory store, voice pack, task list, or similar in the host repo, call this | read |
 | `claim_product_request_for_builder` | Mint a paste-ready Builder claim recipe for a FreedomOS product request so a host coding agent (Grok Build / Claude Code) with Harness + gst | write |
 | `find_tool` | Search tools this seat can call, by name or job | read |
 | `get_product_request_status` | Check status of a product request you previously filed with submit_product_request for your operator | read |
 | `open_product_request_draft_pr` | MANUAL ONLY — open a draft GitHub PR shell for an approved FreedomOS product request | write |
+| `reopen_product_request` | Unstamp a false Fixed on the SAME FreedomOS product request (ticket-only draft attach, or Fixed without deploy verify) | write |
 | `report_feedback` | Report an error, issue, observation, or suggestion you encountered during your work | write |
 | `scan_product_signals` | Scan a company for product-system bugs and unlocks (failed/timed-out activity runs, blocked_on_you cards, open error agent_feedback) and ret | write |
 | `submit_product_request` | File a bug report or feature request about FreedomOS the platform (FO UI, MCP tools, Command Center, auth, connectors, FO agents runtime) wi | write |
