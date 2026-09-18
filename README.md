@@ -388,7 +388,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `cancel_attention_directive` | Cancel a pending attention directive (operator changed mind / wrong target) | write |
 | `cancel_commitment` | Cancel a commitment without completing it — marks it cancelled | write |
 | `complete_commitment` | Mark a commitment as completed | write |
-| `complete_my_activity` | Stamp one due job as done after you deposit the work | write |
+| `complete_my_activity` | Stamp one due job as done AFTER you deposit the work, and prove it | write |
 | `confirm_mcp_approval` | Confirm a pending MCP capability approval by spoken (or chat) yes/no | write |
 | `create_attention_directive` | Queue a short instruction for an external agent session — a coding/builder host (Grok terminal, Claude Code) or a Grok Bot desktop chat agen | write |
 | `create_play_from_activity` | Draft a Play (growth_tactics with steps + human review) from an oversized agent activity | sensitive · approval-carded |
