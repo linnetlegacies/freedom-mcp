@@ -172,7 +172,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `revoke_agent_tool` | Remove ONE specific tool from an agent's loadout (tool_access) | write |
 | `save_artifact` | Save an artifact (screenshot, analysis, report) to the company archive | write |
 | `save_knowledge` | Save a Markdown knowledge file | write |
-| `search_conversations` | Search past FO Desk advisor chats (team_conversations type=ai) in this company, plus unbound FO Desk chats you are in | read |
+| `search_conversations` | Search past FO Desk advisor chats (team_conversations type=ai) in this company, plus unbound FO Desk chats you are in, plus company Knowledg | read |
 | `search_transactions` | Search transactions by description | read |
 | `segment_leads` | Organize, select, or clear a lead segment on the Leads tab by its exact source tag (e.g | read |
 | `set_company_lifecycle` | Archive or unarchive (restore) a company the operator can manage | sensitive · approval-carded |
