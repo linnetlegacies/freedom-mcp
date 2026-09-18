@@ -54,7 +54,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 |---|---|---|
 | `challenge_as_customer` | Run your deliverable past the company's customer truth: REAL Customer Evidence first (when stored), then generated ICP as labeled simulation | read |
 | `deliberate` | Run an adversarial deliberation on a decision | read |
-| `get_my_role` | Read your role brief | read |
+| `get_my_role` | START HERE — call this first even on an operator key | read |
 | `get_product_context` | Returns THIS company's product truth — the operator-authored offer + the SHIPPED, marketable capabilities (what the product does, and what i | read |
 | `recalibrate_agent_jd` | Regenerate an agent's JD using fresh company context | sensitive · approval-carded |
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
