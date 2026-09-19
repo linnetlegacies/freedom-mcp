@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:249f7319c3ad1a52 -->
+<!-- CATALOG-HASH:f55b9b84044c9f71 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (356)
+## Tools (357)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -60,7 +60,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (144)
+### Business data & workspace (finance, OKRs, customers, leads, content) (145)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -168,6 +168,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `remove_dashboard_widget` | Remove a widget from an agent dashboard. | write |
 | `request_content_revision` | Request changes to a content item | write |
 | `resolve_work` | Mark a shared work-graph item resolved — verified (default), published, or cancelled | sensitive · approval-carded |
+| `restore_knowledge` | Put an archived knowledge file back where it was (the inverse of delete_knowledge): the body comes back byte for byte, front matter is re-se | write |
 | `retire_feature` | Archive (retire) a feature so it stops showing to readers and agents, or restore a previously retired one | write |
 | `revoke_agent_tool` | Remove ONE specific tool from an agent's loadout (tool_access) | write |
 | `save_artifact` | Save an artifact (screenshot, analysis, report) to the company archive | write |
