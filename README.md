@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:30000d6b89b8bf84 -->
+<!-- CATALOG-HASH:4fc31301c1e4ecf5 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (349)
+## Tools (350)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -371,7 +371,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_factory_census` | KR2 census for the current company: over the STAMPED builder landings of the trailing 28 days, the share that named a Key Result at birth or | read |
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (56)
+### Workflows & agents (hire, run, schedule, approve) (57)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -411,11 +411,12 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `propose_cos_content_atoms` | Marketing-by-construction: pack THIS operator's recent CoS telemetry into one-job content atoms (Proof/Story/Take · Wisdom/Proof factories) | read |
 | `propose_talk_seeds` | Watch this company's recent activity and pin "Talk about this?" seeds on the Board for the operator | write |
 | `ratify_capability` | Persist the operator-CONFIRMED derived features (from derive_capability) into the product capability index as source='derived' | sensitive · approval-carded |
-| `remove_agent_activity` | Retire ONE activity from an agent's plan | sensitive · approval-carded |
+| `remove_agent_activity` | Retire ONE activity from an agent's plan | write |
 | `request_attention_close` | Close an EXISTING coding tab on the operator machine for THIS operator | write |
 | `request_attention_focus` | Raise an EXISTING coding tab on the operator machine (OS focus) for THIS operator's desk | write |
 | `request_attention_spawn` | Request a NEW local coding session from voice/chat (tab spawn) | write |
 | `request_attention_transfer` | Transfer work for THIS operator: push an instruction to a target coding session (or spawn one), optionally close/park the source | write |
+| `restore_agent_activity` | Bring ONE retired activity back onto an agent's plan (the inverse of remove_agent_activity and split_agent_activity): the entry moves from j | write |
 | `route_operator_hud` | Route the operator's desk HUD to a view they asked to see — open a door (money, sessions, home, roster, loadout, upgrades), lock a company z | write |
 | `run_playbook` | Run a saved Playbook (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry-run a P | sensitive · approval-carded |
 | `run_quality_check` | Evaluate content or media against your ICP persona using xAI grok-4.6 vision | sensitive · approval-carded |
@@ -424,7 +425,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_attention_budget` | Set the founder's attention budget — the maximum pending review cards before they are 'overloaded' (a whole number 1–100; default 7) — for a | sensitive · approval-carded |
 | `set_cos_preferences` | Replace THIS operator's full CoS preference block (or clear with empty) | write |
 | `share_commitment` | Share a commitment with your spouse or partner so they can see it too | write |
-| `split_agent_activity` | Split ONE oversized activity into smaller activities (intake + finish) without regenerating the rest of the plan | sensitive · approval-carded |
+| `split_agent_activity` | Split ONE oversized activity into smaller activities (intake + finish) without regenerating the rest of the plan | write |
 | `toggle_agent_schedule` | Pause or resume an agent's scheduled activities — the whole activity plan, or a single activity via activity_name | sensitive · approval-carded |
 | `trigger_agent_activity` | Trigger a specific agent to run a specific activity immediately | sensitive · approval-carded |
 | `unshare_commitment` | Stop sharing a commitment with someone | write |
