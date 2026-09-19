@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:3892d6e502c8e923 -->
+<!-- CATALOG-HASH:249f7319c3ad1a52 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (355)
+## Tools (356)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -224,7 +224,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (125)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (126)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -277,6 +277,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_xero_books_health` | See whether the company's Xero books are posting: last spend/receive money-document date, authorized unmatched document count (deleted histo | read |
 | `get_xero_report` | Get a LIVE financial report straight from the company's connected Xero ledger: ProfitAndLoss, BalanceSheet, BankSummary, TrialBalance, or Ex | read |
 | `grant_spend_envelope` | Grant or raise this company's spend envelope: issue a Stripe Issuing card on the company's Treasury FinancialAccount with a monthly spending | sensitive · approval-carded |
+| `hold_post` | Hold a scheduled X post before it goes out — the veto lever for a reshaped post that is waiting out its 24-hour window | write |
 | `ingest_x_post_to_pipeline` | Put one of the operator's already-posted X items into the Media pipeline as the human | write |
 | `inspect_url` | Inspect a URL in Google Search Console — check indexing status, crawl errors, mobile usability, and rich results | read |
 | `invoke_integration` | Execute a tool on a connected MCP integration | outbound · human-approved per send |
