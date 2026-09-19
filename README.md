@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:f55b9b84044c9f71 -->
+<!-- CATALOG-HASH:30000d6b89b8bf84 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (357)
+## Tools (349)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -60,7 +60,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (145)
+### Business data & workspace (finance, OKRs, customers, leads, content) (140)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -84,19 +84,16 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `create_objective` | Create a new objective (the O in OKR) | write |
 | `create_pipeline` | Create a new content pipeline to automate content creation | write |
 | `create_playbook` | Create a Playbook for the company (growth_tactics — the Plays rail) | write |
-| `create_tactic` | DEPRECATED: Use create_playbook | write |
 | `deactivate_agent` | Deactivate (archive) an AI agent/specialist from the team | sensitive · approval-carded |
 | `delete_icp` | Delete a saved Ideal Customer Profile (ICP) | sensitive · approval-carded |
 | `delete_idea` | Delete an idea from Ideas | write |
 | `delete_key_result` | Archive a key result (safe delete — recoverable, never hard-deleted) | write |
 | `delete_knowledge` | Archive a knowledge file by slug (soft delete) | write |
 | `delete_objective` | Archive an objective and its key results (safe delete — recoverable, never hard-deleted) | write |
-| `delete_tactic` | DEPRECATED: Use archive_playbook | write |
 | `detach_agent_key` | Take back the key a bot was using to wear a role in this company | sensitive · approval-carded |
 | `enroll_by_segment` | Enroll every contactable lead carrying one exact segment tag into an outreach sequence — one call, no pasted address list | write |
 | `generate_key_results` | Generate intelligent, context-aware key result suggestions for an objective | write |
 | `generate_playbooks` | DEPRECATED: Use create_playbook | write |
-| `generate_tactics` | DEPRECATED: Use create_playbook | write |
 | `get_actuals_vs_budget` | Compare actual financial results to budget/projections | read |
 | `get_agent_outcome_panel` | Per-agent "what did the compute buy" facts for the operator: trailing-14-day credits, runs (with self-maintenance share), human-accepted vs  | read |
 | `get_artifacts` | Get saved artifacts for the company | read |
@@ -128,7 +125,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_reader_profile` | Get a person's OPERATOR FLUENCY (reader profile) — overall character level + per-topic strengths (novice/fluent/expert) | read |
 | `get_routing_overview` | See how agent output is currently routed — who is responsible for which domains in the company | read |
 | `get_setup_state` | Get the company's core-tenet setup completeness — mission, vision, OKRs, finances, ICP, branding, team, integrations, product, revenue chann | read |
-| `get_tactics` | DEPRECATED: Use list_playbooks | read |
 | `get_team_members` | Get all team members for the current company | read |
 | `get_team_roster` | Get complete AI team roster with roles, specialties, and capacity info | read |
 | `get_transactions` | List company transactions with optional filters | read |
@@ -204,7 +200,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_playbook` | Update an existing Playbook (growth_tactics) | write |
 | `update_projection` | Update projected values for specific accounts and months in the financial plan | write |
 | `update_reader_profile` | Update a person's OPERATOR FLUENCY (baseline + per-topic strengths that follow them across companies) | write |
-| `update_tactic` | DEPRECATED: Use update_playbook | write |
 | `update_transaction_account` | Change the cash category on one company transaction | write |
 | `update_transaction_note` | Add or update a note on a specific transaction | write |
 | `update_voice_profile` | Update the company's voice profile | write |
@@ -225,7 +220,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (126)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (124)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -258,7 +253,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_cloudflare_hosting_status` | See whether this company has a standing Cloudflare deploy grant in FreedomOS Vault (OAuth MCP or API token) for Pages, Workers, DNS — not a  | read |
 | `get_decision_ledger` | THE tool for what the Freedom Engine has DECIDED for this company — the audit feed of every autonomous decision: what it auto-ran, what it t | read |
 | `get_github_app_status` | See whether GetFreedomOS (the FreedomOS GitHub App) is connected for this company | read |
-| `get_page_performance` | DEPRECATED: Use get_search_performance with dimensions=["page"] | read |
 | `get_receive_status` | See whether this company can receive money (Stripe charges_enabled) | read |
 | `get_release_ledger` | THE tool for "did this piece ship on this channel" — reads the cross-channel Release Ledger, the queryable truth for every confirmed send (x | read |
 | `get_search_performance` | Get search performance data from Google Search Console — keywords or pages, with clicks, impressions, CTR, and average position | read |
@@ -301,7 +295,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
 | `list_xero_unreconciled` | List authorized, unreconciled Xero spend/receive MONEY DOCUMENTS (deleted documents excluded), newest first, 100 per page | read |
-| `originate_content_ideas` | DEPRECATED: Use promote_corpus_to_content | write |
 | `post_to_x` | Publish a short text post (optionally with a URL) to this company's connected X account under the Freedom Pledge | outbound · human-approved per send |
 | `post_xero_transaction` | Post ONE FreedomOS transaction into Xero as Spend Money or Receive Money | write |
 | `posthog_create_vision_scanner` | Create a Replay Vision scanner on the connected PostHog project for the operator or analytics agent | write |
@@ -378,7 +371,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_factory_census` | KR2 census for the current company: over the STAMPED builder landings of the trailing 28 days, the share that named a Key Result at birth or | read |
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (57)
+### Workflows & agents (hire, run, schedule, approve) (56)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -426,7 +419,6 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `route_operator_hud` | Route the operator's desk HUD to a view they asked to see — open a door (money, sessions, home, roster, loadout, upgrades), lock a company z | write |
 | `run_playbook` | Run a saved Playbook (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry-run a P | sensitive · approval-carded |
 | `run_quality_check` | Evaluate content or media against your ICP persona using xAI grok-4.6 vision | sensitive · approval-carded |
-| `run_tactic` | DEPRECATED: Use run_playbook | sensitive · approval-carded |
 | `send_lead_draft` | Send an approved outreach draft to its lead via the company's Resend connection, then mark the draft 'sent' | outbound · human-approved per send |
 | `send_to_user` | Communicate asynchronously with the user | write |
 | `set_attention_budget` | Set the founder's attention budget — the maximum pending review cards before they are 'overloaded' (a whole number 1–100; default 7) — for a | sensitive · approval-carded |
