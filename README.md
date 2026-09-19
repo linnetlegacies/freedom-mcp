@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:b8d4cf4a3aca7630 -->
+<!-- CATALOG-HASH:273b8ab8d0893c90 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -160,7 +160,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `propose_work` | Create a new shared work-graph item (lab_work_items) so it is visible and coordinated across sessions and agents | write |
 | `publish_pipeline_item` | Publish approved INTERNAL content to configured output | outbound · human-approved per send |
 | `query_lead_journey` | Reconstruct the full journey of a lead — what they did on the site, what they signaled, what we have already sent them | read |
-| `reactivate_agent` | Restore an archived specialist in place (is_active=true on the existing row) | sensitive · approval-carded |
+| `reactivate_agent` | Restore an archived specialist in place (is_active=true on the existing row) | write |
 | `read_knowledge` | Read a Markdown knowledge file by slug | read |
 | `reassign_reports` | DEPRECATED: Use get_team_roster then add_agent_activity | write |
 | `redraft_engine_playbooks` | Portfolio sweep: re-draft every assigned engine-photocopy Play in this company into an English operator contract | write |
@@ -301,7 +301,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_xero_unreconciled` | List authorized, unreconciled Xero spend/receive MONEY DOCUMENTS (deleted documents excluded), newest first, 100 per page | read |
 | `originate_content_ideas` | DEPRECATED: Use promote_corpus_to_content | write |
 | `post_to_x` | Publish a short text post (optionally with a URL) to this company's connected X account under the Freedom Pledge | outbound · human-approved per send |
-| `post_xero_transaction` | Post ONE FreedomOS transaction into Xero as Spend Money or Receive Money | outbound · human-approved per send |
+| `post_xero_transaction` | Post ONE FreedomOS transaction into Xero as Spend Money or Receive Money | write |
 | `posthog_create_vision_scanner` | Create a Replay Vision scanner on the connected PostHog project for the operator or analytics agent | write |
 | `posthog_delete_vision_scanner` | Delete a Replay Vision scanner and its observations tab (PostHog $recording_observed events stay in the event stream) for the operator or an | write |
 | `posthog_get_vision_observation` | Get one Replay Vision observation (structured result + model reasoning) for the operator or analytics agent | read |
@@ -381,7 +381,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | Tool | What it does | Tier |
 |---|---|---|
 | `ack_attention_directive` | Mark a pending attention directive as acked after the host session has taken the instruction | write |
-| `add_agent_activity` | Add ONE activity to an agent's activity plan without regenerating the whole plan | sensitive · approval-carded |
+| `add_agent_activity` | Add ONE activity to an agent's activity plan without regenerating the whole plan | write |
 | `add_commitment` | Track a personal commitment, deadline, birthday, appointment, or obligation | write |
 | `append_cos_lesson` | Append one settleable CoS lesson for THIS operator only (self-improve construction) | write |
 | `append_cos_preference` | Append one durable speech/taste preference for THIS operator only (re-injected on their next voice session mint) | write |
