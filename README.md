@@ -389,7 +389,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `create_attention_directive` | Queue a short instruction for an external agent session — a coding/builder host (Grok terminal, Claude Code) or a Grok Bot desktop chat agen | write |
 | `create_play_from_activity` | Draft a Play (growth_tactics with steps + human review) from an oversized agent activity | sensitive · approval-carded |
 | `decide_command_center_item` | Approve or deny a Command Center card | sensitive · approval-carded |
-| `derive_capability` | Scan the company's connected source code (its GitHub repo, via the Pulse connection in Smart Tools) and DRAFT a capability list — shipped FE | sensitive · approval-carded |
+| `derive_capability` | Scan the company's connected source code (its GitHub repo — the company repo connection through the GetFreedomOS GitHub App on Connections)  | sensitive · approval-carded |
 | `draft_outreach` | Produce two outreach draft variants (A/B) for a lead given an angle | write |
 | `get_activity_health` | Audit all agent activities for staleness, business outcome alignment, and cross-agent overlap | read |
 | `get_agent_performance` | Get detailed performance stats for a specific agent: run count, quality scores, approval/denial rates, error count, recent errors with conte | read |
