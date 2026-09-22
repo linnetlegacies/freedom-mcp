@@ -420,7 +420,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `restore_agent_activity` | Bring ONE retired activity back onto an agent's plan (the inverse of remove_agent_activity and split_agent_activity): the entry moves from j | write |
 | `route_operator_hud` | Route the operator's desk HUD to a view they asked to see — open a door (money, sessions, home, roster, loadout, upgrades), lock a company z | write |
 | `run_playbook` | Run a saved Playbook (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry-run a P | sensitive · approval-carded |
-| `run_quality_check` | Evaluate content or media against your ICP persona using xAI grok-4.6 vision | sensitive · approval-carded |
+| `run_quality_check` | Evaluate content or media against your ICP persona using xAI grok-4.7 vision | sensitive · approval-carded |
 | `send_lead_draft` | Send an approved outreach draft to its lead via the company's Resend connection, then mark the draft 'sent' | outbound · human-approved per send |
 | `send_to_user` | Communicate asynchronously with the user | write |
 | `set_attention_budget` | Set the founder's attention budget — the maximum pending review cards before they are 'overloaded' (a whole number 1–100; default 7) — for a | sensitive · approval-carded |
