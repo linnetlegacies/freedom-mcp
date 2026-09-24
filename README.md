@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:de9dec912a73f086 -->
+<!-- CATALOG-HASH:8d09893e443d9a73 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (351)
+## Tools (352)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -220,7 +220,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (124)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (125)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -249,6 +249,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `generate_video` | Generate a video clip for the company (xAI Imagine Video 1.5, 3 credits): text-to-video, image-to-video, multi-image reference (up to 7), or | sensitive · approval-carded |
 | `generate_video_veo` | DEPRECATED: Archived video door for operators and agents | sensitive · approval-carded |
 | `get_ads_performance` | Get Meta ads results: spend, impressions, clicks, CTR, CPC, CPM, reach, conversions (actions), cost per action, and purchase ROAS — at accou | read |
+| `get_agent_login` | Read ONE login (username, password, website, current one-time code) from this company's connected 1Password service account, so you can sign | sensitive · approval-carded |
 | `get_cac_strategy` | THE tool for any question about this company's CAC strategy or LTV:CAC ratio — e.g | read |
 | `get_cloudflare_hosting_status` | See whether this company has a standing Cloudflare deploy grant in FreedomOS Vault (OAuth MCP or API token) for Pages, Workers, DNS — not a  | read |
 | `get_decision_ledger` | THE tool for what the Freedom Engine has DECIDED for this company — the audit feed of every autonomous decision: what it auto-ran, what it t | read |
