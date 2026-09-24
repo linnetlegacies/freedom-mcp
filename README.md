@@ -143,7 +143,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_inbox` | DEPRECATED: Use list_ideas | read |
 | `list_knowledge` | List knowledge files and folders for this company (names, slugs, sizes, folders) | read |
 | `list_leads` | List the actual leads (id, name, email) in the current company, optionally filtered to one exact segment tag | read |
-| `list_pipeline_learnings` | Show the style guide and recent revision history for a content pipeline | read |
+| `list_pipeline_learnings` | Show the style guide, recent revision history, and what performed (per platform, the best and worst published post by engagement rate, last  | read |
 | `list_pipelines` | List all content pipelines (changelogs, team updates, reports, customer newsletters, social posts) | read |
 | `list_playbooks` | List Playbooks for the company (growth_tactics — the Plays rail) | read |
 | `list_scheduled_reports` | DEPRECATED: Use add_agent_activity / trigger_agent_activity / send_to_user | read |
