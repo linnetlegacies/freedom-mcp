@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:034495817e9a32d3 -->
+<!-- CATALOG-HASH:efbad4ef5ea1c948 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (357)
+## Tools (360)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -60,7 +60,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (144)
+### Business data & workspace (finance, OKRs, customers, leads, content) (147)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -106,6 +106,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_company_birth_play` | Start a new company in conversation — one next step at a time | read |
 | `get_credit_usage` | Company spend snapshot in one read: remaining FOS credits vs plan limit, reset date, named $ cap when set, Grok mix on the FOS ledger (optio | read |
 | `get_executive_record` | Read one executive record by id: title, type, status, each signer's name, capacity and whether and when they signed, and the SHA-256 of the  | read |
+| `get_executive_record_file` | Download one executive record's PDF: the original upload, or the signed copy once the record is signed (a copy signed in FreedomOS carries a | read |
 | `get_financial_summary` | Get P&L summary with revenue, expenses, and net income for the company | read |
 | `get_freedom_target` | Get the user's freedom target (monthly income goal to quit day job), current FCF progress, estimated freedom date, and assumptions | read |
 | `get_grain_policy` | Read the content-grain (wisdom-layer) publish policy for the current company | read |
@@ -140,6 +141,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_customer_evidence` | List ranked REAL Customer Evidence for this company (paying > telemetry > review > relayed > agent_as_user > prospect) | read |
 | `list_dashboard_widgets` | List all dashboard widgets for a specific agent | read |
 | `list_deals` | List CRM deals for the current company | read |
+| `list_executive_record_signers` | List the people who can be named as signers on this company's executive records: FreedomOS users with a role in the company (never an agent  | read |
 | `list_executive_records` | List this company's executive records: governing documents (operating agreement, bylaws, consents, promissory notes, cap table) with status  | read |
 | `list_features` | List all product features in the Feature Index | read |
 | `list_ideas` | List Ideas: untriaged (new/parked) for the operator, and/or triaged into the current company | read |
@@ -183,6 +185,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `share_playbook` | Send this Playbook | write |
 | `submit_content_to_pipeline` | Submit manual content to a pipeline for transformation | write |
 | `suggest_collaboration` | Create a cross-agent collaboration request | read |
+| `supersede_executive_record` | Mark an executive record superseded because a newer version replaces it | write |
 | `triage_idea` | Assign an idea to one or more companies | write |
 | `unshare_knowledge` | Revoke a user's access to a shared knowledge file or folder. | write |
 | `update_agent` | Rename a team member or fix its role/title | write |
