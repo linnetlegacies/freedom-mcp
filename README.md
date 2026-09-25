@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:b0f9e2e7b8ed1a4d -->
+<!-- CATALOG-HASH:cced40e2e43d34ff -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (362)
+## Tools (365)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -60,7 +60,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (149)
+### Business data & workspace (finance, OKRs, customers, leads, content) (152)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -86,6 +86,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `create_playbook` | Create a Playbook for the company (growth_tactics — the Plays rail) | write |
 | `create_signing_request` | File a governing document on this company's Executive records page and ask named people to sign it | write |
 | `deactivate_agent` | Deactivate (archive) an AI agent/specialist from the team | sensitive · approval-carded |
+| `deactivate_person` | Switch off a person's FreedomOS login: they drop out of team lists and agent keys they attached stop working | write |
 | `delete_icp` | Delete a saved Ideal Customer Profile (ICP) | sensitive · approval-carded |
 | `delete_idea` | Delete an idea from Ideas | write |
 | `delete_key_result` | Archive a key result (safe delete — recoverable, never hard-deleted) | write |
@@ -142,6 +143,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_brands` | List this company's brands (today: the house, i.e | read |
 | `list_customer_evidence` | List ranked REAL Customer Evidence for this company (paying > telemetry > review > relayed > agent_as_user > prospect) | read |
 | `list_dashboard_widgets` | List all dashboard widgets for a specific agent | read |
+| `list_deactivated_people` | List logins that User Management's active list does not show: people whose login is switched off (reactivate_person turns one back on), and  | read |
 | `list_deals` | List CRM deals for the current company | read |
 | `list_executive_record_signers` | List the people who can be named as signers on this company's executive records: FreedomOS users with a role in the company (never an agent  | read |
 | `list_executive_records` | List this company's executive records: governing documents (operating agreement, bylaws, consents, promissory notes, cap table) with status  | read |
@@ -164,6 +166,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `publish_pipeline_item` | Publish approved INTERNAL content to configured output | outbound · human-approved per send |
 | `query_lead_journey` | Reconstruct the full journey of a lead — what they did on the site, what they signaled, what we have already sent them | read |
 | `reactivate_agent` | Restore an archived specialist in place (is_active=true on the existing row) | write |
+| `reactivate_person` | Switch a deactivated FreedomOS login back on | write |
 | `read_knowledge` | Read a Markdown knowledge file by slug | read |
 | `reassign_reports` | DEPRECATED: Use get_team_roster then add_agent_activity | write |
 | `redraft_engine_playbooks` | Portfolio sweep: re-draft every assigned engine-photocopy Play in this company into an English operator contract | write |
