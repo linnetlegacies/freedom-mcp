@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:8d09893e443d9a73 -->
+<!-- CATALOG-HASH:bac184128e0e73e0 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (352)
+## Tools (354)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -60,7 +60,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (140)
+### Business data & workspace (finance, OKRs, customers, leads, content) (141)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -124,7 +124,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_reader_expertise_interview` | Get a fluency INTERVIEW kit (domain candidates + "which is clearest?" protocol) so a host CoS can gauge how FO should talk to this operator | read |
 | `get_reader_profile` | Get a person's OPERATOR FLUENCY (reader profile) — overall character level + per-topic strengths (novice/fluent/expert) | read |
 | `get_routing_overview` | See how agent output is currently routed — who is responsible for which domains in the company | read |
-| `get_setup_state` | Get the company's core-tenet setup completeness — mission, vision, OKRs, finances, ICP, branding, team, integrations, product, revenue chann | read |
+| `get_setup_state` | Get the company's core-tenet setup completeness — mission, vision, OKRs, finances, ICP, branding, team, integrations, product, agent reach,  | read |
 | `get_team_members` | Get all team members for the current company | read |
 | `get_team_roster` | Get complete AI team roster with roles, specialties, and capacity info | read |
 | `get_transactions` | List company transactions with optional filters | read |
@@ -161,6 +161,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `reassign_reports` | DEPRECATED: Use get_team_roster then add_agent_activity | write |
 | `redraft_engine_playbooks` | Portfolio sweep: re-draft every assigned engine-photocopy Play in this company into an English operator contract | write |
 | `redraft_playbook_contract` | Rewrite one engine-drafted Play into an English operator contract (outcome, who, what Yes authorizes) | write |
+| `reject_pipeline_item` | Reject a queued content item so it never publishes: the same Reject as the Content Pipeline approval queue | write |
 | `remove_dashboard_widget` | Remove a widget from an agent dashboard. | write |
 | `request_content_revision` | Request changes to a content item | write |
 | `resolve_work` | Mark a shared work-graph item resolved — verified (default), published, or cancelled | sensitive · approval-carded |
@@ -220,12 +221,12 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (125)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (126)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `adjust_shopify_inventory` | Adjust a variant's available inventory by a delta (+/-) at its stocked location in the connected Shopify store | sensitive · approval-carded |
-| `audit_brand_visibility` | Audit whether FreedomOS appears in AI-generated search results | read |
+| `audit_brand_visibility` | Audit whether this company's brand appears in AI-generated search results | read |
 | `bind_hub_newsletter` | Bind this company's already-connected Beehiiv newsletter as the destination for its website articles, so a published letter can reach that l | write |
 | `bless_faith_content` | Record that a person in this chat just said yes to the exact final words of a faith or teaching piece (a letter or page) | write |
 | `browse_url` | Browse a web page in a real browser and take a screenshot | sensitive · approval-carded |
@@ -261,6 +262,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_shopify_order` | Get one Shopify order's detail by id (gid://shopify/Order/...): line items (title, quantity, price), totals, and financial/fulfillment statu | read |
 | `get_shopify_product` | Get one Shopify product's full detail by id (gid://shopify/Product/...): description, status, tags, updatedAt (pass it as expected_updated_a | read |
 | `get_shopify_shop` | Get the connected Shopify store's profile: name, primary domain, currency, plan, and contact email | read |
+| `get_shopify_tax_summary` | Get sales-tax return figures from the connected Shopify store for a period (start_date to end_date, YYYY-MM-DD, end inclusive): gross sales, | read |
 | `get_shopify_theme_asset` | Get one Shopify theme file's raw source code (Liquid/CSS/JS/JSON, e.g | read |
 | `get_site_list` | List all verified sites/properties in Google Search Console | read |
 | `get_sitemaps` | List all sitemaps submitted to Google Search Console for a property — shows submission status, indexing coverage, errors, and warnings | read |
