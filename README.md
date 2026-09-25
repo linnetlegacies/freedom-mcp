@@ -436,7 +436,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_cos_preferences` | Replace THIS operator's full CoS preference block (or clear with empty) | write |
 | `share_commitment` | Share a commitment with your spouse or partner so they can see it too | write |
 | `split_agent_activity` | Split ONE oversized activity into smaller activities (intake + finish) without regenerating the rest of the plan | write |
-| `toggle_agent_schedule` | Pause or resume an agent's scheduled activities — the whole activity plan, or a single activity via activity_name | sensitive · approval-carded |
+| `toggle_agent_schedule` | Pause or resume an agent's schedule: the whole plan, or one activity via activity_name | sensitive · approval-carded |
 | `trigger_agent_activity` | Trigger a specific agent to run a specific activity immediately | sensitive · approval-carded |
 | `unshare_commitment` | Stop sharing a commitment with someone | write |
 | `update_agent_activity` | Edit ONE existing activity in an agent's plan — change its name, description, frequency, tools_used, deliverable, or completion_criteria | write |
