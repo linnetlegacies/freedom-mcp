@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:efbad4ef5ea1c948 -->
+<!-- CATALOG-HASH:b0f9e2e7b8ed1a4d -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (360)
+## Tools (362)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -60,7 +60,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (147)
+### Business data & workspace (finance, OKRs, customers, leads, content) (149)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -98,6 +98,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_actuals_vs_budget` | Compare actual financial results to budget/projections | read |
 | `get_agent_outcome_panel` | Per-agent "what did the compute buy" facts for the operator: trailing-14-day credits, runs (with self-maintenance share), human-accepted vs  | read |
 | `get_artifacts` | Get saved artifacts for the company | read |
+| `get_brand` | Read the house brand card: mission, vision, look, channels and their status, bots, approver, waiting cards, best post this week, setup check | read |
 | `get_brand_guidelines` | Get the company's brand guidelines — name, tagline, colors, typography, personality/tone, naming rules, visual + positioning dos/donts | read |
 | `get_cash_position` | Get current cash and bank account balances | read |
 | `get_check_telemetry` | Read recent quality-check telemetry for the current company | read |
@@ -138,6 +139,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `ingest_voice_corpus` | Build or refresh the company's voice profile from REAL writing | sensitive · approval-carded |
 | `interview_for_hire` | Research the company and return everything needed to propose a new role in ONE shot | sensitive · approval-carded |
 | `link_agent_okrs` | Link an agent to one or more company OKRs | write |
+| `list_brands` | List this company's brands (today: the house, i.e | read |
 | `list_customer_evidence` | List ranked REAL Customer Evidence for this company (paying > telemetry > review > relayed > agent_as_user > prospect) | read |
 | `list_dashboard_widgets` | List all dashboard widgets for a specific agent | read |
 | `list_deals` | List CRM deals for the current company | read |
