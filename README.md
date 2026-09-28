@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:0c98016729618626 -->
+<!-- CATALOG-HASH:28a1caddf1b4edbe -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (366)
+## Tools (369)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -232,7 +232,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (127)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (130)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -254,6 +254,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `draft_tenet_from_signal` | Draft a company tenet (mission or vision) FROM the company's existing website, for the operator to ratify or edit — instead of asking them t | sensitive · approval-carded |
 | `edit_faith_content` | Save edited words onto a waiting words-ready card | write |
 | `ensure_meta_pixel` | Get-or-create the Meta ad account's pixel and report its last activity — this does not verify a specific conversion event | sensitive · approval-carded |
+| `ensure_meta_website_audience` | Get-or-create a Meta website custom audience of people who fired a pixel event (CompleteRegistration by default, or Lead / Purchase) in the  | sensitive · approval-carded |
 | `generate_carousel` | Render a multi-slide image carousel + a LinkedIn-PDF from structured slide copy | write |
 | `generate_html_visual` | Generate a small, self-contained HTML visual (comparison table, simple diagram, annotated list, mini-dashboard) as a throwaway artifact for  | sensitive · approval-carded |
 | `generate_image_xai` | Generate or EDIT an image using xAI Imagine (Quality Mode default = grok-imagine-image-2.0) | sensitive · approval-carded |
@@ -295,6 +296,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_ad_campaigns` | List campaigns in a Meta ad account: status, objective, budgets (major currency units), and schedule | read |
 | `list_corpus_inventory` | List what content material this company already has (knowledge folders like book-1/canon, SME Expert rules, idea_inbox assigned to this comp | read |
 | `list_integrations` | List ALL connected external integrations — MCP servers, OAuth accounts (Google, X, ...), and direct integrations (Xero accounting, Stripe) — | read |
+| `list_meta_custom_audiences` | List the custom audiences on the company's Meta ad account (id, name, type, approximate size) | read |
 | `list_operator_x_posts` | List this company's recent original X posts from the connected account — no URL paste | read |
 | `list_shopify_content` | List the connected Shopify store's online-store pages (title, handle, published status, updatedAt — pass a page's updatedAt as expected_upda | read |
 | `list_shopify_discounts` | List discount codes and automatic discounts configured on the connected Shopify store — id, discount type, title, and status (ACTIVE/EXPIRED | read |
@@ -337,7 +339,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `remove_background` | Remove the background from an existing image, leaving the main subject isolated on a transparent background (PNG). | sensitive · approval-carded |
 | `request_connector` | Climb the door ladder for a needed service: bind this company's connector, offer reuse of an account the operator already admins on another  | sensitive · approval-carded |
 | `reschedule_faith_newsletter` | Move when the blessed letter goes out as the newsletter, without re-blessing the words | write |
-| `search_ad_targeting` | Search Meta's ad-interest targeting catalog (returns interest ids + audience sizes) | read |
+| `search_ad_targeting` | Search Meta's detailed-targeting catalog: interests (default), job titles (kind work_positions) or fields of study (kind education_majors) | read |
 | `search_connector_registry` | When a goal needs a service, search here — do not stop at not-connected | read |
 | `search_x_ad_targeting` | Search X Ads targeting (interests or locations) | read |
 | `send_email` | Send an outbound email via the company's Resend connection | outbound · human-approved per send |
@@ -358,6 +360,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_live_shopify_product` | Edit a LIVE Shopify product's title, description, or tags — changes buyers see immediately | outbound · human-approved per send |
 | `update_live_shopify_theme_file` | Overwrite one existing file (Liquid/CSS/JS/JSON) on the LIVE (MAIN) Shopify theme — buyers render the change immediately | outbound · human-approved per send |
 | `update_meta_ad_budget` | Change the daily budget of a Meta ad set (account currency, major units; structural cap applies) | outbound · human-approved per send |
+| `update_meta_campaign_spend_cap` | Set the lifetime spend limit on a Meta campaign (account currency, major units, 100 to 10000): Meta stops delivery once the campaign has spe | outbound · human-approved per send |
 | `update_shopify_page_draft` | Update an UNPUBLISHED Shopify page's title or body | sensitive · approval-carded |
 | `update_shopify_product_draft` | Update a DRAFT (or archived) Shopify product's title, description, or tags | sensitive · approval-carded |
 | `update_x_ad_budget` | Change the daily budget of an X ads campaign (account currency, major units; structural cap applies) | outbound · human-approved per send |
