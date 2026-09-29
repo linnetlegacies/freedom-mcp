@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:28a1caddf1b4edbe -->
+<!-- CATALOG-HASH:02eae4aea9284b4b -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (369)
+## Tools (370)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -232,7 +232,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (130)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (131)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -313,6 +313,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
 | `list_xero_unreconciled` | List authorized, unreconciled Xero spend/receive MONEY DOCUMENTS (deleted documents excluded), newest first, 100 per page | read |
 | `post_to_x` | Publish a short text post (optionally with a URL) to this company's connected X account under the Freedom Pledge | outbound · human-approved per send |
+| `post_xero_manual_journal` | Post ONE manual journal into this company's Xero books, only after a person says yes | sensitive · approval-carded |
 | `post_xero_transaction` | Post ONE FreedomOS transaction into Xero as Spend Money or Receive Money | write |
 | `posthog_create_vision_scanner` | Create a Replay Vision scanner on the connected PostHog project for the operator or analytics agent | write |
 | `posthog_delete_vision_scanner` | Delete a Replay Vision scanner and its observations tab (PostHog $recording_observed events stay in the event stream) for the operator or an | write |
