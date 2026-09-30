@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:02eae4aea9284b4b -->
+<!-- CATALOG-HASH:4705f6980e4a17b1 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (370)
+## Tools (374)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
 
@@ -232,13 +232,14 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (131)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (135)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `adjust_shopify_inventory` | Adjust a variant's available inventory by a delta (+/-) at its stocked location in the connected Shopify store | sensitive · approval-carded |
 | `audit_brand_visibility` | Audit whether this company's brand appears in AI-generated search results | read |
 | `bind_hub_newsletter` | Bind this company's already-connected Beehiiv newsletter as the destination for its website articles, so a published letter can reach that l | write |
+| `bind_pipeline_social_account` | Make a content pipeline post to one provider from a chosen account (e.g | sensitive · approval-carded |
 | `bless_faith_content` | Record that a person in this chat just said yes to the exact final words of a faith or teaching piece (a letter or page) | write |
 | `browse_url` | Browse a web page in a real browser and take a screenshot | sensitive · approval-carded |
 | `check_my_inbox` | Check your own agent email inbox (receive-only) for messages sent to your @agents.getfreedomos.com address, and read them | sensitive · approval-carded |
@@ -306,13 +307,14 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `list_shopify_orders` | List recent orders from the connected Shopify store — order name/number, total, financial + fulfillment status, and created date | read |
 | `list_shopify_products` | List products from the connected Shopify store — title, status (ACTIVE/DRAFT/ARCHIVED), total inventory, and price range | read |
 | `list_shopify_themes` | List themes installed on the connected Shopify store — name, role (MAIN/UNPUBLISHED/DEVELOPMENT), and updatedAt (pass it as expected_updated | read |
+| `list_social_accounts` | List this company's connected X, Facebook & Instagram and Threads accounts that you may use: handle, which one is the default, whether it is | read |
 | `list_x_ad_accounts` | List the X (Twitter) ads accounts on this company's X Ads connection (its own grant, separate from organic X posting) | read |
 | `list_x_ad_campaigns` | List campaigns in an X ads account | read |
 | `list_xero_accounts` | List the company's Xero chart of accounts (code, type, name, status) | read |
 | `list_xero_bank_transactions` | List LIVE bank transactions from the company's connected Xero ledger (paged, 100 per page, newest first) | read |
 | `list_xero_contacts` | List contacts (customers/suppliers) from the company's connected Xero ledger, optionally filtered by a search term (paged, 100 per page) | read |
 | `list_xero_unreconciled` | List authorized, unreconciled Xero spend/receive MONEY DOCUMENTS (deleted documents excluded), newest first, 100 per page | read |
-| `post_to_x` | Publish a short text post (optionally with a URL) to this company's connected X account under the Freedom Pledge | outbound · human-approved per send |
+| `post_to_x` | Publish a short text post (optionally with a URL) to this company's connected X account under the Freedom Pledge: the default account, or th | outbound · human-approved per send |
 | `post_xero_manual_journal` | Post ONE manual journal into this company's Xero books, only after a person says yes | sensitive · approval-carded |
 | `post_xero_transaction` | Post ONE FreedomOS transaction into Xero as Spend Money or Receive Money | write |
 | `posthog_create_vision_scanner` | Create a Replay Vision scanner on the connected PostHog project for the operator or analytics agent | write |
@@ -346,9 +348,11 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `send_email` | Send an outbound email via the company's Resend connection | outbound · human-approved per send |
 | `send_slack_message` | Send a message to a Slack channel or direct message to a team member | outbound · human-approved per send |
 | `set_cac_strategy` | Change this company's LTV:CAC strategy (the acquisition-spend posture): aggressive (2:1, early-stage growth), standard (3:1, recommended def | sensitive · approval-carded |
+| `set_default_social_account` | Make one of the company's X / Facebook & Instagram / Threads accounts the default: the one used whenever a post names no account | sensitive · approval-carded |
 | `set_meta_ad_status` | Activate or pause a Meta campaign, ad set, or ad | outbound · human-approved per send |
 | `set_revenue_channels` | Declare where this business makes money — stripe, xero, shopify, amazon, ebay, manual invoicing, "none_yet" (pre-revenue), or other (name it | sensitive · approval-carded |
 | `set_shopify_variant_price_draft` | Set a variant's price (and optionally compare-at price) on a DRAFT Shopify product | sensitive · approval-carded |
+| `set_social_account_scope` | Set who may use one social account: the whole company, or one person ("just me", or a member's user id) — and which agents may post from it  | sensitive · approval-carded |
 | `set_x_ad_status` | Activate or pause an X campaign or line item | outbound · human-approved per send |
 | `set_xero_account_map` | Map a FreedomOS cash-flow category (the account name on a transaction) to a Xero account code so suggest_xero_post / post_xero_transaction c | write |
 | `start_company_receive` | Start the path for this company to receive money | write |
