@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:069cfbca7311923e -->
+<!-- CATALOG-HASH:81f6069461e6d1ea -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (373)
+## Tools (374)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (8)
 
@@ -229,7 +229,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (137)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (138)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -354,6 +354,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_social_account_scope` | Set who may use one social account: the whole company, or one person ("just me", or a member's user id) — and which agents may post from it  | sensitive · approval-carded |
 | `set_x_ad_status` | Activate or pause an X campaign or line item | outbound · human-approved per send |
 | `set_xero_account_map` | Map a FreedomOS cash-flow category (the account name on a transaction) to a Xero account code so suggest_xero_post / post_xero_transaction c | write |
+| `set_xero_bank_feed_mode` | Choose who feeds one Xero bank account, for the operator setting up the books | write |
 | `start_company_receive` | Start the path for this company to receive money | write |
 | `start_github_app_claim` | Start connecting GetFreedomOS (the FreedomOS GitHub App) for this company | write |
 | `start_oauth` | Start, poll, or finish FreedomOS-native vendor sign-in (X, Slack, Meta, Xero) after the operator approved the Connect card | sensitive · approval-carded |
