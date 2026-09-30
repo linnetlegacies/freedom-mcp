@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:81f6069461e6d1ea -->
+<!-- CATALOG-HASH:48dc8fa8054ce989 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (374)
+## Tools (377)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (8)
 
@@ -395,7 +395,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_factory_census` | KR2 census for the current company: over the STAMPED builder landings of the trailing 28 days, the share that named a Key Result at birth or | read |
 | `list_my_work` | List shared work-graph items (lab_work_items) for the operator or coding agent in the current company — the cross-session shared plan | read |
 
-### Workflows & agents (hire, run, schedule, approve) (57)
+### Workflows & agents (hire, run, schedule, approve) (60)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -423,6 +423,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_cos_preferences` | Read THIS operator's saved CoS speech/taste preferences (user-scoped) | read |
 | `get_executive_landscape` | Get a cross-domain view of everything on the user's plate | read |
 | `get_factory_floor` | Read the Mac desk factory snapshot for THIS operator (ACP up/down, last launcher event, official workers vs leftover UUID/TUI tabs, Terminal | read |
+| `get_prediction_scoreboard` | How often each agent's or person's predictions hold up: right, wrong, waiting and hit rate per author, plus predictions due to score | read |
 | `get_team_pulse` | Get a real-time snapshot of team output volume, pending approvals, and founder load | read |
 | `list_attention_directives` | List pending attention directives for THIS operator (optionally filtered by target_session_id) | read |
 | `list_attention_sessions` | List THIS operator's coding/builder sessions (status, goal, ask) | read |
@@ -435,6 +436,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `propose_cos_content_atoms` | Marketing-by-construction: pack THIS operator's recent CoS telemetry into one-job content atoms (Proof/Story/Take · Wisdom/Proof factories) | read |
 | `propose_talk_seeds` | Watch this company's recent activity and pin "Talk about this?" seeds on the Board for the operator | write |
 | `ratify_capability` | Persist the operator-CONFIRMED derived features (from derive_capability) into the product capability index as source='derived' | sensitive · approval-carded |
+| `record_prediction` | Attach a checkable prediction to your recommendation (for any agent or person): the number to read, the success line and the date | write |
 | `remove_agent_activity` | Retire ONE activity from an agent's plan | write |
 | `request_attention_close` | Close an EXISTING coding tab on the operator machine for THIS operator | write |
 | `request_attention_focus` | Raise an EXISTING coding tab on the operator machine (OS focus) for THIS operator's desk | write |
@@ -444,6 +446,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `route_operator_hud` | Route the operator's desk HUD to a view they asked to see — open a door (money, sessions, home, roster, loadout, upgrades), lock a company z | write |
 | `run_playbook` | Run a saved Playbook (growth_tactics) for the company operator or agent — dispatch the next unit as a one-off draft activity, or dry-run a P | sensitive · approval-carded |
 | `run_quality_check` | Evaluate content or media against your ICP persona using xAI grok-4.7 vision | sensitive · approval-carded |
+| `score_prediction` | Record a prediction's result (for any agent or person) | write |
 | `send_lead_draft` | Send an approved outreach draft to its lead via the company's Resend connection, then mark the draft 'sent' | outbound · human-approved per send |
 | `send_to_user` | Communicate asynchronously with the user | write |
 | `set_attention_budget` | Set the founder's attention budget — the maximum pending review cards before they are 'overloaded' (a whole number 1–100; default 7) — for a | sensitive · approval-carded |
