@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:4705f6980e4a17b1 -->
+<!-- CATALOG-HASH:07eac7bee52b18a4 -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,12 +46,13 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (374)
+## Tools (375)
 
-### Advisors & scoring (ICP consult, deliberation, quality checks) (7)
+### Advisors & scoring (ICP consult, deliberation, quality checks) (8)
 
 | Tool | What it does | Tier |
 |---|---|---|
+| `ask_jev` | Ask TypeSafe's Jev model fast typed judgments about text you supply, with probabilities | outbound · human-approved per send |
 | `challenge_as_customer` | Run your deliverable past the company's customer truth: REAL Customer Evidence first (when stored), then generated ICP as labeled simulation | read |
 | `deliberate` | Run an adversarial deliberation on a decision | read |
 | `get_my_role` | START HERE — call this first even on an operator key | read |
