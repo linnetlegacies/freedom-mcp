@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:07eac7bee52b18a4 -->
+<!-- CATALOG-HASH:069cfbca7311923e -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,7 +46,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (375)
+## Tools (373)
 
 ### Advisors & scoring (ICP consult, deliberation, quality checks) (8)
 
@@ -61,7 +61,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
 
-### Business data & workspace (finance, OKRs, customers, leads, content) (152)
+### Business data & workspace (finance, OKRs, customers, leads, content) (148)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -116,14 +116,10 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `get_icps` | Get saved Ideal Customer Profiles (ICPs) from Customer Hunter | read |
 | `get_lead_pipeline_snapshot` | Aggregate counts of the Leads CRM (crm_leads) for the current company: active leads by temperature (warm/cold/…/unset) and lifecycle stage,  | read |
 | `get_monthly_trends` | Get month-over-month financial trends | read |
-| `get_my_channel_partner_link` | DEPRECATED: Use get_my_channel_partner_starter_pack | read |
-| `get_my_channel_partner_starter_pack` | Get YOUR classroom starter pack for students: the public share URL (https://getfreedomos.com/start/{slug}) where they copy a one-paste Claud | read |
-| `get_my_channel_partner_stats` | Get YOUR channel partner stats: student share URL (/start/slug), rev-share terms, referral counts by status (pending/joined/activated/credit | read |
 | `get_my_companies` | List the companies the current operator can act in (their FreedomOS portfolio) | read |
 | `get_my_profile` | Get the current user's profile information including name, title, contact info, and personal details. | read |
 | `get_next_priority` | DEPRECATED: Use get_attention_quest | read |
 | `get_okrs` | List objectives and key results for the company | read |
-| `get_partner_cos_onboard` | Onboard YOUR host coding CoS (Claude Code, Cursor, etc.) to FreedomOS: returns a LIVE MCP tool catalog + a deep-research prompt so the host  | read |
 | `get_pending_approvals` | Get CONTENT PIPELINE outputs waiting for approval/publish (changelogs, newsletters, social drafts) | read |
 | `get_playbook` | Read ONE Playbook by id or title — operator contract (outcome, who, what Yes authorizes), steps, plan Agree seal, assignee, how-to (descript | read |
 | `get_projections` | Get projected future values from financial forecasts | read |
@@ -233,11 +229,12 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `update_google_doc` | Append new content to an existing Google Doc. | write |
 | `update_sheet` | Update specific cells in a Google Spreadsheet. | write |
 
-### Integrations (Google, Stripe, Meta, X, analytics, email) (135)
+### Integrations (Google, Stripe, Meta, X, analytics, email) (137)
 
 | Tool | What it does | Tier |
 |---|---|---|
 | `adjust_shopify_inventory` | Adjust a variant's available inventory by a delta (+/-) at its stocked location in the connected Shopify store | sensitive · approval-carded |
+| `approve_monthly_close` | Record an owner's approval of a month's close: the payouts exactly as shown on the close card (to, amount, kind, how each is booked) | sensitive · approval-carded |
 | `audit_brand_visibility` | Audit whether this company's brand appears in AI-generated search results | read |
 | `bind_hub_newsletter` | Bind this company's already-connected Beehiiv newsletter as the destination for its website articles, so a published letter can reach that l | write |
 | `bind_pipeline_social_account` | Make a content pipeline post to one provider from a chosen account (e.g | sensitive · approval-carded |
@@ -351,6 +348,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `set_cac_strategy` | Change this company's LTV:CAC strategy (the acquisition-spend posture): aggressive (2:1, early-stage growth), standard (3:1, recommended def | sensitive · approval-carded |
 | `set_default_social_account` | Make one of the company's X / Facebook & Instagram / Threads accounts the default: the one used whenever a post names no account | sensitive · approval-carded |
 | `set_meta_ad_status` | Activate or pause a Meta campaign, ad set, or ad | outbound · human-approved per send |
+| `set_monthly_close_policy` | Set this company's monthly close payout policy: each owner with the Xero balance-sheet accounts that hold what the company owes them (loans, | sensitive · approval-carded |
 | `set_revenue_channels` | Declare where this business makes money — stripe, xero, shopify, amazon, ebay, manual invoicing, "none_yet" (pre-revenue), or other (name it | sensitive · approval-carded |
 | `set_shopify_variant_price_draft` | Set a variant's price (and optionally compare-at price) on a DRAFT Shopify product | sensitive · approval-carded |
 | `set_social_account_scope` | Set who may use one social account: the whole company, or one person ("just me", or a member's user id) — and which agents may post from it  | sensitive · approval-carded |
