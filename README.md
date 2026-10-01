@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:23b042b7f7d8ee8c -->
+<!-- CATALOG-HASH:a90023932d70b59a -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -57,7 +57,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `deliberate` | Run an adversarial deliberation on a decision | read |
 | `get_my_role` | START HERE — call this first even on an operator key | read |
 | `get_product_context` | Returns THIS company's product truth — the operator-authored offer + the SHIPPED, marketable capabilities (what the product does, and what i | read |
-| `rank_icp_voices` | Jev ranks public posts you ALREADY read against this company's ICP: ICP fit, pain, urgency 1-5, would pay | outbound · human-approved per send |
+| `rank_icp_voices` | Jev ranks public posts you ALREADY read against this company's ICP: ICP fit, pain, urgency 1-5, would pay | write |
 | `recalibrate_agent_jd` | Regenerate an agent's JD using fresh company context | sensitive · approval-carded |
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
