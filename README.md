@@ -1,5 +1,5 @@
 <!-- GENERATED — do not hand-edit. Source: linnetlegacies/freedom-ai scripts/generate-freedom-mcp-readme.ts -->
-<!-- CATALOG-HASH:48dc8fa8054ce989 -->
+<!-- CATALOG-HASH:23b042b7f7d8ee8c -->
 # FreedomOS MCP server (`freedom-mcp`)
 
 Connect Claude, Cursor, Codex, Grok Build, Windsurf — or any MCP client — to [FreedomOS](https://getfreedomos.com), the business operating system where AI agents run your company's day-to-day (finance, goals, customers, content, agent teams) while **anything that sends, spends, or hires asks you first**.
@@ -46,9 +46,9 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 - Reads run freely. Writes are tiered; **sensitive/outbound actions mint an approval card** the human decides in FreedomOS — the agent cannot send, spend, or hire on its own.
 - Revoking a key at [getfreedomos.com/mcp](https://getfreedomos.com/mcp) cuts access on the very next call.
 
-## Tools (377)
+## Tools (378)
 
-### Advisors & scoring (ICP consult, deliberation, quality checks) (8)
+### Advisors & scoring (ICP consult, deliberation, quality checks) (9)
 
 | Tool | What it does | Tier |
 |---|---|---|
@@ -57,6 +57,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `deliberate` | Run an adversarial deliberation on a decision | read |
 | `get_my_role` | START HERE — call this first even on an operator key | read |
 | `get_product_context` | Returns THIS company's product truth — the operator-authored offer + the SHIPPED, marketable capabilities (what the product does, and what i | read |
+| `rank_icp_voices` | Jev ranks public posts you ALREADY read against this company's ICP: ICP fit, pain, urgency 1-5, would pay | outbound · human-approved per send |
 | `recalibrate_agent_jd` | Regenerate an agent's JD using fresh company context | sensitive · approval-carded |
 | `resolve_brand_guide` | Draft a first brand guide (personality tone, visual/positioning dos and donts) EXTRACTED from the company's own canon documents, with a veri | sensitive · approval-carded |
 | `synthesize_lead_hypothesis` | Given a lead journey (from query_lead_journey), produce a structured hypothesis: intent score, conversion-failure mode, suggested outreach a | write |
