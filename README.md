@@ -321,7 +321,7 @@ Also listed on the [official MCP Registry](https://registry.modelcontextprotocol
 | `posthog_get_vision_observation` | Get one Replay Vision observation (structured result + model reasoning) for the operator or analytics agent | read |
 | `posthog_get_vision_scanner` | Get one Replay Vision scanner by id, including its prompt/config and credit usage this month, for the operator or analytics agent | read |
 | `posthog_hogql` | Run an arbitrary HogQL (SQL) query against PostHog data | read |
-| `posthog_list_events` | List all event types tracked in PostHog, ordered by usage | read |
+| `posthog_list_events` | List all event types tracked in PostHog with their real 30-day volume, highest first | read |
 | `posthog_list_insights` | List existing saved insights in PostHog | read |
 | `posthog_list_vision_observations` | List Replay Vision observations (what scanners saw on recordings) for the operator or analytics agent | read |
 | `posthog_list_vision_scanners` | List Replay Vision scanners in the connected PostHog project (AI probes that watch session recordings) for the operator or analytics agent | read |
